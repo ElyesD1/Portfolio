@@ -80,7 +80,7 @@ const Projects = () => {
         key: 'projectflow',
         category: 'mobile',
         featured: true,
-        video: 'https://drive.google.com/uc?export=view&id=1Icmywhlux8nr2C8jc_v3aN__M7-nXgrf',
+        video: 'https://www.youtube.com/embed/SQS832EH9Zs',
         technologies: ['Flutter', 'NestJS', 'MongoDB', 'Docker', 'AI/Gemini', 'WebSocket'],
         year: '2025',
         company: 'Talan Tunisia',
@@ -102,7 +102,7 @@ const Projects = () => {
         key: 'riftpedia',
         category: 'mobile',
         featured: true,
-        video: 'https://drive.google.com/uc?export=view&id=1wLJN71quhoN3W5o6N18hOrHEy1Q3t5I5',
+        video: 'https://www.youtube.com/embed/JUjH3DlewF4',
         technologies: ['SwiftUI', 'MapKit', 'Riot API', 'iOS'],
         year: '2024',
         color: 'primary'
@@ -418,22 +418,22 @@ const Projects = () => {
               >
                 <div className="mobile-frame">
                   <div className="mobile-screen">
-                    <video
-                      ref={el => videoRefs.current[`demo-${project.id}`] = el}
-                      src={project.video}
-                      muted
-                      loop
-                      playsInline
+                    <iframe
+                      src={`${project.video}?autoplay=1&mute=1&loop=1&playlist=${project.video.split('/').pop()}`}
                       className="mobile-video"
-                      autoPlay
-                    />
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      frameBorder="0"
+                      loading="lazy"
+                      title={`${project.key} demo video`}
+                    ></iframe>
                     
                     <div className="mobile-overlay">
                       <button 
                         className="mobile-play-btn"
-                        onClick={() => handleVideoPlay(`demo-${project.id}`)}
+                        onClick={() => window.open(project.video, '_blank')}
                       >
-                        {videoStates[`demo-${project.id}`]?.playing ? <Pause size={20} /> : <Play size={20} />}
+                        <Play size={20} />
                       </button>
                     </div>
                   </div>
