@@ -15,8 +15,6 @@ import {
   Star,
   Award
 } from 'lucide-react'
-import ProjectFlowVideo from '../assets/ProjectFlow.mp4'
-import RiftpediaVideo from '../assets/Riftpedia.mp4'
 import './Projects.css'
 
 const Projects = () => {
@@ -82,7 +80,7 @@ const Projects = () => {
         key: 'projectflow',
         category: 'mobile',
         featured: true,
-        video: ProjectFlowVideo,
+        video: 'https://drive.google.com/uc?export=view&id=1Icmywhlux8nr2C8jc_v3aN__M7-nXgrf',
         technologies: ['Flutter', 'NestJS', 'MongoDB', 'Docker', 'AI/Gemini', 'WebSocket'],
         year: '2025',
         company: 'Talan Tunisia',
@@ -104,7 +102,7 @@ const Projects = () => {
         key: 'riftpedia',
         category: 'mobile',
         featured: true,
-        video: RiftpediaVideo,
+        video: 'https://drive.google.com/uc?export=view&id=1wLJN71quhoN3W5o6N18hOrHEy1Q3t5I5',
         technologies: ['SwiftUI', 'MapKit', 'Riot API', 'iOS'],
         year: '2024',
         color: 'primary'
