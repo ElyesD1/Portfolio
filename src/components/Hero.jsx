@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Download, Mail } from 'lucide-react'
 import profileImage from '../assets/Elyes Darouich.png'
+import cvPdf from '../assets/Elyes_Darouich_CV.pdf'
 import './Hero.css'
 
 const Hero = () => {
@@ -189,11 +190,11 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                href="/cv-elyes-darouich.pdf"
+                href={cvPdf}
                 className="btn btn-secondary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                download
+                download="Elyes_Darouich_CV.pdf"
               >
                 <Download size={20} />
                 {t('hero.downloadCV')}
