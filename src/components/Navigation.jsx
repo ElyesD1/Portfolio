@@ -15,6 +15,7 @@ const Navigation = () => {
     { key: 'experience', href: '#experience', label: t('nav.experience') },
     { key: 'projects', href: '#projects', label: t('nav.projects') },
     { key: 'skills', href: '#skills', label: t('nav.skills') },
+    { key: 'certificates', href: '#certificates', label: t('nav.certificates') },
     { key: 'contact', href: '#contact', label: t('nav.contact') }
   ]
 
@@ -24,7 +25,7 @@ const Navigation = () => {
       setScrolled(scrollPosition > 50)
 
       // Update active section based on scroll position
-      const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'contact']
+      const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'certificates', 'contact']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {

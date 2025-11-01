@@ -25,3 +25,14 @@ dist-ssr
 
 # Large video files (will be handled separately for deployment)
 *.mp4
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk

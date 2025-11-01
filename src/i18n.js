@@ -11,6 +11,7 @@ const resources = {
         experience: "Experience",
         projects: "Projects",
         skills: "Skills",
+        certificates: "Certificates",
         contact: "Contact"
       },
       
@@ -306,6 +307,35 @@ const resources = {
         }
       },
       
+      // Certificates Section
+      certificates: {
+        title: "Certificates",
+        subtitle: "Professional certifications and achievements",
+        items: {
+          aws: {
+            title: "AWS Academy Graduate - Cloud Foundations",
+            issuer: "AWS Academy",
+            date: "2025",
+            description: "Comprehensive AWS Cloud Foundations training program demonstrating cloud computing proficiency",
+            skills: ["AWS Core Services", "Cloud Architecture", "Security Best Practices", "EC2, S3, RDS, VPC"]
+          },
+          hashgraph: {
+            title: "Hashgraph Developer Course",
+            issuer: "Hedera Hashgraph",
+            date: "2025",
+            description: "100% completion of Hashgraph Developer Course curriculum covering distributed ledger technology",
+            skills: ["Distributed Ledger Technology", "Smart Contracts", "Consensus Algorithms", "Blockchain Solutions"]
+          },
+          generativeai: {
+            title: "Generative AI with Diffusion Models",
+            issuer: "NVIDIA",
+            date: "2025",
+            description: "Certificate of Competency in Generative AI with Diffusion Models and advanced AI techniques",
+            skills: ["Diffusion Models", "Image Generation", "Text-to-Image Synthesis", "AI Model Training"]
+          }
+        }
+      },
+      
       // Contact Section
       contact: {
         title: "Get In Touch",
@@ -352,6 +382,7 @@ const resources = {
         experience: "Expérience", 
         projects: "Projets",
         skills: "Compétences",
+        certificates: "Certificats",
         contact: "Contact"
       },
       
@@ -642,6 +673,35 @@ const resources = {
           arduino: "Arduino",
           agile: "Agile/Scrum",
           uml: "UML"
+        }
+      },
+      
+      // Certificates Section
+      certificates: {
+        title: "Certificats",
+        subtitle: "Certifications professionnelles et réalisations",
+        items: {
+          aws: {
+            title: "AWS Academy Graduate - Cloud Foundations",
+            issuer: "AWS Academy",
+            date: "2025",
+            description: "Programme de formation complet AWS Cloud Foundations démontrant la compétence en cloud computing",
+            skills: ["Services AWS de base", "Architecture Cloud", "Meilleures pratiques de sécurité", "EC2, S3, RDS, VPC"]
+          },
+          hashgraph: {
+            title: "Cours Développeur Hashgraph",
+            issuer: "Hedera Hashgraph",
+            date: "2025",
+            description: "100% d'achèvement du programme du cours Développeur Hashgraph couvrant la technologie de registre distribué",
+            skills: ["Technologie de registre distribué", "Contrats intelligents", "Algorithmes de consensus", "Solutions Blockchain"]
+          },
+          generativeai: {
+            title: "IA Générative avec Modèles de Diffusion",
+            issuer: "NVIDIA",
+            date: "2025",
+            description: "Certificat de compétence en IA générative avec modèles de diffusion et techniques IA avancées",
+            skills: ["Modèles de diffusion", "Génération d'images", "Synthèse texte-image", "Formation de modèles IA"]
+          }
         }
       },
       
