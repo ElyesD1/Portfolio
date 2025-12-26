@@ -1,0 +1,453 @@
+%-------------------------
+% Professional CV - Elyes Darouich
+% Modern Multi-Page LaTeX Template
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{tcolorbox}
+\usepackage{shadowtext}
+\usepackage{anyfontsize}
+
+% Page setup
+\geometry{
+    top=0.8in,
+    bottom=0.8in,
+    left=0.8in,
+    right=0.8in
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Define colors
+\definecolor{primary}{RGB}{139, 92, 246}
+\definecolor{secondary}{RGB}{59, 130, 246}
+\definecolor{accent}{RGB}{16, 185, 129}
+\definecolor{darkgray}{RGB}{64, 64, 64}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{mediumgray}{RGB}{128, 128, 128}
+
+% Custom section formatting
+\titleformat{\section}{
+  \vspace{8pt}\scshape\raggedright\large\bfseries\color{primary}
+}{}{0em}{}[\color{primary}\titlerule \vspace{-5pt}]
+
+\titleformat{\subsection}{
+  \vspace{4pt}\scshape\raggedright\normalsize\bfseries\color{secondary}
+}{}{0em}{}[\vspace{-3pt}]
+
+% Custom boxes
+\newtcolorbox{infobox}{
+    colback=lightgray,
+    colframe=primary,
+    boxrule=1pt,
+    arc=4pt,
+    left=6pt,
+    right=6pt,
+    top=6pt,
+    bottom=6pt
+}
+
+\newtcolorbox{skillbox}{
+    colback=white,
+    colframe=secondary,
+    boxrule=0.5pt,
+    arc=3pt,
+    left=4pt,
+    right=4pt,
+    top=4pt,
+    bottom=4pt
+}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{1pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{3pt}\item
+  \begin{tcolorbox}[
+    colback=lightgray,
+    colframe=primary,
+    boxrule=0.5pt,
+    arc=3pt,
+    left=8pt,
+    right=8pt,
+    top=4pt,
+    bottom=4pt
+  ]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{darkgray}#1} & \textbf{\small \color{mediumgray}#2} \\
+      \textit{\small\color{secondary}#3} & \textit{\small \color{mediumgray}#4} \\
+    \end{tabular*}
+  \end{tcolorbox}
+  \vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tcolorbox}[
+      colback=white,
+      colframe=accent,
+      boxrule=0.5pt,
+      arc=3pt,
+      left=6pt,
+      right=6pt,
+      top=3pt,
+      bottom=3pt
+    ]
+      \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{\color{darkgray}#1} & \textbf{\small \color{mediumgray}#2}\\
+      \end{tabular*}
+    \end{tcolorbox}
+    \vspace{-6pt}
+}
+
+\newcommand{\skillCategory}[2]{
+  \begin{skillbox}
+    \textbf{\color{secondary}#1:} \color{darkgray}#2
+  \end{skillbox}
+  \vspace{3pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+  % Header background
+  \begin{tcolorbox}[
+    colback=primary!10,
+    colframe=primary,
+    boxrule=1pt,
+    arc=8pt,
+    width=\textwidth,
+    left=20pt,
+    right=20pt,
+    top=15pt,
+    bottom=15pt
+  ]
+    \begin{minipage}{0.25\textwidth}
+      \centering
+      % Profile image with circular border
+      \begin{tikzpicture}
+        \clip (0,0) circle (1.1cm);
+        \node at (0,0) {\includegraphics[width=2.2cm, height=2.2cm, keepaspectratio]{src/assets/Elyes Darouich.png}};
+        \draw[primary, line width=3pt] (0,0) circle (1.1cm);
+        \draw[secondary, line width=1pt] (0,0) circle (1.25cm);
+      \end{tikzpicture}
+    \end{minipage}%
+    \begin{minipage}{0.75\textwidth}
+      \raggedright
+      {\Huge\bfseries\color{primary} Elyes Darouich} \\[8pt]
+      {\Large\color{secondary} Mobile Software Engineer} \\[8pt]
+      {\large\color{darkgray} 5th Year Engineering Student at ESPRIT} \\[12pt]
+      
+      % Contact information with icons
+      \begin{multicols}{2}
+        \small
+        \color{darkgray}
+        \faPhone\ +216 94 906 400 \\
+        \faEnvelope\ skyrexcgaming@gmail.com \\
+        \faMapMarker\ Bizerte, Tunisia \\
+        \faLinkedin\ linkedin.com/in/elyesdarouich \\
+        \faGithub\ github.com/ElyesD1 \\
+        \faGlobe\ \href{https://elyesdarouichportflio.vercel.app}{Check my Portfolio} \\
+        \faBirthdayCake\ 23 years old
+      \end{multicols}
+    \end{minipage}
+  \end{tcolorbox}
+\end{center}
+
+\vspace{10pt}
+
+%----------PROFESSIONAL SUMMARY----------
+\section{Professional Summary}
+\begin{infobox}
+\large
+Passionate mobile software engineer in 5th year at ESPRIT (3ème année cycle d'ingénieur), specializing in cross-platform mobile development. Expert in iOS (SwiftUI, UIKit), Android (Kotlin), Flutter, and full-stack web development with React, NestJS, Next.js, and Spring Boot. Experienced in AI/ML integration, DevOps practices, and agile methodologies with proven track record in enterprise-level projects and innovative personal applications.
+\end{infobox}
+
+%----------TECHNICAL SKILLS----------
+\section{Technical Skills}
+
+\subsection{Programming Languages}
+\skillCategory{Mobile \& Native}{Java, Kotlin, Swift, Dart/Flutter, Objective-C}
+\skillCategory{Web \& Backend}{JavaScript, TypeScript, PHP, Python, C++, C}
+\skillCategory{Database}{SQL, NoSQL, MongoDB, MySQL, Firebase, SQLite}
+
+\subsection{Mobile Development}
+\skillCategory{iOS Development}{SwiftUI, UIKit, Core Data, MapKit, iOS SDK, Xcode}
+\skillCategory{Android Development}{Kotlin, Java, Android SDK, Jetpack Compose, Android Studio}
+\skillCategory{Cross-Platform}{Flutter, Dart, React Native, Xamarin}
+
+\subsection{Web \& Backend Technologies}
+\skillCategory{Frontend}{React, Next.js, Vue.js, HTML5, CSS3, Bootstrap, Tailwind CSS}
+\skillCategory{Backend}{NestJS, Node.js, Spring Boot, .NET, Symfony, Express.js}
+\skillCategory{APIs}{REST, GraphQL, WebSockets, Socket.IO, Microservices}
+
+\subsection{Cloud \& DevOps}
+\skillCategory{Cloud Platforms}{AWS, Google Cloud, Firebase, Vercel}
+\skillCategory{DevOps}{Docker, Kubernetes, CI/CD, GitHub Actions, Jenkins}
+\skillCategory{Tools}{Git/GitHub, Linux, PowerBI, Arduino, Postman}
+
+\subsection{AI \& Machine Learning}
+\skillCategory{AI Integration}{Google Gemini API, OpenAI GPT, TensorFlow Lite}
+\skillCategory{ML Concepts}{Natural Language Processing, Computer Vision, Deep Learning}
+
+\subsection{Methodologies \& Practices}
+\skillCategory{Development}{Agile/Scrum, Test-Driven Development, Clean Architecture}
+\skillCategory{Design}{UML, Figma, Adobe XD, Responsive Design, UI/UX Principles}
+
+%----------EXPERIENCE----------
+\section{Professional Experience}
+
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Engineering Intern - Mobile \& Backend Development}{Dec 2024 - Feb 2025}
+    {Talan Tunisia}{Tunis, Tunisia}
+    \resumeItemListStart
+      \resumeItem{Designed and developed \textbf{ProjectFlow} - a comprehensive cross-platform project management platform using Flutter \& NestJS architecture}
+      \resumeItem{Implemented robust authentication system with JWT + Google OAuth integration and role-based access control}
+      \resumeItem{Built responsive Kanban board with drag-and-drop functionality across mobile, web, and desktop platforms}
+      \resumeItem{Integrated real-time collaboration features using WebSockets and Socket.IO for seamless team communication}
+      \resumeItem{Developed AI Assistant powered by Google Gemini 2.0 Flash for intelligent task automation and project insights}
+      \resumeItem{Implemented comprehensive DevOps pipeline with Docker containerization, GitHub Actions, and Nginx deployment}
+      \resumeItem{Achieved exceptional performance with API response times <150ms and stable performance for 100+ concurrent users}
+      \resumeItem{Contributed to 78\% test coverage with comprehensive unit and integration testing using Jest and Flutter Test}
+      \resumeItem{Sprint management and analytics dashboard implementation with real-time data visualization}
+    \resumeItemListEnd
+
+\newpage
+
+  \resumeSubheading
+    {Flutter Developer Intern}{Summer 2023}
+    {Vatech WABAG}{Tunis, Tunisia}
+    \resumeItemListStart
+      \resumeItem{Developed comprehensive Flutter application for automating employee leave management processes}
+      \resumeItem{Built and integrated RESTful API for seamless backend communication and real-time data processing}
+      \resumeItem{Designed intuitive user interface with real-time push notifications and status updates}
+      \resumeItem{Collaborated extensively with HR team to gather functional requirements and implement business logic}
+      \resumeItem{Implemented secure authentication system with role-based access control for different user types}
+      \resumeItem{Optimized app performance and user experience across Android and iOS platforms}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Industrial Trainee}{Summer 2022}
+    {Vatech WABAG}{Tunis, Tunisia}
+    \resumeItemListStart
+      \resumeItem{Gained comprehensive understanding of company management and organizational processes}
+      \resumeItem{Developed strong teamwork and internal communication skills through cross-functional collaboration}
+      \resumeItem{Learned complete IT project lifecycle in enterprise environment from planning to deployment}
+      \resumeItem{Participated actively in cross-functional team meetings and strategic planning sessions}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------PROJECTS----------
+\section{Key Projects}
+
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{ProjectFlow - AI Project Management Platform}}{2024-2025}
+    \resumeItemListStart
+      \resumeItem{\textbf{Technologies:} Flutter, NestJS, MongoDB, Docker, Google Gemini AI, WebSockets, JWT, OAuth}
+      \resumeItem{Cross-platform project management solution with intelligent AI integration for task automation}
+      \resumeItem{Real-time Kanban boards with drag-and-drop functionality across mobile, web, and desktop platforms}
+      \resumeItem{AI assistant for automated task creation, deadline suggestions, and project performance insights}
+      \resumeItem{WebSocket-powered real-time collaboration with instant updates and team communication features}
+      \resumeItem{Comprehensive user management with role-based access control and Google OAuth integration}
+      \resumeItem{Advanced analytics dashboard with sprint management and performance tracking}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Riftpedia - League of Legends Match Tracker}}{2024}
+    \resumeItemListStart
+      \resumeItem{\textbf{Technologies:} SwiftUI, MapKit, Riot Games API, iOS SDK, Core Data}
+      \resumeItem{Comprehensive iOS application for tracking League of Legends match statistics and game analysis}
+      \resumeItem{Interactive Runeterra map integration with match location visualization and champion analytics}
+      \resumeItem{Detailed match statistics with performance analysis and historical data tracking}
+      \resumeItem{Champion build recommendations based on current meta analysis and win rate statistics}
+      \resumeItem{Real-time match tracking with live game updates and post-game detailed breakdowns}
+      \resumeItem{Social features for comparing performance with friends and sharing match highlights}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Employee Leave Management System}}{2023}
+    \resumeItemListStart
+      \resumeItem{\textbf{Technologies:} Flutter, REST API, Firebase, Push Notifications, Material Design}
+      \resumeItem{Comprehensive leave management automation system for enterprise-level deployment}
+      \resumeItem{Automated leave request and approval workflow with multi-level authorization}
+      \resumeItem{Real-time notifications and status updates for all stakeholders}
+      \resumeItem{Integration with HR systems and comprehensive reporting dashboard}
+      \resumeItem{Role-based access control with different interfaces for employees, managers, and HR}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{E-Commerce Platform}}{2023}
+    \resumeItemListStart
+      \resumeItem{\textbf{Technologies:} React, Next.js, Node.js, MySQL, Stripe API, AWS S3}
+      \resumeItem{Full-stack e-commerce solution with modern UI/UX and secure payment processing}
+      \resumeItem{Advanced product catalog with search, filtering, and recommendation engine}
+      \resumeItem{Secure payment gateway integration with Stripe for multiple payment methods}
+      \resumeItem{Admin dashboard for inventory management, order processing, and sales analytics}
+      \resumeItem{Responsive design optimized for desktop, tablet, and mobile devices}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{University Management System}}{2022}
+    \resumeItemListStart
+      \resumeItem{\textbf{Technologies:} Java, Spring Boot, MySQL, Thymeleaf, Bootstrap}
+      \resumeItem{Comprehensive academic management system for student and faculty administration}
+      \resumeItem{Student enrollment, course management, and grade tracking functionality}
+      \resumeItem{Faculty dashboard for course creation, assignment management, and student evaluation}
+      \resumeItem{Administrative tools for semester planning, room scheduling, and academic reporting}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Content Management Website}}{2022}
+    \resumeItemListStart
+      \resumeItem{\textbf{Technologies:} PHP, Symfony, MySQL, HTML/CSS, JavaScript, Bootstrap}
+      \resumeItem{Dynamic content management system with custom admin interface}
+      \resumeItem{Responsive design optimized for all devices with modern UI components}
+      \resumeItem{User-friendly admin panel for content creation, editing, and publishing}
+      \resumeItem{Database integration with optimized queries for fast content retrieval}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{2D Game Development with SDL}}{2021}
+    \resumeItemListStart
+      \resumeItem{\textbf{Technologies:} C, SDL Library, Game Physics, Custom Graphics Engine}
+      \resumeItem{Custom 2D video game with advanced game mechanics and collision detection system}
+      \resumeItem{Comprehensive scoring system with level progression and difficulty scaling}
+      \resumeItem{Custom level design tools and asset creation pipeline}
+      \resumeItem{Optimized game physics engine for smooth character movement and interactions}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\newpage
+
+%----------EDUCATION----------
+\section{Education}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Computer Engineering - Mobile Development Specialization}{2021 -- Present}
+    {ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)}{Ariana, Tunisia}
+    \resumeItemListStart
+      \resumeItem{Currently in 5th year (3ème année cycle d'ingénieur) with specialization in mobile application development}
+      \resumeItem{Completed 4th year engineering internship at Talan Tunisia developing ProjectFlow platform}
+      \resumeItem{Advanced coursework in software architecture, AI integration, system design, and enterprise development}
+      \resumeItem{Hands-on experience with modern development frameworks, DevOps practices, and agile methodologies}
+      \resumeItem{Active participation in hackathons, programming competitions, and technical workshops}
+      \resumeItem{Strong academic foundation in algorithms, data structures, databases, and software engineering principles}
+      \resumeItem{Cross-platform development expertise gained through comprehensive mobile development curriculum}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Baccalauréat in Computer Science}{2021}
+    {Lycée Jeune Fille}{Tunisia}
+    \resumeItemListStart
+      \resumeItem{Graduated with specialization in Computer Science and advanced Mathematics}
+      \resumeItem{Strong foundation in programming fundamentals, logical thinking, and problem-solving methodologies}
+      \resumeItem{Active participation in national mathematics and computer science competitions}
+      \resumeItem{Early development of passion for software development and innovative technology solutions}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------LANGUAGES----------
+\section{Languages}
+\begin{multicols}{3}
+\skillCategory{Arabic}{Native Speaker}
+\skillCategory{French}{Advanced (B2)}
+\skillCategory{English}{Fluent (C1)}
+\end{multicols}
+
+%----------CERTIFICATES----------
+\section{Certificates}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{AWS Academy Graduate - Cloud Foundations}}{2025}
+    \resumeItemListStart
+      \resumeItem{Completed comprehensive AWS Cloud Foundations training program}
+      \resumeItem{Earned AWS Academy Graduate Training Badge demonstrating cloud computing proficiency}
+      \resumeItem{Gained expertise in AWS core services, cloud architecture, and security best practices}
+      \resumeItem{Practical experience with EC2, S3, RDS, VPC, and other essential AWS services}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Hashgraph Developer Course}}{2025}
+    \resumeItemListStart
+      \resumeItem{Successfully completed 100\% of the Hashgraph Developer Course curriculum}
+      \resumeItem{Comprehensive training in distributed ledger technology and Hedera Hashgraph platform}
+      \resumeItem{Hands-on experience with smart contracts, consensus algorithms, and decentralized applications}
+      \resumeItem{Practical knowledge of building blockchain solutions using Hashgraph technology}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Generative AI with Diffusion Models}}{2025}
+    \resumeItemListStart
+      \resumeItem{Certificate of Competency in Generative AI with Diffusion Models}
+      \resumeItem{Advanced understanding of diffusion models for generative AI applications}
+      \resumeItem{Practical experience with image generation, text-to-image synthesis, and AI model training}
+      \resumeItem{Application of cutting-edge AI techniques in creative and technical projects}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------ACHIEVEMENTS----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeItem{Successfully completed engineering internship at Talan Tunisia with excellent performance review}
+  \resumeItem{Participated in multiple hackathons and programming competitions at national and university level}
+  \resumeItem{Contributed to open-source projects on GitHub with focus on mobile development and AI integration}
+  \resumeItem{Self-taught in advanced AI/ML technologies including Google Gemini API and OpenAI integration}
+  \resumeItem{Mentored junior students in mobile development and software engineering best practices}
+  \resumeItem{Active member of ESPRIT programming clubs and technical communities}
+\resumeSubHeadingListEnd
+
+%----------INTERESTS & ACTIVITIES----------
+\section{Interests \& Activities}
+\begin{multicols}{2}
+\skillCategory{Technical Interests}{Problem Solving, AI \& Machine Learning, Mobile Innovation}
+\skillCategory{Professional Development}{Hackathons, Programming Competitions, Open Source}
+\skillCategory{Personal Interests}{Gaming, Technology Trends, Continuous Learning}
+\skillCategory{Community}{Mentoring, Technical Workshops, Student Organizations}
+\end{multicols}
+
+\end{document}

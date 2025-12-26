@@ -31,7 +31,8 @@ const Projects = () => {
         category: 'mobile',
         technologies: ['Swift (iOS)', 'Kotlin (Android)', 'NestJS', 'MongoDB', 'Flutter'],
         year: '2024-2025',
-        color: 'primary'
+        color: 'primary',
+        github: ['https://github.com/ElyesD1/Dialex-Front-IOS', 'https://github.com/ElyesD1/Dialex-Backed']
       },
       {
         id: 2,
@@ -39,7 +40,8 @@ const Projects = () => {
         category: 'mobile',
         technologies: ['Flutter', 'NestJS', 'MongoDB', 'Gemini AI', 'Geolocation'],
         year: '2024-2025',
-        color: 'secondary'
+        color: 'secondary',
+        github: ['https://github.com/Tayaa01/Nomadly', 'https://github.com/Tayaa01/Nomadly-back']
       },
       {
         id: 3,
@@ -47,7 +49,8 @@ const Projects = () => {
         category: 'web',
         technologies: ['Symfony', 'JavaFX', 'MySQL', 'PHP'],
         year: '2023',
-        color: 'success'
+        color: 'success',
+        github: ['https://github.com/rouazayani211/Pi_Symfony']
       },
       {
         id: 4,
@@ -84,7 +87,8 @@ const Projects = () => {
         technologies: ['Flutter', 'NestJS', 'MongoDB', 'Docker', 'AI/Gemini', 'WebSocket'],
         year: '2025',
         company: 'Talan Tunisia',
-        color: 'primary'
+        color: 'primary',
+        github: ['https://github.com/ElyesD1/Project-management-tool-mobile-front']
       },
       {
         id: 8,
@@ -106,6 +110,15 @@ const Projects = () => {
         technologies: ['SwiftUI', 'MapKit', 'Riot API', 'iOS'],
         year: '2024',
         color: 'primary'
+      },
+      {
+        id: 10,
+        key: 'squadlink',
+        category: 'web',
+        technologies: ['Next.js', 'NestJS', 'MongoDB', 'Socket.io', 'Riot API', 'Discord Bot'],
+        year: '2025-2026',
+        color: 'accent',
+        github: ['https://github.com/ElyesD1/SquadLink']
       }
     ]
   }
@@ -261,6 +274,23 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {project.github && (
+                  <div className="project-links">
+                    {project.github.map((link, i) => (
+                      <a
+                        key={i}
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        <Github size={18} />
+                        {project.github.length > 1 ? `GitHub ${i + 1}` : 'GitHub'}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -315,6 +345,23 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {project.github && (
+                  <div className="project-links">
+                    {project.github.map((link, i) => (
+                      <a
+                        key={i}
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        <Github size={18} />
+                        {project.github.length > 1 ? `GitHub ${i + 1}` : 'GitHub'}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -386,6 +433,23 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {project.github && (
+                  <div className="project-links">
+                    {project.github.map((link, i) => (
+                      <a
+                        key={i}
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        <Github size={18} />
+                        {project.github.length > 1 ? `GitHub ${i + 1}` : 'GitHub'}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

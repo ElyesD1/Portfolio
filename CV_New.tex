@@ -1,0 +1,205 @@
+%-------------------------
+% Resume - Elyes Darouich
+% Simple One-Page Style
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+% Page margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Color definitions
+\definecolor{darkgray}{RGB}{64, 64, 64}
+\definecolor{lightgray}{RGB}{128, 128, 128}
+\definecolor{sectioncolor}{RGB}{0, 102, 204}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large\color{sectioncolor}\bfseries
+}{}{0em}{}[\color{sectioncolor}\titlerule \vspace{-8pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=-2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Elyes Darouich} \\ \vspace{3pt}
+    \small \textbf{Software Engineer --- Full-Stack Developer --- Problem Solver}
+    \\ \vspace{5pt}
+    \small 
+    \faMapMarker\ Bizerte, Tunisia \quad
+    \faPhone\ +216 94 906 400 \quad
+    \faEnvelope\ \href{mailto:skyrexcgaming@gmail.com}{skyrexcgaming@gmail.com}
+    \\ \vspace{2pt}
+    \small
+    \faLinkedin\ \href{https://linkedin.com/in/elyesdarouich}{linkedin.com/in/elyesdarouich} \quad
+    \faGithub\ \href{https://github.com/ElyesD1}{github.com/ElyesD1} \quad
+    \faGlobe\ \href{https://elyesdarouichportfolio.vercel.app}{Portfolio}
+\end{center}
+
+%----------PROFESSIONAL SUMMARY----------
+\section{Professional Summary}
+\small{Mobile Software Engineer with expertise in iOS (SwiftUI, UIKit), Android (Kotlin), and cross-platform development (Flutter). Proficient in full-stack web development with React, NestJS, Next.js, and Spring Boot. Experienced in AI/ML integration, DevOps practices, and agile methodologies.}
+
+%----------TECHNICAL EXPERTISE----------
+\section{Technical Expertise}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Mobile Development}{: Swift (SwiftUI, UIKit, Core Data, MapKit), Kotlin (Jetpack, Android SDK), Flutter, Dart} \\
+     \textbf{Frontend \& Web}{: TypeScript, React, Next.js, JavaScript, HTML/CSS, Tailwind CSS} \\
+     \textbf{Backend \& APIs}{: NestJS, Node.js, Express, REST APIs, WebSockets, GraphQL} \\
+     \textbf{Databases}{: MongoDB, Firebase, MySQL, PostgreSQL} \\
+     \textbf{Cloud \& DevOps}{: Docker, GitHub Actions, Vercel, Nginx, Linux} \\
+     \textbf{AI Integration}{: Google Gemini API, OpenAI, TensorFlow Lite} \\
+     \textbf{Tools}{: Git/GitHub, Figma, Postman, Jira, VS Code, Xcode, Android Studio}
+    }}
+\end{itemize}
+
+%----------EXPERIENCE----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mobile \& Backend Engineering Intern}{Summer 2025}
+      {Talan Tunisia}{Tunis, Tunisia}
+      \resumeItemListStart
+        \resumeItem{Built ProjectFlow, a cross-platform project management platform using Flutter and NestJS deployed in production.}
+        \resumeItem{Implemented real-time collaboration with WebSockets \& Socket.IO for live updates, chat, and Kanban boards.}
+        \resumeItem{Integrated Google OAuth + JWT authentication with role-based access control and AI assistant using Gemini 2.0.}
+        \resumeItem{Set up Dockerized deployments with GitHub Actions CI/CD achieving <150ms API response time for 100+ users.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Flutter Developer Intern}{Summer 2023}
+      {Vatech WABAG}{Tunis, Tunisia}
+      \resumeItemListStart
+        \resumeItem{Developed cross-platform employee leave management app with secure authentication and role-based access.}
+        \resumeItem{Integrated Firebase real-time push notifications and optimized performance for Android and iOS.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------EDUCATION----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Computer Engineering - Mobile Development}{2021 -- Present}
+      {ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)}{Ariana, Tunisia}
+      \resumeItemListStart
+        \resumeItem{5th year student, specialized in mobile development and cross-platform solutions (iOS, Android, Flutter).}
+        \resumeItem{Advanced coursework in software architecture, AI integration, DevOps, and agile methodologies.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Baccalauréat in Computer Science}{2020 -- 2021}
+      {Lycée Jeune Fille}{Bizerte, Tunisia}
+      \resumeItemListStart
+        \resumeItem{Graduated with specialization in Computer Science and Mathematics.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------KEY PROJECTS----------
+\section{Key Projects}
+  \resumeSubHeadingListStart
+  
+    \resumeProjectHeading
+      {\textbf{SquadLink} | \emph{Next.js, NestJS, MongoDB, Socket.io, Riot API, Discord Bot}}{2025--2026}
+      \resumeItemListStart
+        \resumeItem{Full-stack esports platform with real-time matchmaking, live tracking, and player analytics.}
+        \resumeItem{Built WebSocket notifications and automated Discord bot with voice integration and smart MongoDB caching.}
+      \resumeItemListEnd
+      
+    \resumeProjectHeading
+      {\textbf{ProjectFlow} | \emph{Flutter, NestJS, MongoDB, Gemini AI, WebSockets}}{2024--2025}
+      \resumeItemListStart
+        \resumeItem{AI-powered project management platform with real-time Kanban, drag-and-drop, analytics dashboard, and team communication.}
+      \resumeItemListEnd
+      
+    \resumeProjectHeading
+      {\textbf{Dialex} | \emph{SwiftUI, Kotlin, NestJS, MongoDB}}{2024--2025}
+      \resumeItemListStart
+        \resumeItem{Cross-platform language learning app with interactive exercises, voice recognition, and gamification features.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------EDUCATION----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Computer Engineering --- Mobile Development Specialization}{2021 -- Present}
+      {ESPRIT, Tunisia}{5th Year Engineering Student}
+  \resumeSubHeadingListEnd
+
+%----------LANGUAGES & ADDITIONAL----------
+\section{Languages \& Additional}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Arabic (Native), French (B2), English (C1)} \\
+     \textbf{Certifications}{: AWS Academy Graduate --- Cloud Foundations, Hashgraph Developer Certificate}
+    }}
+\end{itemize}
+
+\end{document}

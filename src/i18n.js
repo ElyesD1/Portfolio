@@ -197,6 +197,18 @@ const resources = {
               "Open-source project available on GitHub"
             ]
           },
+          squadlink: {
+            title: "SquadLink - League of Legends Team Finder",
+            description: "Full-stack web platform for finding League of Legends teammates with real-time matchmaking and Discord integration",
+            features: [
+              "Real-time team formation with Socket.io",
+              "Riot Games API integration for player stats",
+              "Discord bot for community engagement",
+              "Player ranking and role-based matchmaking",
+              "Live chat and notification system",
+              "Modern Next.js frontend with responsive design"
+            ]
+          },
           // Academic Projects
           languagelearning: {
             title: "Multi-platform Language Learning Application",
@@ -564,6 +576,18 @@ const resources = {
               "Intégration API Riot Games avec données de matchs temps réel",
               "Historique des matchs et insights détaillés du gameplay",
               "Projet open-source disponible sur GitHub"
+            ]
+          },
+          squadlink: {
+            title: "SquadLink - Recherche d'Équipe League of Legends",
+            description: "Plateforme web full-stack pour trouver des coéquipiers League of Legends avec matchmaking temps réel et intégration Discord",
+            features: [
+              "Formation d'équipe en temps réel avec Socket.io",
+              "Intégration API Riot Games pour statistiques joueurs",
+              "Bot Discord pour engagement communautaire",
+              "Classement des joueurs et matchmaking basé sur rôles",
+              "Chat en direct et système de notifications",
+              "Frontend Next.js moderne avec design responsive"
             ]
           },
           // Projets Académiques
