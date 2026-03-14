@@ -19,9 +19,9 @@ const resources = {
       hero: {
         greeting: "Hi, I'm",
         name: "Elyes Darouich",
-        title: "Mobile Software Engineer",
-        subtitle: "Passionate about crafting exceptional mobile experiences",
-        description: "5th year Engineering Student at ESPRIT, specializing in mobile development with Flutter, Swift, and Kotlin. Creating innovative solutions that bridge technology and user experience.",
+        title: "Software Engineer",
+        subtitle: "Building across the full stack — frontend, mobile, AI systems",
+        description: "5th year Engineering Student at ESPRIT. Frontend-first, but fluent across the full stack — mobile (Flutter, Swift, Kotlin), backend (FastAPI, NestJS), and production AI systems (LangGraph, multi-agent pipelines, RAG). I build things that work at every layer.",
         cta: "Get In Touch",
         downloadCV: "Download CV",
         stats: {
@@ -40,7 +40,7 @@ const resources = {
         age: "23 years old",
         email: "skyrexcgaming@gmail.com",
         phone: "+216 94 906 400",
-        description: "Mobile Software Engineer with expertise in iOS (SwiftUI, UIKit), Android (Kotlin), and cross-platform development (Flutter). Proficient in full-stack web development with React, NestJS, Next.js, and Spring Boot. Experienced in AI/ML integration, DevOps practices, and agile methodologies.",
+        description: "Software Engineer with a frontend and mobile core — React, Flutter, SwiftUI — but comfortable across the entire stack. Build backends in FastAPI and NestJS, architect production AI systems with LangGraph multi-agent pipelines and RAG, and work across mobile (iOS, Android), web, and infrastructure (Docker, CI/CD). Leaning increasingly toward AI engineering while keeping strong roots in great UI.",
         languages: {
           title: "Languages",
           arabic: "Arabic - Native",
@@ -182,7 +182,35 @@ const resources = {
               "Secure authentication and role-based access control"
             ]
           },
-          // Personal Projects  
+          sentinelai: {
+            title: "SentinelAI — Geopolitical Market Intelligence Platform",
+            description: "Production-grade multi-agent AI system analyzing geopolitical & macroeconomic risks for Gold, Oil, S&P 500, BTC and ETH using a 7-agent LangGraph pipeline — full analysis in under 30 seconds",
+            features: [
+              "7-agent LangGraph pipeline: routing → geo intel → sentiment → per-asset analysis → quant/risk → critic → synthesis",
+              "$0 LLM cost via free tiers across Groq, OpenRouter & Together.ai with multi-key rotation",
+              "Monte Carlo simulation and GARCH volatility modeling for quantitative risk assessment",
+              "Semantic news search via Qdrant vector embeddings (GDELT + FRED data sources)",
+              "JWT + RBAC (5 roles), reCAPTCHA v3, Cloudflare Turnstile, WAF security hardening",
+              "Async parallelism achieving <30s end-to-end analysis pipeline",
+              "PDF report generation with full source attribution",
+              "Models: Mistral 7B, DeepSeek-R1, DeepSeek-V3, Qwen2.5-72B, Llama 3.3 70B"
+            ]
+          },
+          scribeai: {
+            title: "ScribeAI — Meeting Intelligence Platform",
+            description: "Real-time speech-to-text and AI analysis platform that turns meetings into structured documentation with speaker diarization, 9-step AI pipeline, and auto-generated architecture diagrams",
+            features: [
+              "Real-time transcription with ElevenLabs Scribe v2 and speaker diarization (EN, FR, AR, Tunisian dialect)",
+              "Multi-language support including Arabic code-switching and RTL PDF rendering",
+              "9-step AI pipeline: requirements extraction, ambiguity detection, architecture diagram generation",
+              "RAG pipeline with ChromaDB + Sentence-Transformers (MiniLM-L6-v2) for context-aware analysis",
+              "Auto-generated Mermaid.js architecture diagrams with CLI rendering",
+              "PDF export — professional A4 reports combining all analysis sections",
+              "Conversational refinement chat interface for iterative improvement of diagrams & requirements",
+              "Three-service architecture: React UI → Flask WebSocket + FastAPI + Ollama (zero cloud inference cost)"
+            ]
+          },
+          // Personal Projects
           riftpedia: {
             title: "Riftpedia - League of Legends Match Tracker",
             description: "iOS application built with SwiftUI for tracking League of Legends match statistics and game analysis",
@@ -375,7 +403,7 @@ const resources = {
         loading: "Loading...",
         loadingPortfolio: "Loading Portfolio...",
         name: "Elyes Darouich",
-        title: "Mobile Software Engineer",
+        title: "Software Engineer",
         footer: "Crafted with ❤️ and React",
         error: "Something went wrong",
         retry: "Retry",
@@ -402,9 +430,9 @@ const resources = {
       hero: {
         greeting: "Salut, je suis",
         name: "Elyes Darouich",
-        title: "Ingénieur Logiciel Mobile",
-        subtitle: "Passionné par la création d'expériences mobiles exceptionnelles",
-        description: "Étudiant en 5ème année d'ingénierie à ESPRIT (3ème année cycle d'ingénieur), spécialisé dans le développement mobile avec Flutter, Swift et Kotlin. Je crée des solutions innovantes qui lient technologie et expérience utilisateur.",
+        title: "Ingénieur Logiciel",
+        subtitle: "Frontend, mobile, backend et IA — sur toute la stack",
+        description: "Étudiant en 5ème année d'ingénierie à ESPRIT. Ancrage frontend et mobile, mais polyvalent sur toute la stack — Flutter, Swift, React en frontend; FastAPI, NestJS en backend; LangGraph et pipelines multi-agents en IA. Je construis des systèmes qui fonctionnent à chaque couche.",
         cta: "Me Contacter",
         downloadCV: "Télécharger CV",
         stats: {
@@ -423,7 +451,7 @@ const resources = {
         age: "23 ans",
         email: "skyrexcgaming@gmail.com", 
         phone: "+216 94 906 400",
-        description: "Ingénieur Logiciel Mobile avec expertise en iOS (SwiftUI, UIKit), Android (Kotlin), et développement multiplateforme (Flutter). Compétent en développement web full-stack avec React, NestJS, Next.js, et Spring Boot. Expérimenté en intégration IA/ML, pratiques DevOps, et méthodologies agiles.",
+        description: "Ingénieur Logiciel avec un ancrage frontend et mobile — React, Flutter, SwiftUI — mais à l'aise sur toute la stack. Backend en FastAPI et NestJS, systèmes IA de production avec LangGraph et RAG, mobile iOS et Android, infrastructure Docker et CI/CD. De plus en plus orienté ingénierie IA, tout en gardant de solides bases en UI.",
         languages: {
           title: "Langues",
           arabic: "Arabe - Langue maternelle",
@@ -561,6 +589,34 @@ const resources = {
               "Interface utilisateur intuitive avec notifications temps réel",
               "Collaboration avec équipe RH pour exigences fonctionnelles",
               "Authentification sécurisée et contrôle d'accès basé sur rôles"
+            ]
+          },
+          sentinelai: {
+            title: "SentinelAI — Plateforme Intelligence de Marché Géopolitique",
+            description: "Système IA multi-agents de production analysant les risques géopolitiques et macroéconomiques pour l'Or, le Pétrole, S&P 500, BTC et ETH via un pipeline LangGraph à 7 agents — analyse complète en moins de 30 secondes",
+            features: [
+              "Pipeline LangGraph à 7 agents : routage → intelligence géo → sentiment → analyse par actif → quantitatif/risque → critique → synthèse",
+              "Coût LLM $0 via niveaux gratuits Groq, OpenRouter & Together.ai avec rotation multi-clés",
+              "Simulation Monte Carlo et modélisation de volatilité GARCH pour évaluation quantitative des risques",
+              "Recherche sémantique via embeddings vectoriels Qdrant (sources GDELT + FRED)",
+              "JWT + RBAC (5 rôles), reCAPTCHA v3, Cloudflare Turnstile, règles WAF",
+              "Parallélisme asynchrone atteignant <30s de pipeline d'analyse complet",
+              "Génération de rapports PDF avec attribution complète des sources",
+              "Modèles : Mistral 7B, DeepSeek-R1, DeepSeek-V3, Qwen2.5-72B, Llama 3.3 70B"
+            ]
+          },
+          scribeai: {
+            title: "ScribeAI — Plateforme Intelligence de Réunions",
+            description: "Plateforme de transcription vocale temps réel et d'analyse IA transformant les réunions en documentation structurée avec diarisation des locuteurs, pipeline IA en 9 étapes et diagrammes d'architecture auto-générés",
+            features: [
+              "Transcription temps réel avec ElevenLabs Scribe v2 et diarisation des locuteurs (EN, FR, AR, dialecte tunisien)",
+              "Support multilingue incluant alternance codique arabe et rendu PDF RTL",
+              "Pipeline IA en 9 étapes : extraction d'exigences, détection d'ambiguïtés, génération de diagrammes",
+              "Pipeline RAG avec ChromaDB + Sentence-Transformers (MiniLM-L6-v2) pour analyse contextuelle",
+              "Diagrammes d'architecture Mermaid.js auto-générés avec rendu CLI",
+              "Export PDF — rapports A4 professionnels combinant toutes les sections d'analyse",
+              "Interface de raffinement conversationnelle pour amélioration itérative des diagrammes et exigences",
+              "Architecture trois services : React UI → Flask WebSocket + FastAPI + Ollama (inférence locale, zéro coût cloud)"
             ]
           },
           // Projets Personnels
@@ -756,7 +812,7 @@ const resources = {
         loading: "Chargement...",
         loadingPortfolio: "Chargement Portfolio...",
         name: "Elyes Darouich",
-        title: "Ingénieur Logiciel Mobile",
+        title: "Ingénieur Logiciel",
         footer: "Conçu avec ❤️ et React",
         error: "Une erreur s'est produite",
         retry: "Réessayer",

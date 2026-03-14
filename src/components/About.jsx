@@ -1,158 +1,118 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { MapPin, Mail, Phone, Calendar, Code } from 'lucide-react'
+import { MapPin, Mail, Phone } from 'lucide-react'
 import profileImage from '../assets/Elyes Darouich.png'
 import './About.css'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] },
+})
 
 const About = () => {
   const { t } = useTranslation()
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  }
-
   return (
     <section id="about" className="section about-section">
       <div className="container">
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="section-title gradient-text">{t('about.title')}</h2>
-          <p className="section-subtitle">{t('about.subtitle')}</p>
+        {/* Label */}
+        <motion.div className="about-label" {...fadeUp()}>
+          <span className="section-label">{t('about.title')}</span>
         </motion.div>
 
-        <motion.div
-          className="about-content"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {/* Profile Section */}
-          <div className="about-grid">
-            <motion.div className="about-profile" variants={itemVariants}>
-              <div className="profile-card glass">
-                <div className="profile-image-container">
-                  <div className="profile-rings">
-                    <div className="ring ring-1"></div>
-                    <div className="ring ring-2"></div>
-                  </div>
-                  <img
-                    src={profileImage}
-                    alt="Elyes Darouich"
-                    className="profile-image"
-                    onError={(e) => {
-                      e.target.style.display = 'none'
-                      e.target.nextSibling.style.display = 'flex'
-                    }}
-                  />
-                  <div className="profile-fallback" style={{ display: 'none' }}>
-                    <span className="gradient-text">ED</span>
-                  </div>
-                </div>
-                <div className="profile-info">
-                  <h3 className="gradient-text">{t('common.name')}</h3>
-                  <p className="profile-title">{t('common.title')}</p>
-                  <div className="profile-details">
-                    <div className="detail-item">
-                      <MapPin size={16} />
-                      <span>{t('about.location')}</span>
-                    </div>
-                    <div className="detail-item">
-                      <Calendar size={16} />
-                      <span>{t('about.age')}</span>
-                    </div>
-                    <div className="detail-item">
-                      <Mail size={16} />
-                      <span>{t('about.email')}</span>
-                    </div>
-                    <div className="detail-item">
-                      <Phone size={16} />
-                      <span>{t('about.phone')}</span>
-                    </div>
-                  </div>
-                </div>
+        <div className="about-split">
+          {/* Left — photo */}
+          <motion.div className="about-photo-col" {...fadeUp(0.1)}>
+            <div className="about-photo-wrap">
+              <img
+                src={profileImage}
+                alt="Elyes Darouich"
+                className="about-photo"
+                onError={(e) => { e.target.style.display = 'none' }}
+              />
+              <div className="about-photo-border" />
+            </div>
+            <div className="about-photo-info">
+              <div className="about-name-block">
+                <span className="about-name">ELYES DAROUICH</span>
+                <span className="about-role">// Software Engineer</span>
               </div>
-            </motion.div>
-
-            <motion.div className="about-description" variants={itemVariants}>
-              <div className="description-card glass">
-                <div className="card-header">
-                  <Code className="header-icon" />
-                  <h3>About Me</h3>
-                </div>
-                <p className="description-text">
-                  {t('about.description')}
-                </p>
-                <div className="languages-section">
-                  <h4>{t('about.languages.title')}</h4>
-                  <div className="languages-grid">
-                    <div className="language-item">
-                      <span className="language-flag">🇹🇳</span>
-                      <span>{t('about.languages.arabic')}</span>
-                    </div>
-                    <div className="language-item">
-                      <span className="language-flag">🇫🇷</span>
-                      <span>{t('about.languages.french')}</span>
-                    </div>
-                    <div className="language-item">
-                      <span className="language-flag">🇺🇸</span>
-                      <span>{t('about.languages.english')}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Interests Section */}
-          <motion.div className="interests-section" variants={itemVariants}>
-            <div className="interests-card glass">
-              <h4 className="gradient-text">{t('about.interests.title')}</h4>
-              <div className="interests-grid">
-                <div className="interest-item">
-                  <span className="interest-emoji">🧩</span>
-                  <span>{t('about.interests.problemSolving')}</span>
-                </div>
-                <div className="interest-item">
-                  <span className="interest-emoji">📱</span>
-                  <span>{t('about.interests.mobileDev')}</span>
-                </div>
-                <div className="interest-item">
-                  <span className="interest-emoji">🏆</span>
-                  <span>{t('about.interests.hackathons')}</span>
-                </div>
-                <div className="interest-item">
-                  <span className="interest-emoji">🤖</span>
-                  <span>{t('about.interests.aiTech')}</span>
-                </div>
+              <div className="about-location">
+                <MapPin size={12} />
+                <span>{t('about.location')}</span>
               </div>
             </div>
           </motion.div>
-        </motion.div>
+
+          {/* Right — text */}
+          <motion.div className="about-text-col" {...fadeUp(0.15)}>
+            {/* Huge heading */}
+            <h2 className="about-heading">
+              {t('about.subtitle')}
+            </h2>
+
+            <p className="about-bio">{t('about.description')}</p>
+
+            {/* Stats row */}
+            <div className="about-stats">
+              {[
+                { num: '4', label: 'Years at ESPRIT' },
+                { num: '10+', label: 'Projects Built' },
+                { num: '4', label: 'Internships' },
+              ].map((s) => (
+                <div key={s.label} className="about-stat">
+                  <span className="about-stat-num">{s.num}</span>
+                  <span className="about-stat-label">{s.label}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="about-divider" />
+
+            {/* Languages + Contact */}
+            <div className="about-meta-row">
+              <div className="about-langs">
+                <span className="about-meta-label">// {t('about.languages.title')}</span>
+                <div className="about-lang-list">
+                  {[
+                    t('about.languages.arabic'),
+                    t('about.languages.french'),
+                    t('about.languages.english'),
+                  ].map((l) => (
+                    <span key={l} className="tag">{l}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="about-contact-col">
+                <span className="about-meta-label">// Contact</span>
+                <a href="mailto:skyrexcgaming@gmail.com" className="about-contact-link">
+                  <Mail size={12} /> skyrexcgaming@gmail.com
+                </a>
+                <a href="tel:+21694906400" className="about-contact-link">
+                  <Phone size={12} /> +216 94 906 400
+                </a>
+              </div>
+            </div>
+
+            {/* Interests */}
+            <div className="about-interests">
+              <span className="about-meta-label">// {t('about.interests.title')}</span>
+              <div className="about-interest-tags">
+                {[
+                  t('about.interests.problemSolving'),
+                  t('about.interests.mobileDev'),
+                  t('about.interests.hackathons'),
+                  t('about.interests.aiTech'),
+                ].map((item) => (
+                  <span key={item} className="tag tag-lime">{item}</span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )

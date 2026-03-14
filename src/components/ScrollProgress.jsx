@@ -9,11 +9,10 @@ const ScrollProgress = () => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset
       const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const scrollPercent = (scrollTop / docHeight) * 100
+      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
       setScrollProgress(scrollPercent)
     }
-
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -23,7 +22,7 @@ const ScrollProgress = () => {
         className="scroll-progress-bar"
         style={{ scaleX: scrollProgress / 100 }}
         initial={{ scaleX: 0 }}
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.08 }}
       />
     </div>
   )

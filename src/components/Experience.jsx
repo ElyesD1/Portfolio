@@ -1,204 +1,114 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Calendar, MapPin, Building, GraduationCap, Briefcase, Users, Code } from 'lucide-react'
 import './Experience.css'
+
+const ITEMS = [
+  {
+    key: 'talan',
+    type: 'internship',
+    period: 'Jul – Sep 2025',
+    location: 'Tunis, TN',
+    tech: ['Flutter', 'NestJS', 'MongoDB', 'WebSockets', 'Gemini AI', 'Docker'],
+  },
+  {
+    key: 'vatech2023',
+    type: 'internship',
+    period: 'Summer 2023',
+    location: 'Tunis, TN',
+    tech: ['Flutter', 'REST API', 'Firebase', 'Push Notifications'],
+  },
+  {
+    key: 'vatech2022',
+    type: 'internship',
+    period: 'Summer 2022',
+    location: 'Tunis, TN',
+    tech: ['Team Collaboration', 'Project Management'],
+  },
+  {
+    key: 'esprit',
+    type: 'education',
+    period: '2021 – Present',
+    location: 'Ariana, TN',
+    tech: ['Mobile Dev', 'Software Architecture', 'AI Integration', 'DevOps'],
+  },
+  {
+    key: 'bac',
+    type: 'education',
+    period: '2020 – 2021',
+    location: 'Bizerte, TN',
+    tech: ['CS', 'Mathematics', 'Programming Fundamentals'],
+  },
+]
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] },
+})
 
 const Experience = () => {
   const { t } = useTranslation()
 
-  const experiences = [
-    {
-      id: 1,
-      type: 'internship',
-      key: 'talan',
-      location: 'Tunis, Tunisia',
-      period: 'July 9 - September 9, 2025',
-      duration: '2 months',
-      technologies: ['Flutter', 'NestJS', 'MongoDB', 'WebSockets', 'Google Gemini AI', 'Docker', 'JWT', 'OAuth 2.0'],
-      icon: <Briefcase />,
-      color: 'primary'
-    },
-    {
-      id: 2,
-      type: 'internship',
-      key: 'vatech2023',
-      location: 'Tunis, Tunisia',
-      period: 'Summer 2023',
-      duration: '3 months',
-      technologies: ['Flutter', 'REST API', 'Firebase', 'Push Notifications'],
-      icon: <Code />,
-      color: 'accent'
-    },
-    {
-      id: 3,
-      type: 'internship',
-      key: 'vatech2022',
-      location: 'Tunis, Tunisia',
-      period: 'Summer 2022',
-      duration: '1 month',
-      technologies: ['Team Collaboration', 'Project Management', 'Business Analysis'],
-      icon: <Users />,
-      color: 'secondary'
-    },
-    {
-      id: 4,
-      type: 'education',
-      key: 'esprit',
-      location: 'Ariana, Tunisia',
-      period: '2021 - Present',
-      duration: '5 years',
-      technologies: ['Mobile Development', 'Software Architecture', 'AI Integration', 'DevOps', 'Agile Methodologies'],
-      icon: <GraduationCap />,
-      color: 'success'
-    },
-    {
-      id: 5,
-      type: 'education',
-      key: 'bac',
-      location: 'Bizerte, Tunisia',
-      period: '2020 - 2021',
-      duration: '1 year',
-      technologies: ['Programming Fundamentals', 'Mathematics', 'Logic'],
-      icon: <GraduationCap />,
-      color: 'info'
-    }
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { x: -50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  }
-
   return (
-    <section id="experience" className="section experience-section">
+    <section id="experience" className="section exp-section">
       <div className="container">
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="section-title gradient-text">{t('experience.title')}</h2>
-          <p className="section-subtitle">{t('experience.subtitle')}</p>
+        <motion.div className="exp-header" {...fadeUp()}>
+          <span className="section-label">Career</span>
+          <h2 className="exp-title-main">{t('experience.title')}</h2>
         </motion.div>
 
-        <motion.div
-          className="timeline-container"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="timeline-line"></div>
-          
-          {experiences.map((experience, index) => (
-            <motion.div
-              key={experience.id}
-              className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className={`timeline-dot ${experience.color}`}>
-                {experience.icon}
-              </div>
-              
-              <div className={`experience-card glass ${experience.type}`}>
-                {/* Creative Header */}
-                <div className="experience-header-top">
-                  <div className="experience-period-container">
-                    <span className={`experience-type ${experience.type}`}>
-                      {experience.type === 'internship' ? t('experience.labels.internship') : t('experience.labels.education')}
-                    </span>
-                    <div className="experience-period">
-                      <Calendar size={14} />
-                      <span>{experience.period}</span>
-                      <span className="duration">({experience.duration})</span>
-                    </div>
-                  </div>
+        {/* Changelog-style list */}
+        <div className="exp-log">
+          {ITEMS.map((item, i) => {
+            const achievements = t(`experience.content.${item.key}.achievements`, { returnObjects: true })
+            const isWork = item.type === 'internship'
+
+            return (
+              <motion.div
+                key={item.key}
+                className={`exp-entry ${isWork ? 'exp-entry-work' : 'exp-entry-edu'}`}
+                {...fadeUp(i * 0.07)}
+              >
+                {/* Left: type + period */}
+                <div className="exp-entry-meta">
+                  <span className={`exp-type-tag ${isWork ? 'exp-type-work' : 'exp-type-edu'}`}>
+                    {isWork ? 'WORK' : 'EDU'}
+                  </span>
+                  <span className="exp-period">{item.period}</span>
+                  <span className="exp-loc">{item.location}</span>
                 </div>
 
-                <div className="card-body">
-                  {/* Meta Row */}
-                  <div className="experience-meta-row">
-                    <div className="experience-title-container">
-                      <h3 className="experience-title gradient-text">
-                        {t(`experience.content.${experience.key}.title`)}
-                      </h3>
-                      <div className="experience-location">
-                        <MapPin size={16} />
-                        <span>{experience.location}</span>
-                      </div>
-                    </div>
-                    <div className="experience-company">
-                      <Building size={16} />
-                      <span>{t(`experience.content.${experience.key}.company`)}</span>
-                    </div>
+                {/* Right: content */}
+                <div className="exp-entry-body">
+                  <div className="exp-entry-head">
+                    <h3 className="exp-role">{t(`experience.content.${item.key}.title`)}</h3>
+                    <span className="exp-company">@ {t(`experience.content.${item.key}.company`)}</span>
                   </div>
 
-                  <p className="experience-description">
-                    {t(`experience.content.${experience.key}.description`)}
-                  </p>
-                  
-                  <div className="experience-achievements">
-                    <h4>{t('experience.labels.achievements')}</h4>
-                    <ul>
-                      {t(`experience.content.${experience.key}.achievements`, { returnObjects: true }).map((achievement, i) => (
-                        <motion.li
-                          key={i}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.5, delay: i * 0.1 }}
-                          viewport={{ once: true }}
-                        >
-                          {achievement}
-                        </motion.li>
+                  <p className="exp-desc">{t(`experience.content.${item.key}.description`)}</p>
+
+                  {Array.isArray(achievements) && achievements.length > 0 && (
+                    <ul className="exp-achievements">
+                      {achievements.slice(0, 4).map((a, j) => (
+                        <li key={j}>
+                          <span className="exp-bullet">→</span>
+                          {a}
+                        </li>
                       ))}
                     </ul>
-                  </div>
-                  
-                  <div className="experience-technologies">
-                    <h4>{t('experience.labels.technologies')}</h4>
-                    <div className="tech-tags">
-                      {experience.technologies.map((tech, i) => (
-                        <motion.span
-                          key={i}
-                          className="tech-tag"
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: i * 0.05 }}
-                          viewport={{ once: true }}
-                          whileHover={{ scale: 1.1 }}
-                        >
-                          {tech}
-                        </motion.span>
-                      ))}
-                    </div>
+                  )}
+
+                  <div className="exp-tech-wrap">
+                    {item.tech.map((tech) => (
+                      <span key={tech} className="tag">{tech}</span>
+                    ))}
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              </motion.div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

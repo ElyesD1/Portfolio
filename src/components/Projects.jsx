@@ -1,520 +1,375 @@
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { useState, useRef } from 'react'
-import { 
-  ExternalLink, 
-  Github, 
-  Play, 
-  Pause, 
-  Volume2, 
-  VolumeX,
-  Code,
-  Smartphone,
-  Globe,
-  Database,
-  Star,
-  Award
-} from 'lucide-react'
+import { Github } from 'lucide-react'
+import demoSentinel from '../assets/Demo-SentinelAI.mov'
+import demoScribe from '../assets/demo-scribeAi.mov'
+import demoSquadlink from '../assets/demo squadlink.mov'
 import './Projects.css'
 
+const ALL_PROJECTS = [
+  {
+    key: 'sentinelai',
+    num: '01',
+    type: 'internship',
+    year: '2026',
+    tech: ['React', 'FastAPI', 'LangGraph', 'Python', 'Celery', 'Redis', 'MongoDB', 'Qdrant', 'Groq', 'Docker'],
+    github: null,
+    video: demoSentinel,
+    videoType: 'local',
+  },
+  {
+    key: 'scribeai',
+    num: '02',
+    type: 'internship',
+    year: '2026',
+    tech: ['React', 'Flask', 'FastAPI', 'Ollama', 'ChromaDB', 'ElevenLabs', 'Mermaid.js', 'Python'],
+    github: null,
+    video: demoScribe,
+    videoType: 'local',
+  },
+  {
+    key: 'projectflow',
+    num: '03',
+    type: 'internship',
+    year: '2025',
+    tech: ['Flutter', 'NestJS', 'MongoDB', 'Gemini AI', 'Docker', 'WebSocket'],
+    github: 'https://github.com/ElyesD1/Project-management-tool-mobile-front',
+    video: 'https://www.youtube.com/embed/SQS832EH9Zs',
+    videoType: 'youtube',
+  },
+  {
+    key: 'squadlink',
+    num: '04',
+    type: 'personal',
+    year: '2025',
+    tech: ['Next.js', 'NestJS', 'Socket.io', 'Riot API'],
+    github: 'https://github.com/ElyesD1/SquadLink',
+    video: demoSquadlink,
+    videoType: 'local',
+  },
+  {
+    key: 'riftpedia',
+    num: '05',
+    type: 'personal',
+    year: '2024',
+    tech: ['SwiftUI', 'MapKit', 'Riot API'],
+    github: 'https://github.com/ElyesD1',
+    video: 'https://www.youtube.com/embed/JUjH3DlewF4',
+    videoType: 'youtube',
+  },
+  {
+    key: 'languagelearning',
+    num: '06',
+    type: 'academic',
+    year: '2024',
+    tech: ['Swift', 'Kotlin', 'NestJS', 'MongoDB'],
+    github: 'https://github.com/ElyesD1/Dialex-Front-IOS',
+    video: null,
+  },
+  {
+    key: 'smarttravel',
+    num: '07',
+    type: 'academic',
+    year: '2024',
+    tech: ['Flutter', 'NestJS', 'Gemini AI'],
+    github: 'https://github.com/Tayaa01/Nomadly',
+    video: null,
+  },
+  {
+    key: 'employeeleave',
+    num: '08',
+    type: 'internship',
+    year: '2023',
+    tech: ['Flutter', 'REST API', 'Firebase'],
+    github: null,
+    video: null,
+  },
+  {
+    key: 'footballplatform',
+    num: '09',
+    type: 'academic',
+    year: '2023',
+    tech: ['Symfony', 'JavaFX', 'MySQL'],
+    github: 'https://github.com/rouazayani211/Pi_Symfony',
+    video: null,
+  },
+  {
+    key: 'firedetection',
+    num: '10',
+    type: 'academic',
+    year: '2022',
+    tech: ['Qt', 'C++', 'Arduino', 'IoT'],
+    github: null,
+    video: null,
+  },
+]
+
+const FILTERS = ['all', 'internship', 'academic', 'personal']
+
+// ── CRT Inline Demo Screen ───────────────────────────────────────────
+const CrtScreen = ({ video, videoType, title }) => {
+  const [playing, setPlaying] = useState(false)
+
+  if (!video) {
+    return (
+      <div className="crt-screen crt-screen-empty">
+        <div className="crt-corner crt-tl" /><div className="crt-corner crt-tr" />
+        <div className="crt-corner crt-bl" /><div className="crt-corner crt-br" />
+        <div className="crt-no-signal">
+          <span className="crt-no-code">NO_DEMO</span>
+          <span className="crt-no-sub">// source unavailable</span>
+        </div>
+        <div className="crt-status-bar">
+          <span>SIGNAL: NULL</span><span>FEED: —</span><span>STATUS: N/A</span>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div
+      className={`crt-screen${playing ? ' crt-screen-playing' : ''}`}
+      onClick={() => !playing && setPlaying(true)}
+    >
+      <div className="crt-corner crt-tl" /><div className="crt-corner crt-tr" />
+      <div className="crt-corner crt-bl" /><div className="crt-corner crt-br" />
+
+      {playing ? (
+        <div className="crt-media">
+          {videoType === 'local' ? (
+            <video src={video} controls autoPlay className="crt-video" />
+          ) : (
+            <iframe
+              src={`${video}?autoplay=1&rel=0&modestbranding=1`}
+              title={`${title} demo`}
+              allowFullScreen
+              allow="autoplay; fullscreen"
+              className="crt-video"
+            />
+          )}
+        </div>
+      ) : (
+        <div className="crt-idle">
+          <div className="crt-scan-sweep" />
+          <div className="crt-play-zone">
+            <div className="crt-play-ring">
+              <span className="crt-play-icon">▶</span>
+            </div>
+            <span className="crt-play-label">INITIALIZE DEMO FEED</span>
+          </div>
+        </div>
+      )}
+
+      <div className="crt-status-bar">
+        <span className={playing ? 'crt-rec' : 'crt-standby'}>
+          {playing ? '● REC' : '○ STANDBY'}
+        </span>
+        <span>SIGNAL: ACQUIRED</span>
+        <span>{videoType === 'local' ? 'LOCAL·MOV' : 'STREAM·YT'}</span>
+      </div>
+    </div>
+  )
+}
+
+// ── Project Detail Panel ─────────────────────────────────────────────
+const ProjectDetail = ({ project }) => {
+  const { t } = useTranslation()
+  return (
+    <div className="proj-detail-inner">
+      <div className="proj-detail-topbar">
+        <span className="proj-detail-cmd">
+          <span className="proj-detail-prompt">$</span>
+          {' '}cat ./projects/<span className="proj-detail-filename">{project.key}.md</span>
+        </span>
+        <span className="proj-detail-year">{project.year}</span>
+      </div>
+
+      <div className="proj-detail-content">
+        {/* Left: description + tech + links */}
+        <div className="proj-detail-info">
+          <div>
+            <h3 className="proj-detail-title">
+              {t(`projects.content.${project.key}.title`)}
+            </h3>
+            <span className="proj-detail-type">{t(`projects.categories.${project.type}`)}</span>
+          </div>
+
+          <p className="proj-detail-desc">
+            <span className="proj-desc-cursor">&gt;&nbsp;</span>
+            {t(`projects.content.${project.key}.description`)}
+          </p>
+
+          <div className="proj-detail-stack">
+            <span className="proj-stack-label">STACK:</span>
+            <div className="proj-detail-tech">
+              {project.tech.map((tech) => (
+                <span key={tech} className="tag">{tech}</span>
+              ))}
+            </div>
+          </div>
+
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="proj-link-btn"
+            >
+              <Github size={11} />
+              <span>$ open --github</span>
+            </a>
+          )}
+        </div>
+
+        {/* Right: CRT demo screen */}
+        <div className="proj-crt-col">
+          <div className="crt-header-bar">
+            <span>// DEMO_FEED</span>
+            <div className="crt-header-indicators">
+              <span className="crt-ind crt-ind-r" />
+              <span className="crt-ind crt-ind-y" />
+              <span className="crt-ind crt-ind-g" />
+            </div>
+          </div>
+          <CrtScreen
+            key={project.key}
+            video={project.video}
+            videoType={project.videoType}
+            title={t(`projects.content.${project.key}.title`)}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ── Main Component ───────────────────────────────────────────────────
 const Projects = () => {
   const { t } = useTranslation()
-  const [activeVideo, setActiveVideo] = useState(null)
-  const [videoStates, setVideoStates] = useState({})
-  const videoRefs = useRef({})
+  const [filter, setFilter] = useState('all')
+  const [selectedKey, setSelectedKey] = useState(ALL_PROJECTS[0].key)
 
-  const projects = {
-    academic: [
-      {
-        id: 1,
-        key: 'languagelearning',
-        category: 'mobile',
-        technologies: ['Swift (iOS)', 'Kotlin (Android)', 'NestJS', 'MongoDB', 'Flutter'],
-        year: '2024-2025',
-        color: 'primary',
-        github: ['https://github.com/ElyesD1/Dialex-Front-IOS', 'https://github.com/ElyesD1/Dialex-Backed']
-      },
-      {
-        id: 2,
-        key: 'smarttravel',
-        category: 'mobile',
-        technologies: ['Flutter', 'NestJS', 'MongoDB', 'Gemini AI', 'Geolocation'],
-        year: '2024-2025',
-        color: 'secondary',
-        github: ['https://github.com/Tayaa01/Nomadly', 'https://github.com/Tayaa01/Nomadly-back']
-      },
-      {
-        id: 3,
-        key: 'footballplatform',
-        category: 'web',
-        technologies: ['Symfony', 'JavaFX', 'MySQL', 'PHP'],
-        year: '2023',
-        color: 'success',
-        github: ['https://github.com/rouazayani211/Pi_Symfony']
-      },
-      {
-        id: 4,
-        key: 'firedetection',
-        category: 'desktop',
-        technologies: ['Qt', 'C++', 'Arduino', 'IoT'],
-        year: '2022',
-        color: 'info'
-      },
-      {
-        id: 5,
-        key: 'smartlabwebsite',
-        category: 'web',
-        technologies: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
-        year: '2022',
-        color: 'warning'
-      },
-      {
-        id: 6,
-        key: 'sdlgame',
-        category: 'desktop',
-        technologies: ['C', 'SDL', 'Game Development'],
-        year: '2021',
-        color: 'danger'
-      }
-    ],
-    internship: [
-      {
-        id: 7,
-        key: 'projectflow',
-        category: 'mobile',
-        featured: true,
-        video: 'https://www.youtube.com/embed/SQS832EH9Zs',
-        technologies: ['Flutter', 'NestJS', 'MongoDB', 'Docker', 'AI/Gemini', 'WebSocket'],
-        year: '2025',
-        company: 'Talan Tunisia',
-        color: 'primary',
-        github: ['https://github.com/ElyesD1/Project-management-tool-mobile-front']
-      },
-      {
-        id: 8,
-        key: 'employeeleave',
-        category: 'mobile',
-        technologies: ['Flutter', 'REST API', 'Push Notifications'],
-        year: '2023',
-        company: 'Vatech WABAG',
-        color: 'secondary'
-      }
-    ],
-    personal: [
-      {
-        id: 9,
-        key: 'riftpedia',
-        category: 'mobile',
-        featured: true,
-        video: 'https://www.youtube.com/embed/JUjH3DlewF4',
-        technologies: ['SwiftUI', 'MapKit', 'Riot API', 'iOS'],
-        year: '2024',
-        color: 'primary'
-      },
-      {
-        id: 10,
-        key: 'squadlink',
-        category: 'web',
-        technologies: ['Next.js', 'NestJS', 'MongoDB', 'Socket.io', 'Riot API', 'Discord Bot'],
-        year: '2025-2026',
-        color: 'accent',
-        github: ['https://github.com/ElyesD1/SquadLink']
-      }
-    ]
-  }
+  const filtered = ALL_PROJECTS.filter((p) => filter === 'all' || p.type === filter)
 
-  const handleVideoPlay = (projectId) => {
-    const video = videoRefs.current[projectId]
-    if (video) {
-      if (activeVideo && activeVideo !== projectId) {
-        const activeVideoEl = videoRefs.current[activeVideo]
-        if (activeVideoEl) {
-          activeVideoEl.pause()
-        }
-      }
-      
-      if (videoStates[projectId]?.playing) {
-        video.pause()
-        setVideoStates(prev => ({ ...prev, [projectId]: { ...prev[projectId], playing: false } }))
-      } else {
-        video.play()
-        setVideoStates(prev => ({ ...prev, [projectId]: { ...prev[projectId], playing: true } }))
-        setActiveVideo(projectId)
-      }
+  useEffect(() => {
+    const isVisible = filtered.some((p) => p.key === selectedKey)
+    if (!isVisible && filtered.length > 0) {
+      setSelectedKey(filtered[0].key)
     }
-  }
+  }, [filter])
 
-  const handleVideoMute = (projectId) => {
-    const video = videoRefs.current[projectId]
-    if (video) {
-      video.muted = !video.muted
-      setVideoStates(prev => ({ 
-        ...prev, 
-        [projectId]: { ...prev[projectId], muted: video.muted } 
-      }))
-    }
-  }
+  const selected = ALL_PROJECTS.find((p) => p.key === selectedKey) || filtered[0]
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  }
-
-  const getCategoryIcon = (category) => {
-    switch (category) {
-      case 'mobile':
-        return <Smartphone size={20} />
-      case 'web':
-        return <Globe size={20} />
-      case 'api':
-        return <Database size={20} />
-      default:
-        return <Code size={20} />
-    }
+  const handleFilter = (f) => {
+    setFilter(f)
+    const next = ALL_PROJECTS.find((p) => f === 'all' || p.type === f)
+    if (next) setSelectedKey(next.key)
   }
 
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
         <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 50 }}
+          className="proj-header"
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title gradient-text">{t('projects.title')}</h2>
-          <p className="section-subtitle">{t('projects.subtitle')}</p>
+          <span className="section-label">Portfolio</span>
+          <h2 className="proj-header-title">{t('projects.title')}</h2>
         </motion.div>
 
-        {/* Internship Projects */}
+        {/* Terminal window */}
         <motion.div
-          className="project-category-section"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          className="proj-terminal"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="category-header">
-            <h3 className="category-title">
-              <Award className="category-icon" />
-              {t('projects.categories.internship')}
-            </h3>
-            <p className="category-subtitle">{t('projects.categories.internshipDesc')}</p>
+          {/* Title bar */}
+          <div className="proj-terminal-bar">
+            <div className="proj-win-controls">
+              <span className="proj-win-dot" style={{ background: '#ff5f57' }} />
+              <span className="proj-win-dot" style={{ background: '#ffbd2e' }} />
+              <span className="proj-win-dot" style={{ background: 'var(--lime)', animation: 'crt-pulse 2s ease-in-out infinite' }} />
+            </div>
+            <span className="proj-terminal-title">PROJECTS.sh — ~/portfolio/work</span>
+            <div className="proj-terminal-filters">
+              {FILTERS.map((f) => (
+                <button
+                  key={f}
+                  onClick={() => handleFilter(f)}
+                  className={`proj-filter-btn${filter === f ? ' proj-filter-active' : ''}`}
+                >
+                  {f === 'all' ? 'ALL' : t(`projects.categories.${f}`)}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="projects-category-grid">
-            {projects.internship.map((project, index) => (
-              <motion.div
-                key={project.id}
-                className={`project-card glass ${project.color}`}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, y: -10 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="project-header">
-                  <div className="project-category">
-                    {getCategoryIcon(project.category)}
-                    <span>{t(`projects.categories.${project.category}`)}</span>
-                  </div>
-                  
-                  <div className="project-year-company">
-                    <div className="project-year">{project.year}</div>
-                    {project.company && <div className="project-company">{project.company}</div>}
-                  </div>
-                </div>
+          {/* Body: explorer + detail */}
+          <div className="proj-terminal-body">
 
-                <h3 className="project-title gradient-text">
-                  {t(`projects.content.${project.key}.title`)}
-                </h3>
+            {/* Left: File explorer */}
+            <div className="proj-explorer">
+              <div className="proj-explorer-header">
+                <span>EXPLORER</span>
+                <span className="proj-explorer-count">{filtered.length}&nbsp;FILES</span>
+              </div>
 
-                <p className="project-description">
-                  {t(`projects.content.${project.key}.description`)}
-                </p>
-
-                <div className="project-features">
-                  <h4>{t('projects.labels.features')}</h4>
-                  <ul>
-                    {t(`projects.content.${project.key}.features`, { returnObjects: true }).slice(0, 4).map((feature, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                        viewport={{ once: true }}
+              <div className="proj-file-list">
+                <AnimatePresence mode="popLayout">
+                  {filtered.map((p) => {
+                    const active = selectedKey === p.key
+                    return (
+                      <motion.button
+                        key={p.key}
+                        className={`proj-file-item${active ? ' proj-file-item-active' : ''}`}
+                        onClick={() => setSelectedKey(p.key)}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -10 }}
+                        transition={{ duration: 0.18 }}
+                        layout
                       >
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
+                        <span className="proj-file-cursor">{active ? '>' : '\u00a0'}</span>
+                        <span className="proj-file-num">{p.num}</span>
+                        <span className="proj-file-name">{t(`projects.content.${p.key}.title`)}</span>
+                        <span className="proj-file-year">{p.year}</span>
+                      </motion.button>
+                    )
+                  })}
+                </AnimatePresence>
+              </div>
 
-                <div className="project-technologies">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="tech-tag-small">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <div className="proj-explorer-footer">
+                <span className="proj-explorer-prompt">
+                  ~/work&nbsp;<span className="proj-prompt-dollar">$</span>&nbsp;<span className="proj-cursor-blink">_</span>
+                </span>
+              </div>
+            </div>
 
-                {project.github && (
-                  <div className="project-links">
-                    {project.github.map((link, i) => (
-                      <a
-                        key={i}
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <Github size={18} />
-                        {project.github.length > 1 ? `GitHub ${i + 1}` : 'GitHub'}
-                      </a>
-                    ))}
-                  </div>
+            {/* Right: Detail panel */}
+            <div className="proj-detail">
+              <AnimatePresence mode="wait">
+                {selected && (
+                  <motion.div
+                    key={selected.key}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.22 }}
+                    style={{ height: '100%' }}
+                  >
+                    <ProjectDetail project={selected} />
+                  </motion.div>
                 )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              </AnimatePresence>
+            </div>
 
-        {/* Academic Projects */}
-        <motion.div
-          className="project-category-section"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="category-header">
-            <h3 className="category-title">
-              <Code className="category-icon" />
-              {t('projects.categories.academic')}
-            </h3>
-            <p className="category-subtitle">{t('projects.categories.academicDesc')}</p>
-          </div>
-
-          <div className="projects-category-grid academic-grid">
-            {projects.academic.map((project, index) => (
-              <motion.div
-                key={project.id}
-                className={`project-card glass ${project.color}`}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, y: -10 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="project-header">
-                  <div className="project-category">
-                    {getCategoryIcon(project.category)}
-                    <span>{t(`projects.categories.${project.category}`)}</span>
-                  </div>
-                  
-                  <div className="project-year">{project.year}</div>
-                </div>
-
-                <h3 className="project-title gradient-text">
-                  {t(`projects.content.${project.key}.title`)}
-                </h3>
-
-                <p className="project-description">
-                  {t(`projects.content.${project.key}.description`)}
-                </p>
-
-                <div className="project-technologies">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="tech-tag-small">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {project.github && (
-                  <div className="project-links">
-                    {project.github.map((link, i) => (
-                      <a
-                        key={i}
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <Github size={18} />
-                        {project.github.length > 1 ? `GitHub ${i + 1}` : 'GitHub'}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Personal Projects */}
-        <motion.div
-          className="project-category-section"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="category-header">
-            <h3 className="category-title">
-              <Star className="category-icon" />
-              {t('projects.categories.personal')}
-            </h3>
-            <p className="category-subtitle">{t('projects.categories.personalDesc')}</p>
-          </div>
-
-          <div className="projects-category-grid">
-            {projects.personal.map((project, index) => (
-              <motion.div
-                key={project.id}
-                className={`project-card glass ${project.color}`}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, y: -10 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="project-header">
-                  <div className="project-category">
-                    {getCategoryIcon(project.category)}
-                    <span>{t(`projects.categories.${project.category}`)}</span>
-                  </div>
-                  
-                  <div className="project-year">{project.year}</div>
-                </div>
-
-                <h3 className="project-title gradient-text">
-                  {t(`projects.content.${project.key}.title`)}
-                </h3>
-
-                <p className="project-description">
-                  {t(`projects.content.${project.key}.description`)}
-                </p>
-
-                <div className="project-features">
-                  <h4>{t('projects.labels.features')}</h4>
-                  <ul>
-                    {t(`projects.content.${project.key}.features`, { returnObjects: true }).slice(0, 4).map((feature, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                        viewport={{ once: true }}
-                      >
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="project-technologies">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="tech-tag-small">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {project.github && (
-                  <div className="project-links">
-                    {project.github.map((link, i) => (
-                      <a
-                        key={i}
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <Github size={18} />
-                        {project.github.length > 1 ? `GitHub ${i + 1}` : 'GitHub'}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Mobile Demos Section */}
-        <motion.div
-          className="mobile-demos-section"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="demos-header">
-            <h3 className="demos-title">
-              <Smartphone className="demos-icon" />
-              {t('projects.demos.title')}
-            </h3>
-            <p className="demos-subtitle">{t('projects.demos.subtitle')}</p>
-          </div>
-
-          <div className="mobile-demos-grid">
-            {[projects.internship.find(p => p.key === 'projectflow'), projects.personal.find(p => p.key === 'riftpedia')].map((project, index) => (
-              <motion.div
-                key={project.id}
-                className="mobile-demo-container"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="mobile-frame">
-                  <div className="mobile-screen">
-                    <iframe
-                      src={`${project.video}?autoplay=1&mute=1&loop=1&playlist=${project.video.split('/').pop()}`}
-                      className="mobile-video"
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen
-                      frameBorder="0"
-                      loading="lazy"
-                      title={`${project.key} demo video`}
-                    ></iframe>
-                    
-                    <div className="mobile-overlay">
-                      <button 
-                        className="mobile-play-btn"
-                        onClick={() => window.open(project.video, '_blank')}
-                      >
-                        <Play size={20} />
-                      </button>
-                    </div>
-                  </div>
-                  
-                  <div className="mobile-home-indicator"></div>
-                </div>
-                
-                <div className="demo-info">
-                  <h4 className="demo-title gradient-text">
-                    {t(`projects.content.${project.key}.title`)}
-                  </h4>
-                  <p className="demo-description">
-                    {t(`projects.content.${project.key}.demoDesc`)}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </div>

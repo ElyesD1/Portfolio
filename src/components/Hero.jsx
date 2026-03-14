@@ -1,206 +1,104 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Download, Mail } from 'lucide-react'
-import profileImage from '../assets/Elyes Darouich.png'
+import { Download, ArrowRight } from 'lucide-react'
 import cvPdf from '../assets/Elyes_Darouich_CV.pdf'
 import './Hero.css'
 
+const TICKER_ITEMS = ['Software Engineer', 'AI Engineer', 'Frontend Dev', 'Flutter Expert', 'iOS Developer', 'LangGraph Builder', 'Full-Stack Dev', 'Problem Solver', 'Open to Work']
+
 const Hero = () => {
   const { t } = useTranslation()
-  const [currentWordIndex, setCurrentWordIndex] = useState(0)
-  
-  const dynamicWords = [
-    'Software Engineer',
-    'Mobile Developer',
-    'Flutter Expert', 
-    'iOS Developer',
-    'Full-Stack Developer',
-    'Problem Solver'
-  ]
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % dynamicWords.length)
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  }
-
-  const floatingVariants = {
-    animate: {
-      y: [-20, 20, -20],
-      rotate: [0, 5, -5, 0],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  }
+  const tickerDouble = [...TICKER_ITEMS, ...TICKER_ITEMS]
 
   return (
-    <section id="hero" className="hero">
-      <div className="hero-bg">
-        <div className="hero-gradient"></div>
-        <div className="floating-shapes">
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              className={`floating-shape shape-${i + 1}`}
-              variants={floatingVariants}
-              animate="animate"
-              transition={{ delay: i * 0.5 }}
-            />
-          ))}
-        </div>
+    <section id="hero" className="hero-section">
+      <div className="container hero-inner">
+        <motion.div
+          className="hero-badge"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <span className="status-dot" />
+          // AVAILABLE FOR OPPORTUNITIES
+        </motion.div>
+
+        <motion.h1
+          className="hero-name"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          ELYES<br />
+          <span className="hero-name-lime">DAROUICH</span>
+        </motion.h1>
       </div>
 
-      <div className="container hero-container">
+      {/* Lime ticker — full bleed */}
+      <motion.div
+        className="hero-ticker-wrap"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.45, duration: 0.4 }}
+      >
+        <div className="hero-ticker-track marquee-track-right">
+          {tickerDouble.map((item, i) => (
+            <span key={i} className="hero-ticker-item">
+              {item}
+              <span className="hero-ticker-sep"> × </span>
+            </span>
+          ))}
+        </div>
+      </motion.div>
+
+      <div className="container">
         <motion.div
-          className="hero-content"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+          className="hero-bottom"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Profile Image Placeholder */}
-          <motion.div
-            className="hero-image"
-            variants={itemVariants}
-            whileHover={{ scale: 1.05, rotate: 5 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="image-placeholder glass">
-              <div className="image-ring ring-1"></div>
-              <div className="image-ring ring-2"></div>
-              <div className="profile-img">
-                <img 
-                  src={profileImage} 
-                  alt="Elyes Darouich" 
-                  className="profile-photo"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                    e.target.nextSibling.style.display = 'flex'
-                  }}
-                />
-                <span className="gradient-text profile-fallback" style={{ display: 'none' }}>ED</span>
-              </div>
+          <div className="hero-bio-block">
+            <p className="hero-bio">{t('hero.description')}</p>
+            <div className="hero-actions">
+              <a
+                href="#projects"
+                className="btn btn-lime"
+                onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}
+              >
+                VIEW WORK <ArrowRight size={14} />
+              </a>
+              <a href={cvPdf} className="btn btn-outline" download="Elyes_Darouich_CV.pdf">
+                <Download size={14} /> CV
+              </a>
             </div>
-          </motion.div>
-
-          {/* Main Content */}
-          <div className="hero-text">
-            <motion.p 
-              className="hero-greeting"
-              variants={itemVariants}
-            >
-              {t('hero.greeting')} 👋
-            </motion.p>
-
-            <motion.h1 
-              className="hero-name"
-              variants={itemVariants}
-            >
-              <span className="gradient-text">{t('hero.name')}</span>
-            </motion.h1>
-
-            <motion.div 
-              className="hero-title-container"
-              variants={itemVariants}
-            >
-              <h2 className="hero-title">
-                <span className="static-text">{t('hero.title')} & </span>
-                <motion.span
-                  key={currentWordIndex}
-                  className="dynamic-text gradient-text"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {dynamicWords[currentWordIndex]}
-                </motion.span>
-              </h2>
-            </motion.div>
-
-            <motion.p 
-              className="hero-description"
-              variants={itemVariants}
-            >
-              {t('hero.description')}
-            </motion.p>
-
-            <motion.div 
-              className="hero-stats"
-              variants={itemVariants}
-            >
-              <div className="stat">
-                <span className="stat-number gradient-text">4</span>
-                <span className="stat-label">{t('hero.stats.years')}</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number gradient-text">8+</span>
-                <span className="stat-label">{t('hero.stats.projects')}</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number gradient-text">3</span>
-                <span className="stat-label">{t('hero.stats.internships')}</span>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              className="hero-actions"
-              variants={itemVariants}
-            >
-              <motion.a
-                href="#contact"
-                className="btn btn-primary"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={(e) => {
-                  e.preventDefault()
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-                }}
-              >
-                <Mail size={20} />
-                {t('hero.cta')}
-              </motion.a>
-
-              <motion.a
-                href={cvPdf}
-                className="btn btn-secondary"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                download="Elyes_Darouich_CV.pdf"
-              >
-                <Download size={20} />
-                {t('hero.downloadCV')}
-              </motion.a>
-            </motion.div>
           </div>
+
+          <div className="hero-stats">
+            {[
+              { num: '4', label: t('hero.stats.years') },
+              { num: '10+', label: t('hero.stats.projects') },
+              { num: '4', label: t('hero.stats.internships') },
+            ].map((s, i) => (
+              <div key={i} className="hero-stat">
+                <span className="hero-stat-num">{s.num}</span>
+                <span className="hero-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="hero-scroll"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
+          <motion.span animate={{ y: [0, 4, 0] }} transition={{ duration: 1.8, repeat: Infinity }}>
+            ↓
+          </motion.span>
+          <span>SCROLL</span>
         </motion.div>
       </div>
     </section>
