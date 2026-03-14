@@ -36,3 +36,4 @@ dist-ssr
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+src/assets/*.mov

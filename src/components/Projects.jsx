@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Github } from 'lucide-react'
-import demoSentinel from '../assets/Demo-SentinelAI.mov'
-import demoScribe from '../assets/demo-scribeAi.mov'
-import demoSquadlink from '../assets/demo squadlink.mov'
 import './Projects.css'
 
 const ALL_PROJECTS = [
@@ -15,8 +12,8 @@ const ALL_PROJECTS = [
     year: '2026',
     tech: ['React', 'FastAPI', 'LangGraph', 'Python', 'Celery', 'Redis', 'MongoDB', 'Qdrant', 'Groq', 'Docker'],
     github: null,
-    video: demoSentinel,
-    videoType: 'local',
+    video: 'https://www.youtube.com/embed/iznfuuZudcc',
+    videoType: 'youtube',
   },
   {
     key: 'scribeai',
@@ -25,8 +22,8 @@ const ALL_PROJECTS = [
     year: '2026',
     tech: ['React', 'Flask', 'FastAPI', 'Ollama', 'ChromaDB', 'ElevenLabs', 'Mermaid.js', 'Python'],
     github: null,
-    video: demoScribe,
-    videoType: 'local',
+    video: 'https://www.youtube.com/embed/v0qGRqt-6O8',
+    videoType: 'youtube',
   },
   {
     key: 'projectflow',
@@ -45,8 +42,8 @@ const ALL_PROJECTS = [
     year: '2025',
     tech: ['Next.js', 'NestJS', 'Socket.io', 'Riot API'],
     github: 'https://github.com/ElyesD1/SquadLink',
-    video: demoSquadlink,
-    videoType: 'local',
+    video: 'https://www.youtube.com/embed/BuduF2vcr3k',
+    videoType: 'youtube',
   },
   {
     key: 'riftpedia',
