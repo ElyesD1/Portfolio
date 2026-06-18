@@ -1,4 +1,4 @@
-/* App layout */
+/* App shell — footer/lang styles live in index.css (ISO Specimen system) */
 .App {
   position: relative;
   min-height: 100vh;
@@ -8,68 +8,4 @@
 .main-content {
   position: relative;
   z-index: 1;
-}
-
-/* Footer */
-.footer {
-  padding: var(--space-8) 0;
-  border-top: 1px solid var(--border);
-  position: relative;
-  z-index: 2;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-4);
-  flex-wrap: wrap;
-}
-
-.footer-copy {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--text-3);
-  letter-spacing: 0.02em;
-}
-
-.footer-copy span {
-  color: var(--a1);
-}
-
-.lang-pills {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.lang-pill {
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--r-full);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  border: 1px solid var(--border);
-  color: var(--text-2);
-  background: transparent;
-  cursor: pointer;
-  transition: all var(--t-fast);
-}
-
-.lang-pill:hover {
-  border-color: var(--a1);
-  color: var(--a1);
-}
-
-.lang-pill.active {
-  background: var(--a1-dim);
-  border-color: var(--a1);
-  color: var(--a1);
-}
-
-@media (max-width: 768px) {
-  .footer-inner {
-    justify-content: center;
-    text-align: center;
-  }
 }

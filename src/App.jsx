@@ -114,26 +114,34 @@ function App() {
             </main>
 
             <footer className="footer">
-              <div className="container">
-                <div className="footer-inner">
-                  <motion.p
-                    className="footer-copy"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                  >
-                    © 2025 <span style={{ color: 'var(--lime)' }}>ELYES DAROUICH</span> — CRAFTED WITH INTENTION
-                  </motion.p>
-                  <div className="lang-pills">
-                    {['en', 'fr'].map((lang) => (
-                      <button
-                        key={lang}
-                        onClick={() => i18n.changeLanguage(lang)}
-                        className={`lang-pill ${i18n.language === lang ? 'active' : ''}`}
-                      >
-                        {lang.toUpperCase()}
-                      </button>
-                    ))}
+              <div className="container footer-inner">
+                <div className="footer-left">
+                  <span className="footer-mark">ELYES DAROUICH</span>
+                  <span className="footer-colophon">
+                    Set in Bricolage Grotesque, Newsreader &amp; IBM Plex Mono — built with React + Vite.
+                  </span>
+                </div>
+                <div className="footer-right">
+                  <span className="footer-copy">© 2026 · PORTFOLIO SPECIMEN · REF ED—2026</span>
+                  <div className="footer-right-actions">
+                    <div className="lang-pills">
+                      {['en', 'fr'].map((lang) => (
+                        <button
+                          key={lang}
+                          onClick={() => i18n.changeLanguage(lang)}
+                          className={`lang-pill ${i18n.language?.startsWith(lang) ? 'active' : ''}`}
+                        >
+                          {lang.toUpperCase()}
+                        </button>
+                      ))}
+                    </div>
+                    <a
+                      href="#hero"
+                      className="footer-top"
+                      onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }) }}
+                    >
+                      ↑ TOP
+                    </a>
                   </div>
                 </div>
               </div>

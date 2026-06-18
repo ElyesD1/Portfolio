@@ -1,47 +1,69 @@
-/* ── Certificates Section ───────────────────────────────── */
+/* ── Certificates — §05 CREDENTIALS (register) ──────────── */
 .certs-section { position: relative; z-index: 2; }
 
+.certs-main { display: flex; flex-direction: column; min-width: 0; }
+
 .certs-header {
-  margin-bottom: var(--space-12);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
 }
 
-.certs-header-title {
+.certs-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 0.95;
-  color: var(--text);
+  font-weight: 700;
+  font-size: var(--t-h2);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  color: var(--ink);
 }
 
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--border);
+  border: 1px solid var(--rule-2);
 }
 
 .cert-card {
-  padding: var(--space-8);
-  border-right: 1px solid var(--border);
+  padding: var(--space-6);
+  border-right: 1px solid var(--rule);
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
-  transition: background var(--t-fast);
+  gap: var(--space-4);
+  transition: background var(--t-normal);
   overflow: hidden;
 }
-
 .cert-card:last-child { border-right: none; }
-.cert-card:hover { background: var(--surface); }
+.cert-card:hover { background: rgba(236, 231, 219, 0.02); }
 
+/* Brand accent leader */
 .cert-card::before {
   content: '';
   position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 2px;
+  left: 0; top: 0;
+  width: 40px; height: 2px;
   background: var(--c-accent, var(--lime));
+  transition: width var(--t-normal);
 }
+.cert-card:hover::before { width: 100%; }
+
+.cert-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+}
+
+.cert-ref {
+  font-family: var(--font-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.cert-verified { font-size: 0.55rem; }
 
 .cert-head {
   display: flex;
@@ -52,35 +74,35 @@
 
 .cert-label {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
+  font-size: var(--t-micro);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 3px 10px;
+  padding: 3px 9px;
   border: 1px solid var(--c-accent, var(--lime));
   color: var(--c-accent, var(--lime));
 }
 
 .cert-issuer {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--text-3);
+  font-size: var(--t-micro);
+  color: var(--ink-3);
   letter-spacing: 0.05em;
   text-align: right;
 }
 
 .cert-title {
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  letter-spacing: 0.02em;
-  color: var(--text);
-  line-height: 1.1;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.08;
 }
 
 .cert-desc {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--text-2);
+  font-size: 0.92rem;
   line-height: 1.7;
+  color: var(--ink-2);
 }
 
 .cert-skills {
@@ -95,37 +117,33 @@
   justify-content: space-between;
   margin-top: auto;
   padding-top: var(--space-4);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--rule);
   gap: var(--space-3);
   flex-wrap: wrap;
 }
 
 .cert-date {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--text-3);
-  letter-spacing: 0.05em;
+  font-size: var(--t-micro);
+  color: var(--ink-3);
+  letter-spacing: 0.06em;
 }
 
 .cert-link {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-2);
   display: flex;
   align-items: center;
-  gap: var(--space-1);
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
   transition: color var(--t-fast);
 }
-
 .cert-link:hover { color: var(--lime); }
 
 @media (max-width: 900px) {
   .certs-grid { grid-template-columns: 1fr; }
-  .cert-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .cert-card { border-right: none; border-bottom: 1px solid var(--rule); }
   .cert-card:last-child { border-bottom: none; }
 }

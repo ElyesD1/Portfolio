@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { X, AlignRight } from 'lucide-react'
+import { X, AlignRight, ArrowUpRight } from 'lucide-react'
 import './Navigation.css'
 
 const Navigation = () => {
@@ -11,12 +11,12 @@ const Navigation = () => {
   const { t, i18n } = useTranslation()
 
   const navItems = [
-    { key: 'about', href: '#about', label: t('nav.about') },
-    { key: 'experience', href: '#experience', label: t('nav.experience') },
-    { key: 'projects', href: '#projects', label: t('nav.projects') },
-    { key: 'skills', href: '#skills', label: t('nav.skills') },
-    { key: 'certificates', href: '#certificates', label: t('nav.certificates') },
-    { key: 'contact', href: '#contact', label: t('nav.contact') },
+    { key: 'about', href: '#about', num: '01', label: t('nav.about') },
+    { key: 'experience', href: '#experience', num: '02', label: t('nav.experience') },
+    { key: 'projects', href: '#projects', num: '03', label: t('nav.projects') },
+    { key: 'skills', href: '#skills', num: '04', label: t('nav.skills') },
+    { key: 'certificates', href: '#certificates', num: '05', label: t('nav.certificates') },
+    { key: 'contact', href: '#contact', num: '06', label: t('nav.contact') },
   ]
 
   useEffect(() => {
@@ -55,10 +55,13 @@ const Navigation = () => {
             className="nav-logo"
             onClick={(e) => { e.preventDefault(); scrollTo('#hero') }}
           >
-            ED
+            <span className="nav-logo-mark">ED</span>
+            <span className="nav-logo-reg" aria-hidden="true" />
+            <span className="nav-logo-meta">PORTFOLIO<br />SPECIMEN</span>
           </a>
 
           <div className="nav-links">
+            <span className="nav-contents">CONTENTS</span>
             {navItems.map((item, i) => (
               <motion.a
                 key={item.key}
@@ -69,25 +72,31 @@ const Navigation = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.05 * i + 0.3 }}
               >
-                {item.label}
+                <span className="nav-link-num">{item.num}</span>
+                <span className="nav-link-label">{item.label}</span>
               </motion.a>
             ))}
           </div>
 
           <div className="nav-right">
-            <button
-              className="nav-lang"
-              onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'fr' : 'en')}
-            >
-              {i18n.language.toUpperCase()}
-            </button>
+            <div className="nav-lang" role="group" aria-label="Language">
+              {['en', 'fr'].map((lng) => (
+                <button
+                  key={lng}
+                  className={`nav-lang-btn ${i18n.language?.startsWith(lng) ? 'active' : ''}`}
+                  onClick={() => i18n.changeLanguage(lng)}
+                >
+                  {lng.toUpperCase()}
+                </button>
+              ))}
+            </div>
 
             <a
               href="#contact"
-              className="nav-hire desktop-only"
+              className="nav-enquire desktop-only"
               onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}
             >
-              — HIRE ME
+              ENQUIRE <ArrowUpRight size={13} />
             </a>
 
             <button
@@ -108,9 +117,14 @@ const Navigation = () => {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.34, ease: [0.22, 1, 0.36, 1] }}
           >
-            <button className="mobile-close-btn" onClick={() => setIsOpen(false)}>✕</button>
+            <div className="mobile-head">
+              <span className="kicker">TABLE OF CONTENTS</span>
+              <button className="mobile-close-btn" onClick={() => setIsOpen(false)} aria-label="Close menu">
+                <X size={18} />
+              </button>
+            </div>
             <div className="mobile-nav-inner">
               {navItems.map((item, i) => (
                 <motion.a
@@ -120,10 +134,10 @@ const Navigation = () => {
                   onClick={(e) => { e.preventDefault(); scrollTo(item.href) }}
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.07, duration: 0.3 }}
+                  transition={{ delay: i * 0.06, duration: 0.3 }}
                 >
-                  <span className="mobile-nav-num">0{i + 1}</span>
-                  {item.label}
+                  <span className="mobile-nav-num">§ {item.num}</span>
+                  <span className="mobile-nav-label">{item.label}</span>
                 </motion.a>
               ))}
               <motion.a
@@ -132,9 +146,9 @@ const Navigation = () => {
                 onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.45 }}
+                transition={{ delay: 0.42 }}
               >
-                — HIRE ME
+                ENQUIRE <ArrowUpRight size={15} />
               </motion.a>
             </div>
           </motion.div>

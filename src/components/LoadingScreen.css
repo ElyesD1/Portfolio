@@ -1,55 +1,109 @@
 .ls-root {
   position: fixed;
   inset: 0;
-  background: #000;
+  background: var(--paper);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.ls-crop { opacity: 0.5; }
+
 .ls-content {
   width: 100%;
-  max-width: 640px;
-  padding: 0 2rem;
+  max-width: 560px;
+  padding: 0 var(--space-8);
+}
+
+.ls-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.ls-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--rule-2);
+  margin: var(--space-4) 0 var(--space-6);
+  position: relative;
+}
+.ls-rule::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 48px; height: 1px;
+  background: var(--lime);
+}
+
+.ls-lines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
 .ls-line {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: clamp(0.72rem, 1.8vw, 0.88rem);
-  color: #555;
-  line-height: 2;
-  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  text-transform: uppercase;
 }
 
-.ls-line-name {
-  color: #C5F74F;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  font-weight: 700;
-  margin-top: 0.5rem;
+.ls-line-label { flex-shrink: 0; }
+
+.ls-line-dots {
+  flex: 1;
+  height: 0;
+  border-bottom: 1px dotted var(--rule-3);
+  transform: translateY(-2px);
 }
 
-.ls-line-done {
-  color: #F0F0F0;
+.ls-line-ok {
+  flex-shrink: 0;
+  color: var(--lime);
+  letter-spacing: 0.16em;
 }
 
-.ls-cursor {
-  color: #C5F74F;
-  margin-left: 2px;
+.ls-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: var(--space-6) 0 var(--space-8);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ls-foot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
 }
 
 .ls-bar-wrap {
-  margin-top: 2rem;
-  width: 100%;
-  height: 1px;
-  background: #1A1A1A;
+  flex: 1;
+  height: 2px;
+  background: var(--rule-2);
   overflow: hidden;
 }
 
 .ls-bar {
   height: 100%;
   width: 100%;
-  background: #C5F74F;
+  background: var(--lime);
   transform-origin: left;
-  box-shadow: 0 0 12px rgba(197,247,79,0.6);
+  box-shadow: 0 0 12px rgba(197, 247, 79, 0.5);
+}
+
+.ls-verdict { flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .ls-content { padding: 0 var(--space-5); }
 }

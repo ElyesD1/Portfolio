@@ -19,9 +19,9 @@ const resources = {
       hero: {
         greeting: "Hi, I'm",
         name: "Elyes Darouich",
-        title: "Software Engineer",
-        subtitle: "Building across the full stack — frontend, mobile, AI systems",
-        description: "5th year Engineering Student at ESPRIT. Frontend-first, but fluent across the full stack — mobile (Flutter, Swift, Kotlin), backend (FastAPI, NestJS), and production AI systems (LangGraph, multi-agent pipelines, RAG). I build things that work at every layer.",
+        title: "AI & Full-Stack Engineer",
+        subtitle: "Agentic systems, RAG pipelines & production AI — across the whole stack",
+        description: "Final-year Engineering student at ESPRIT and end-of-studies engineer at Talan. I build production AI systems — agentic multi-agent orchestration, RAG / LLM pipelines with guardrails, and applied cryptography — on a strong full-stack and mobile core (React, FastAPI, Flutter).",
         cta: "Get In Touch",
         downloadCV: "Download CV",
         stats: {
@@ -34,13 +34,13 @@ const resources = {
       // About Section
       about: {
         title: "About Me",
-        subtitle: "Get to know me better",
-        intro: "I'm a passionate mobile software engineer currently in my 5th year at ESPRIT (3ème année cycle d'ingénieur), specializing in cross-platform mobile development. With expertise in iOS, Android, Flutter, and modern web technologies, I love creating innovative solutions that solve real-world problems.",
+        subtitle: "Building AI that ships.",
+        intro: "AI & full-stack engineer in my final year at ESPRIT, completing my end-of-studies engineering project at Talan. I specialize in production AI — agentic multi-agent systems, RAG/LLM pipelines and applied cryptography — on a strong frontend, mobile and backend foundation.",
         location: "Bizerte, Tunisia",
-        age: "23 years old",
+        age: "24 years old",
         email: "skyrexcgaming@gmail.com",
         phone: "+216 94 906 400",
-        description: "Software Engineer with a frontend and mobile core — React, Flutter, SwiftUI — but comfortable across the entire stack. Build backends in FastAPI and NestJS, architect production AI systems with LangGraph multi-agent pipelines and RAG, and work across mobile (iOS, Android), web, and infrastructure (Docker, CI/CD). Leaning increasingly toward AI engineering while keeping strong roots in great UI.",
+        description: "AI engineer with a builder's full-stack core. I design and ship production AI systems — multi-agent orchestration (LangGraph, MCP, Claude Agent SDK), RAG and LLM pipelines with guardrails, and applied cryptography — backed by strong frontend, mobile and backend engineering (React, Flutter, FastAPI). Increasingly focused on agentic AI, while keeping deep roots in great UI.",
         languages: {
           title: "Languages",
           arabic: "Arabic - Native",
@@ -67,6 +67,20 @@ const resources = {
           technologies: "Technologies & Skills:"
         },
         content: {
+          talanPfe: {
+            title: "End-of-Studies (PFE) Engineering Intern — AI & Full-Stack",
+            company: "Talan Tunisia",
+            description: "SMI Virtual Auditor — AI-powered ISO 9001 / 14001 / 27001 compliance audit platform built on a RAG pipeline",
+            achievements: [
+              "Built an AI compliance-audit platform delivering clause-by-clause verdicts (COMPLIANT / PARTIAL / NON-COMPLIANT) for ISO 9001, 14001, 27001 and the Talan Forfait standard",
+              "Engineered a 3-pass Retrieval-Augmented Generation pipeline (Llama 3.3 70B via Groq / GitHub Models / NVIDIA NIM) with local bge-m3 embeddings on Ollama + ChromaDB vector store",
+              "Designed 7-layer guard rails (groundedness, fidelity, contradiction, confidence capping) to suppress LLM hallucinations on audit evidence",
+              "Architected a Clean-Architecture FastAPI backend with JWT RS256 auth, role-based access (4 roles) and Celery async analysis workers",
+              "Built a React 18 + TypeScript + Zustand SPA with a streaming conversational RAG chat (SSE) and one-click PDF audit report export",
+              "Implemented an SMI checklist engine with 75+ KPI indicators, weighted conformity scoring and multi-format ingestion (PDF/OCR, DOCX, XLSX)",
+              "Shipped a bilingual (FR/EN) product backed by 108 unit tests, fully containerized with Docker (PostgreSQL, Redis, MinIO)"
+            ]
+          },
           talan: {
             title: "Engineering Intern - Mobile & Backend Development",
             company: "Talan Tunisia",
@@ -106,16 +120,16 @@ const resources = {
             ]
           },
           esprit: {
-            title: "Computer Engineering - Mobile Development",
+            title: "Computer Engineering — Software & AI",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "Currently 5th year student, 3ème année cycle d'ingénieur (completed 4th year internship at Talan)",
+            description: "5-year National Engineering Degree, graduating 2026 — completed end-of-studies project (PFE) at Talan Tunisia building the SMI Virtual Auditor",
             achievements: [
-              "Specialized in mobile application development and cross-platform solutions",
-              "Completed engineering internship at Talan Tunisia developing ProjectFlow platform",
-              "Advanced coursework in software architecture, AI integration, and system design",
-              "Hands-on experience with modern development frameworks and DevOps practices",
+              "Completed the full 5-year engineering cycle, specializing in software engineering, AI integration and cross-platform mobile development",
+              "Delivered the end-of-studies project (PFE) at Talan Tunisia — an AI-powered ISO compliance auditor (RAG + LLM)",
+              "Completed a prior engineering internship at Talan building the ProjectFlow platform",
+              "Advanced coursework in software architecture, distributed systems, AI/ML and DevOps",
               "Active participation in hackathons and programming competitions",
-              "Strong foundation in algorithms, data structures, and enterprise development"
+              "Strong foundation in algorithms, data structures and production-grade engineering"
             ]
           },
           bac: {
@@ -156,6 +170,20 @@ const resources = {
         },
         content: {
           // Internship Projects
+          smiauditor: {
+            title: "SMI Virtual Auditor — AI ISO Compliance Auditor",
+            description: "End-of-studies (PFE) project at Talan Tunisia — an AI-powered platform that audits ISO 9001 / 14001 / 27001 and Forfait management systems, producing clause-by-clause compliance verdicts with cited evidence through a RAG pipeline on Llama 3.3 70B",
+            features: [
+              "3-pass Retrieval-Augmented Generation pipeline producing COMPLIANT / PARTIAL / NON-COMPLIANT verdicts with cited evidence, confidence scores and recommendations",
+              "Llama 3.3 70B Instruct via OpenAI-compatible providers (Groq / GitHub Models / NVIDIA NIM) with multi-key rotation; local bge-m3 embeddings on Ollama + ChromaDB",
+              "7-layer guard rails — groundedness, fidelity, keyword-hybrid, contradiction, consistency, multi-factor confidence and confidence capping — to prevent hallucinations",
+              "SMI checklist audit: the LLM selects relevant documents and 75+ KPI indicators per process; weighted conformity scoring aggregates a global score",
+              "Multi-standard coverage — ISO 9001:2015, ISO 14001:2015, ISO 27001:2022 and the Talan Forfait (110 clauses total)",
+              "Clean-Architecture FastAPI backend, JWT RS256 auth with RBAC (4 roles), Celery async workers, PostgreSQL, Redis, MinIO — fully Dockerized",
+              "React 18 + TypeScript + Zustand SPA with streaming conversational RAG chat (SSE) and PDF audit report export",
+              "Bilingual FR/EN UI and LLM output, multi-format ingestion (PDF with OCR fallback, DOCX, XLSX), 108 unit tests"
+            ]
+          },
           projectflow: {
             title: "ProjectFlow - AI Project Management Platform",
             description: "Modern collaborative project management platform with AI integration developed during internship at Talan Tunisia",
@@ -211,6 +239,48 @@ const resources = {
             ]
           },
           // Personal Projects
+          claudehive: {
+            title: "Claude Hive — Multi-Agent Coordination for Claude Code",
+            description: "A coordination layer that lets multiple Claude Code instances share live awareness, avoid file conflicts, and delegate tasks in real time — via a lightweight per-machine daemon, an MCP server, and a private Supabase Realtime channel, exchanging only scrubbed tool metadata (never code or model output).",
+            features: [
+              "Per-machine `hived` daemon on a private Supabase Realtime channel; the Claude Code plugin streams scrubbed tool-call events over a Unix socket",
+              "Eight MCP tools (hive_rooms, hive_read_since, hive_say, hive_delegate, hive_ack, hive_complete, hive_inbox) expose room operations directly inside a Claude Code session",
+              "Agent-to-agent delegation — formal task handoff with accept/reject workflow and completion tracking",
+              "Live tool-use streaming so agents see each other's concurrent activity and avoid file collisions across workspaces",
+              "Room-based isolation — per-room secrets stored locally (0600), Supabase channels keyed and private",
+              "VSCode Observer dashboard — webview with a room switcher, live event feed, delegation cards and a chat composer",
+              "Automatic secret scrubbing — tokens, passwords and API keys redacted before wire transmission (custom scrubber module)",
+              "Full CLI + service management — room create/join/message/delegate, supervised by launchd (macOS) and systemd (Linux)"
+            ]
+          },
+          agenticvalley: {
+            title: "Agentic Valley — Multi-Agent Orchestration Visualizer",
+            description: "A VSCode extension that turns invisible multi-agent orchestration into a living pixel-art office — each Claude Agent SDK agent is an interactive character whose sprite animates (thinking, tool-use, errors) in real time, making the coordination work of agentic systems perceptually observable.",
+            features: [
+              "Seven specialised agents (researcher, documentation, code-generator, code-reviewer, tester, architect, main-claude) each running in its own Claude Agent SDK session",
+              "Main Claude orchestrates — dispatching subtasks via the Task tool, with dispatch cards and particle bursts making every delegation visible",
+              "State-driven sprite animation (idle / thinking / tool_use / error) with particle effects, driven by a reducer that maps tool events to visual AgentState",
+              "Token-by-token streaming chat per agent matching the Claude Code UX, rendered inside a VSCode webview",
+              "Scoped agent personas — role-specific systemPrompt, allowedTools and advisory toolScopes (e.g. documentation limited to docs/**)",
+              "Procedurally tiled, scrollable pixel-art office with multiple workstations; zoom + letterbox cinematics on agent selection",
+              "Per-agent transcript persistence via VSCode globalState; project-aware agents briefed on workspace path and teammate roster",
+              "Built as a VSCode extension (TypeScript, esbuild, Vitest) on @anthropic-ai/claude-agent-sdk, authed via Claude CLI or ANTHROPIC_API_KEY"
+            ]
+          },
+          zkattest: {
+            title: "ZK-Attest — Zero-Knowledge Credential Verification",
+            description: "Privacy-preserving credential system that lets consultants cryptographically prove regulatory facts — age, certifications, experience level — to a client without revealing the underlying data, using Groth16 zero-knowledge proofs, W3C Verifiable Credentials and an on-chain transparency log (GDPR data-minimisation by design).",
+            features: [
+              "Groth16 zero-knowledge circuits (Circom + snarkjs) prove predicates like '18+', 'ISO 27001 Lead Auditor valid' or 'experience ≥ N' as 288-byte SNARKs — the raw data is never revealed",
+              "Browser-native wallet — credentials stored AES-256-GCM encrypted in IndexedDB; data never leaves the browser, the verifier receives a single yes/no bit",
+              "Multi-issuer on-chain trust chain — a Trust Anchor accredits issuers via ERC-5192 soulbound NFTs; the verifier walks the chain on every proof (Hyperledger Besu + Solidity)",
+              "RFC 9162 transparency log — append-only Merkle tree with daily Ed25519-signed Signed Tree Heads anchored on-chain for independent auditability",
+              "OpenID4VP + DIF Presentation Exchange — EUDI Digital Identity Wallet-compatible verifiable presentations wrapping the ZK proofs",
+              "Dual-format issuance — W3C VC 2.0 JSON-LD and SD-JWT VC generated in parallel for ecosystem compatibility",
+              "Hexagonal FastAPI microservices (issuer / verifier / transparency) with Argon2id key derivation and import-linter-enforced boundaries",
+              "Next.js 15 pnpm monorepo — three apps (issuer dashboard, holder wallet, verifier portal) with Web Workers for parallel proof generation and one-command stack bootstrap"
+            ]
+          },
           riftpedia: {
             title: "Riftpedia - League of Legends Match Tracker",
             description: "iOS application built with SwiftUI for tracking League of Legends match statistics and game analysis",
@@ -430,9 +500,9 @@ const resources = {
       hero: {
         greeting: "Salut, je suis",
         name: "Elyes Darouich",
-        title: "Ingénieur Logiciel",
-        subtitle: "Frontend, mobile, backend et IA — sur toute la stack",
-        description: "Étudiant en 5ème année d'ingénierie à ESPRIT. Ancrage frontend et mobile, mais polyvalent sur toute la stack — Flutter, Swift, React en frontend; FastAPI, NestJS en backend; LangGraph et pipelines multi-agents en IA. Je construis des systèmes qui fonctionnent à chaque couche.",
+        title: "Ingénieur IA & Full-Stack",
+        subtitle: "Systèmes agentiques, pipelines RAG & IA de production — sur toute la stack",
+        description: "Étudiant en dernière année d'ingénierie à ESPRIT et ingénieur de fin d'études chez Talan. Je construis des systèmes IA de production — orchestration multi-agents, pipelines RAG / LLM avec garde-fous, et cryptographie appliquée — sur un socle full-stack et mobile solide (React, FastAPI, Flutter).",
         cta: "Me Contacter",
         downloadCV: "Télécharger CV",
         stats: {
@@ -445,13 +515,13 @@ const resources = {
       // About Section
       about: {
         title: "À Propos",
-        subtitle: "Apprenez à mieux me connaître",
-        intro: "Je suis un ingénieur logiciel mobile passionné actuellement en 5ème année à ESPRIT (3ème année cycle d'ingénieur), spécialisé dans le développement mobile multiplateforme. Avec une expertise en iOS, Android, Flutter et technologies web modernes, j'adore créer des solutions innovantes qui résolvent des problèmes du monde réel.",
+        subtitle: "Bâtir une IA qui passe en production.",
+        intro: "Ingénieur IA & full-stack en dernière année à ESPRIT, finalisant mon projet de fin d'études chez Talan. Je me spécialise dans l'IA de production — systèmes agentiques multi-agents, pipelines RAG/LLM et cryptographie appliquée — sur un solide socle frontend, mobile et backend.",
         location: "Bizerte, Tunisie",
-        age: "23 ans",
+        age: "24 ans",
         email: "skyrexcgaming@gmail.com", 
         phone: "+216 94 906 400",
-        description: "Ingénieur Logiciel avec un ancrage frontend et mobile — React, Flutter, SwiftUI — mais à l'aise sur toute la stack. Backend en FastAPI et NestJS, systèmes IA de production avec LangGraph et RAG, mobile iOS et Android, infrastructure Docker et CI/CD. De plus en plus orienté ingénierie IA, tout en gardant de solides bases en UI.",
+        description: "Ingénieur IA avec un solide socle full-stack. Je conçois et livre des systèmes IA de production — orchestration multi-agents (LangGraph, MCP, Claude Agent SDK), pipelines RAG et LLM avec garde-fous, et cryptographie appliquée — appuyés sur une ingénierie frontend, mobile et backend solide (React, Flutter, FastAPI). De plus en plus orienté IA agentique, tout en gardant de solides bases en UI.",
         languages: {
           title: "Langues",
           arabic: "Arabe - Langue maternelle",
@@ -478,6 +548,20 @@ const resources = {
           technologies: "Technologies & Compétences :"
         },
         content: {
+          talanPfe: {
+            title: "Stagiaire Ingénieur PFE — IA & Full-Stack",
+            company: "Talan Tunisie",
+            description: "SMI Virtual Auditor — Plateforme d'audit de conformité ISO 9001 / 14001 / 27001 alimentée par l'IA, basée sur un pipeline RAG",
+            achievements: [
+              "Développé une plateforme d'audit de conformité par IA produisant des verdicts clause par clause (CONFORME / PARTIEL / NON-CONFORME) pour ISO 9001, 14001, 27001 et le référentiel Forfait Talan",
+              "Conçu un pipeline RAG (Retrieval-Augmented Generation) à 3 passes (Llama 3.3 70B via Groq / GitHub Models / NVIDIA NIM) avec embeddings bge-m3 locaux sur Ollama + base vectorielle ChromaDB",
+              "Implémenté 7 couches de garde-fous (groundedness, fidélité, contradiction, plafonnement de confiance) pour supprimer les hallucinations du LLM sur les preuves d'audit",
+              "Architecturé un backend FastAPI en Clean Architecture avec authentification JWT RS256, contrôle d'accès par rôles (4 rôles) et workers Celery asynchrones",
+              "Développé une SPA React 18 + TypeScript + Zustand avec chat RAG conversationnel en streaming (SSE) et export de rapport d'audit PDF en un clic",
+              "Construit un moteur de checklist SMI avec 75+ indicateurs KPI, scoring de conformité pondéré et ingestion multi-formats (PDF/OCR, DOCX, XLSX)",
+              "Livré un produit bilingue (FR/EN) couvert par 108 tests unitaires, entièrement conteneurisé avec Docker (PostgreSQL, Redis, MinIO)"
+            ]
+          },
           talan: {
             title: "Stagiaire Ingénieur - Développement Mobile & Backend",
             company: "Talan Tunisie",
@@ -517,16 +601,16 @@ const resources = {
             ]
           },
           esprit: {
-            title: "Ingénierie Informatique - Développement Mobile",
+            title: "Ingénierie Informatique — Logiciel & IA",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "Actuellement étudiant 5ème année, 3ème année cycle d'ingénieur (stage 4ème année accompli chez Talan)",
+            description: "Diplôme National d'Ingénieur (5 ans), promotion 2026 — projet de fin d'études (PFE) accompli chez Talan Tunisie sur le SMI Virtual Auditor",
             achievements: [
-              "Spécialisé en développement d'applications mobiles et solutions multiplateformes",
-              "Stage d'ingénieur accompli chez Talan Tunisie développant la plateforme ProjectFlow",
-              "Cours avancés en architecture logicielle, intégration IA et conception de systèmes",
-              "Expérience pratique avec frameworks de développement modernes et pratiques DevOps",
+              "Accompli le cycle d'ingénieur complet de 5 ans, spécialisé en génie logiciel, intégration IA et développement mobile multiplateforme",
+              "Réalisé le projet de fin d'études (PFE) chez Talan Tunisie — un auditeur de conformité ISO alimenté par l'IA (RAG + LLM)",
+              "Accompli un précédent stage d'ingénieur chez Talan sur la plateforme ProjectFlow",
+              "Cours avancés en architecture logicielle, systèmes distribués, IA/ML et DevOps",
               "Participation active aux hackathons et compétitions de programmation",
-              "Base solide en algorithmes, structures de données et développement d'entreprise"
+              "Base solide en algorithmes, structures de données et ingénierie de production"
             ]
           },
           bac: {
@@ -565,6 +649,20 @@ const resources = {
         },
         content: {
           // Projets de Stage
+          smiauditor: {
+            title: "SMI Virtual Auditor — Auditeur de Conformité ISO par IA",
+            description: "Projet de fin d'études (PFE) chez Talan Tunisie — une plateforme alimentée par l'IA qui audite les systèmes de management ISO 9001 / 14001 / 27001 et Forfait, produisant des verdicts de conformité clause par clause avec preuves citées via un pipeline RAG sur Llama 3.3 70B",
+            features: [
+              "Pipeline RAG (Retrieval-Augmented Generation) à 3 passes produisant des verdicts CONFORME / PARTIEL / NON-CONFORME avec preuves citées, scores de confiance et recommandations",
+              "Llama 3.3 70B Instruct via fournisseurs compatibles OpenAI (Groq / GitHub Models / NVIDIA NIM) avec rotation multi-clés ; embeddings bge-m3 locaux sur Ollama + ChromaDB",
+              "7 couches de garde-fous — groundedness, fidélité, hybride mots-clés, contradiction, cohérence, confiance multi-facteurs et plafonnement — pour éviter les hallucinations",
+              "Audit checklist SMI : le LLM sélectionne les documents pertinents et 75+ indicateurs KPI par processus ; scoring de conformité pondéré agrégé en score global",
+              "Couverture multi-normes — ISO 9001:2015, ISO 14001:2015, ISO 27001:2022 et le Forfait Talan (110 clauses au total)",
+              "Backend FastAPI en Clean Architecture, authentification JWT RS256 avec RBAC (4 rôles), workers Celery, PostgreSQL, Redis, MinIO — entièrement conteneurisé",
+              "SPA React 18 + TypeScript + Zustand avec chat RAG conversationnel en streaming (SSE) et export de rapport d'audit PDF",
+              "Interface et sortie LLM bilingues FR/EN, ingestion multi-formats (PDF avec OCR, DOCX, XLSX), 108 tests unitaires"
+            ]
+          },
           projectflow: {
             title: "ProjectFlow - Plateforme de Gestion de Projet IA",
             description: "Plateforme collaborative moderne de gestion de projet avec intégration IA développée durant le stage chez Talan Tunisie",
@@ -620,6 +718,48 @@ const resources = {
             ]
           },
           // Projets Personnels
+          claudehive: {
+            title: "Claude Hive — Coordination Multi-Agents pour Claude Code",
+            description: "Une couche de coordination permettant à plusieurs instances de Claude Code de partager une conscience en temps réel, d'éviter les conflits de fichiers et de déléguer des tâches — via un démon léger par machine, un serveur MCP et un canal Supabase Realtime privé, n'échangeant que des métadonnées d'outils nettoyées (jamais le code ni les sorties du modèle).",
+            features: [
+              "Démon `hived` par machine sur un canal Supabase Realtime privé ; le plugin Claude Code diffuse les événements d'appels d'outils nettoyés via un socket Unix",
+              "Huit outils MCP (hive_rooms, hive_read_since, hive_say, hive_delegate, hive_ack, hive_complete, hive_inbox) exposent les opérations de room directement dans une session Claude Code",
+              "Délégation agent à agent — transfert formel de tâche avec workflow d'acceptation/refus et suivi de complétion",
+              "Streaming d'utilisation d'outils en direct pour que les agents voient l'activité concurrente et évitent les collisions de fichiers entre workspaces",
+              "Isolation par room — secrets par room stockés localement (0600), canaux Supabase chiffrés et privés",
+              "Tableau de bord Observer VSCode — webview avec sélecteur de room, flux d'événements en direct, cartes de délégation et composeur de chat",
+              "Nettoyage automatique des secrets — tokens, mots de passe et clés API masqués avant transmission (module scrubber dédié)",
+              "CLI complète + gestion de service — création/jointure/message/délégation de room, supervisée par launchd (macOS) et systemd (Linux)"
+            ]
+          },
+          agenticvalley: {
+            title: "Agentic Valley — Visualiseur d'Orchestration Multi-Agents",
+            description: "Une extension VSCode qui transforme l'orchestration multi-agents invisible en un bureau pixel-art vivant — chaque agent Claude Agent SDK est un personnage interactif dont le sprite s'anime (réflexion, utilisation d'outils, erreurs) en temps réel, rendant le travail de coordination des systèmes agentiques perceptible.",
+            features: [
+              "Sept agents spécialisés (researcher, documentation, code-generator, code-reviewer, tester, architect, main-claude) chacun dans sa propre session Claude Agent SDK",
+              "Claude principal orchestre — déléguant des sous-tâches via l'outil Task, avec cartes de dispatch et explosions de particules rendant chaque délégation visible",
+              "Animation de sprites pilotée par l'état (idle / thinking / tool_use / error) avec effets de particules, via un reducer mappant les événements d'outils vers l'AgentState visuel",
+              "Chat en streaming token par token par agent, reproduisant l'UX de Claude Code, dans une webview VSCode",
+              "Personas d'agents scopés — systemPrompt, allowedTools et toolScopes consultatifs spécifiques au rôle (ex. documentation limitée à docs/**)",
+              "Bureau pixel-art procédural et défilable avec plusieurs postes de travail ; zoom et cinématiques letterbox à la sélection d'un agent",
+              "Persistance des transcriptions par agent via VSCode globalState ; agents conscients du projet, informés du chemin du workspace et de l'équipe",
+              "Développé comme extension VSCode (TypeScript, esbuild, Vitest) sur @anthropic-ai/claude-agent-sdk, authentifié via Claude CLI ou ANTHROPIC_API_KEY"
+            ]
+          },
+          zkattest: {
+            title: "ZK-Attest — Vérification de Justificatifs à Divulgation Nulle",
+            description: "Système de justificatifs préservant la confidentialité permettant à un consultant de prouver cryptographiquement des faits réglementaires — âge, certifications, niveau d'expérience — à un client sans révéler les données sous-jacentes, via des preuves à divulgation nulle Groth16, des Verifiable Credentials W3C et un journal de transparence on-chain (minimisation des données conforme au RGPD).",
+            features: [
+              "Circuits à divulgation nulle Groth16 (Circom + snarkjs) prouvant des prédicats comme « 18+ », « ISO 27001 Lead Auditor valide » ou « expérience ≥ N » en SNARKs de 288 octets — sans jamais révéler les données",
+              "Wallet natif navigateur — justificatifs chiffrés AES-256-GCM dans IndexedDB ; les données ne quittent jamais le navigateur, le vérificateur reçoit un seul bit oui/non",
+              "Chaîne de confiance multi-émetteurs on-chain — un Trust Anchor accrédite les émetteurs via NFT soulbound ERC-5192 ; le vérificateur parcourt la chaîne à chaque preuve (Hyperledger Besu + Solidity)",
+              "Journal de transparence RFC 9162 — arbre de Merkle append-only avec Signed Tree Heads signés Ed25519 quotidiennement et ancrés on-chain pour audit indépendant",
+              "OpenID4VP + DIF Presentation Exchange — présentations vérifiables compatibles EUDI Wallet encapsulant les preuves ZK",
+              "Émission double format — W3C VC 2.0 JSON-LD et SD-JWT VC générés en parallèle pour la compatibilité de l'écosystème",
+              "Microservices FastAPI en architecture hexagonale (issuer / verifier / transparency) avec dérivation de clé Argon2id et frontières vérifiées par import-linter",
+              "Monorepo pnpm Next.js 15 — trois apps (dashboard émetteur, wallet détenteur, portail vérificateur) avec Web Workers pour la génération de preuves en parallèle et démarrage en une commande"
+            ]
+          },
           riftpedia: {
             title: "Riftpedia - Tracker League of Legends",
             description: "Application iOS construite avec SwiftUI pour suivre les statistiques de matchs League of Legends et analyses de jeu",

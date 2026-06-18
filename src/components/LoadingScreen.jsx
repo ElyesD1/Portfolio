@@ -2,12 +2,10 @@ import { motion } from 'framer-motion'
 import './LoadingScreen.css'
 
 const LINES = [
-  '> INITIALIZING PORTFOLIO_v2.0...',
-  '> LOADING MODULES................OK',
-  '> COMPILING ASSETS...............OK',
-  '> MOUNTING COMPONENTS............OK',
-  '> ELYES DAROUICH — SOFTWARE ENGINEER',
-  '> BOOT COMPLETE.',
+  'ESTABLISHING SUBJECT',
+  'LOADING CLAUSES § 00–06',
+  'VERIFYING EVIDENCE',
+  'COMPILING SPECIMEN',
 ]
 
 const LoadingScreen = () => {
@@ -18,40 +16,68 @@ const LoadingScreen = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="ls-content">
-        {LINES.map((line, i) => (
-          <motion.div
-            key={i}
-            className={`ls-line ${i === 4 ? 'ls-line-name' : ''} ${i === 5 ? 'ls-line-done' : ''}`}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.32, duration: 0.2 }}
-          >
-            {line}
-            {i === LINES.length - 1 && (
-              <motion.span
-                className="ls-cursor"
-                animate={{ opacity: [1, 0, 1] }}
-                transition={{ duration: 0.8, repeat: Infinity }}
-              >_</motion.span>
-            )}
-          </motion.div>
-        ))}
+      <span className="hero-crop hero-crop-tl ls-crop" aria-hidden="true" />
+      <span className="hero-crop hero-crop-tr ls-crop" aria-hidden="true" />
+      <span className="hero-crop hero-crop-bl ls-crop" aria-hidden="true" />
+      <span className="hero-crop hero-crop-br ls-crop" aria-hidden="true" />
 
-        {/* Progress bar */}
-        <motion.div
-          className="ls-bar-wrap"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+      <div className="ls-content">
+        <div className="ls-top">
+          <span className="kicker">PORTFOLIO SPECIMEN</span>
+          <span className="kicker">REF · ED—2026</span>
+        </div>
+        <div className="ls-rule" />
+
+        <div className="ls-lines">
+          {LINES.map((line, i) => (
+            <motion.div
+              key={line}
+              className="ls-line"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: i * 0.28, duration: 0.2 }}
+            >
+              <span className="ls-line-label">{line}</span>
+              <span className="ls-line-dots" />
+              <motion.span
+                className="ls-line-ok"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: i * 0.28 + 0.22 }}
+              >
+                OK
+              </motion.span>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.h2
+          className="ls-name"
+          initial={{ clipPath: 'inset(0 100% 0 0)' }}
+          animate={{ clipPath: 'inset(0 -2% 0 0)' }}
+          transition={{ delay: 1.25, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <motion.div
-            className="ls-bar"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.3, duration: 2.2, ease: 'linear' }}
-          />
-        </motion.div>
+          ELYES DAROUICH
+        </motion.h2>
+
+        <div className="ls-foot">
+          <div className="ls-bar-wrap">
+            <motion.div
+              className="ls-bar"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.2, duration: 2.3, ease: 'easeInOut' }}
+            />
+          </div>
+          <motion.span
+            className="verdict verdict-pass ls-verdict"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 2.0, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          >
+            PASS
+          </motion.span>
+        </div>
       </div>
     </motion.div>
   )
