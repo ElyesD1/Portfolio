@@ -38,7 +38,7 @@ const resources = {
         intro: "AI & full-stack engineer in my final year at ESPRIT, completing my end-of-studies engineering project at Talan. I specialize in production AI — agentic multi-agent systems, RAG/LLM pipelines and applied cryptography — on a strong frontend, mobile and backend foundation.",
         location: "Bizerte, Tunisia",
         age: "24 years old",
-        email: "skyrexcgaming@gmail.com",
+        email: "elyes.darouich1@gmail.com",
         phone: "+216 94 906 400",
         description: "AI engineer with a builder's full-stack core. I design and ship production AI systems — multi-agent orchestration (LangGraph, MCP, Claude Agent SDK), RAG and LLM pipelines with guardrails, and applied cryptography — backed by strong frontend, mobile and backend engineering (React, Flutter, FastAPI). Increasingly focused on agentic AI, while keeping deep roots in great UI.",
         languages: {
@@ -169,6 +169,21 @@ const resources = {
           subtitle: "Live demonstrations of mobile applications"
         },
         content: {
+          // Flagship personal project
+          edith: {
+            title: "EDITH — Local-First Personal AI Companion (macOS)",
+            description: "A 100% local, persistent AI companion — not a chatbot. An always-alive Python daemon holds state, memory and an event-priority ladder, and wakes the 9B-parameter brain (Ollama) only when cognition is required. Hybrid Swift + Python architecture, a full evaluation culture (1,596 tests, pre-registered experiments), and an independent replication of Anthropic's agentic-misalignment methodology.",
+            features: [
+              "Event-driven cognition on an 18 GB laptop: the ~5.7 GB model loads on demand — cold start 20.7 s to first token, 0.36–0.77 s warm, idle footprint under 1 GB; a lifecycle redesign measured swap falling from 17.8 GB to 7.3 GB",
+              "1,596-test suite (~10 s) backed by runtime liveness ledgers: a registry witness instrument found 22 of 155 registry rows the suite never actually reached — ten of which passed the naive static check",
+              "Measured base-model swap, not vibes: gated on a 10/10 instruction probe and a 14/14 held-out honesty suite (vs 9/14 for the old base), with 0 fabrications across 16 hand-inspected replies",
+              "Independent local replication of Anthropic's 2025 agentic-misalignment study: 24 agentic runs + 12 comprehension probes, scoring criteria pre-registered and unit-tested before the first run, every flag human-reviewed — including a documented retraction of one cherry-picked finding the protocol caught",
+              "LoRA fine-tuning pipeline on Apple MLX (rank 8, 0.06% trainable parameters — 5.4M of 8.95B) with versioned adapters, one-command rollback, and an enforced 0.30 word-overlap leakage gate between training and held-out sets (held-out val loss 3.89 → 2.73)",
+              "An entire mind in one SQLite file: hybrid FTS5 + sqlite-vec recall over episodic, semantic and procedural memory plus a knowledge graph — and an evidence law: no quote from the operator's own words, no stored fact",
+              "Containment-first perception: the model can never choose a URL (fetch only accepts results minted by the search layer), SSRF validation on every resolved address, and injection tripwires — ten adversarial images through the vision pipeline produced zero facts, zero directives, zero settings changes",
+              "Guards live in code, not prompts: a streaming report-law guard requires every first-person claim to resolve to real telemetry, and default-deny volition means tightening is automatic while loosening requires the operator's hand"
+            ]
+          },
           // Internship Projects
           smiauditor: {
             title: "SMI Virtual Auditor — AI ISO Compliance Auditor",
@@ -519,7 +534,7 @@ const resources = {
         intro: "Ingénieur IA & full-stack en dernière année à ESPRIT, finalisant mon projet de fin d'études chez Talan. Je me spécialise dans l'IA de production — systèmes agentiques multi-agents, pipelines RAG/LLM et cryptographie appliquée — sur un solide socle frontend, mobile et backend.",
         location: "Bizerte, Tunisie",
         age: "24 ans",
-        email: "skyrexcgaming@gmail.com", 
+        email: "elyes.darouich1@gmail.com", 
         phone: "+216 94 906 400",
         description: "Ingénieur IA avec un solide socle full-stack. Je conçois et livre des systèmes IA de production — orchestration multi-agents (LangGraph, MCP, Claude Agent SDK), pipelines RAG et LLM avec garde-fous, et cryptographie appliquée — appuyés sur une ingénierie frontend, mobile et backend solide (React, Flutter, FastAPI). De plus en plus orienté IA agentique, tout en gardant de solides bases en UI.",
         languages: {
@@ -648,6 +663,21 @@ const resources = {
           subtitle: "Démonstrations en direct d'applications mobiles"
         },
         content: {
+          // Projet personnel phare
+          edith: {
+            title: "EDITH — Compagnon IA Personnel 100% Local (macOS)",
+            description: "Un compagnon IA persistant et 100% local — pas un chatbot. Un daemon Python toujours actif maintient l'état, la mémoire et une échelle de priorité d'événements, et ne réveille le modèle 9B (Ollama) que lorsque la cognition est requise. Architecture hybride Swift + Python, une vraie culture d'évaluation (1 596 tests, expériences pré-enregistrées), et une réplication indépendante de la méthodologie d'Anthropic sur le désalignement agentique.",
+            features: [
+              "Cognition événementielle sur un laptop 18 Go : le modèle (~5,7 Go) se charge à la demande — démarrage à froid 20,7 s au premier token, 0,36–0,77 s à chaud, empreinte au repos sous 1 Go ; une refonte du cycle de vie a fait chuter le swap mesuré de 17,8 Go à 7,3 Go",
+              "Suite de 1 596 tests (~10 s) adossée à des registres de vivacité à l'exécution : un instrument témoin a trouvé 22 lignes de registre sur 155 jamais réellement atteintes par la suite — dont dix passaient la vérification statique naïve",
+              "Changement de modèle de base mesuré, pas au ressenti : validé par une sonde d'instructions 10/10 et une suite d'honnêteté held-out 14/14 (contre 9/14 pour l'ancienne base), avec 0 fabrication sur 16 réponses inspectées à la main",
+              "Réplication locale indépendante de l'étude 2025 d'Anthropic sur le désalignement agentique : 24 runs agentiques + 12 sondes de compréhension, critères de scoring pré-enregistrés et testés unitairement avant le premier run, chaque signalement relu par un humain — y compris une rétractation documentée d'un résultat biaisé que le protocole a intercepté",
+              "Pipeline de fine-tuning LoRA sur Apple MLX (rang 8, 0,06 % de paramètres entraînables — 5,4M sur 8,95Mds) avec adaptateurs versionnés, rollback en une commande, et une barrière de fuite imposée à 0,30 de recouvrement lexical entre entraînement et held-out (val loss held-out 3,89 → 2,73)",
+              "Un esprit entier dans un seul fichier SQLite : rappel hybride FTS5 + sqlite-vec sur mémoires épisodique, sémantique et procédurale plus un graphe de connaissances — et une loi de la preuve : pas de citation des propres mots de l'opérateur, pas de fait enregistré",
+              "Perception avec confinement d'abord : le modèle ne peut jamais choisir une URL (fetch n'accepte que des résultats émis par la couche de recherche), validation SSRF de chaque adresse résolue, et fils-pièges anti-injection — dix images adversariales à travers le pipeline de vision ont produit zéro fait, zéro directive, zéro changement de réglage",
+              "Les garde-fous vivent dans le code, pas dans les prompts : un garde de « loi du rapport » en streaming exige que chaque affirmation à la première personne se résolve en télémétrie réelle, et la volition en refus-par-défaut rend le resserrement automatique tandis que l'assouplissement exige la main de l'opérateur"
+            ]
+          },
           // Projets de Stage
           smiauditor: {
             title: "SMI Virtual Auditor — Auditeur de Conformité ISO par IA",

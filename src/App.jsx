@@ -19,8 +19,13 @@ import ScrollProgress from './components/ScrollProgress'
 // Styles
 import './App.css'
 
+// Server-side rendering (build-time prerender) skips the loading screen so
+// crawlers get the full document; a prerendered page also skips it on the
+// client, since real content is already on screen.
+const INITIAL_LOADING = typeof window !== 'undefined' && !window.__PRERENDERED__
+
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(INITIAL_LOADING)
   const { i18n } = useTranslation()
   const dotRef = useRef(null)
   const ringRef = useRef(null)

@@ -6,6 +6,15 @@ import './Projects.css'
 
 const ALL_PROJECTS = [
   {
+    key: 'edith',
+    num: '00',
+    type: 'personal',
+    year: '2026',
+    tech: ['Python', 'Swift', 'SwiftUI', 'Ollama', 'MLX', 'LoRA', 'SQLite', 'sqlite-vec', 'whisper.cpp', 'ONNX'],
+    github: null,
+    video: null,
+  },
+  {
     key: 'smiauditor',
     num: '01',
     type: 'internship',
@@ -388,6 +397,17 @@ const Projects = () => {
                 </AnimatePresence>
               </div>
             </div>
+
+            {/* Build-time prerender only: the interactive dossier mounts one
+                case file at a time, so the full archive is emitted here for
+                crawlers and AI scrapers. Never rendered in the browser. */}
+            {typeof window === 'undefined' && (
+              <div className="exh-ssr-archive">
+                {ALL_PROJECTS.map((p) => (
+                  <ExhibitDetail key={p.key} project={p} />
+                ))}
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

@@ -1,0 +1,84 @@
+# Elyes Darouich — AI Engineer (Agents, RAG & LLM)
+
+> AI engineer at Talan (Tunis, Tunisia) building production agentic and RAG systems:
+> multi-agent orchestration, guardrailed retrieval pipelines, and private on-premise
+> LLM deployment — generative AI that does not require handing your data to a cloud API.
+> National Engineering Degree in Computer Engineering, ESPRIT, 2026.
+> Languages: Arabic (native), French, English.
+> Contact: elyes.darouich1@gmail.com · https://linkedin.com/in/elyes-darouich
+> Code: https://github.com/ElyesD1 · https://github.com/ElyesDarouich
+
+## Experience
+
+- **AI Engineer (end-of-studies project) — Talan Tunisia, Feb–Aug 2026.** Architected the
+  SMI Virtual Auditor, an AI ISO-compliance platform producing clause-by-clause verdicts
+  (COMPLIANT / PARTIAL / NON-COMPLIANT) with cited evidence across ISO 9001/14001/27001
+  (110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B; 7-layer anti-hallucination
+  guardrails; clean-architecture FastAPI backend (JWT RS256, RBAC, Celery, PostgreSQL,
+  Redis, MinIO, Docker, 108 tests) and a React 18 + TypeScript SPA with streaming RAG chat.
+  Retained by Talan as an internal demonstrator.
+- **Software Engineering Intern — Talan Tunisia, Jul–Sep 2025.** ProjectFlow: cross-platform
+  project management (Flutter + NestJS), sub-150 ms API responses for 100+ concurrent users,
+  78% test coverage, Gemini 2.0 Flash assistant, WebSocket real-time collaboration.
+- **Flutter Developer Intern — Vatech WABAG, 2023.** Employee leave-management app with
+  secure auth, RBAC and Firebase push notifications.
+
+## Flagship project: EDITH — local-first personal AI companion (macOS)
+
+A 100% local, persistent AI companion — not a chatbot. An always-alive Python daemon holds
+state, memory and an event-priority ladder; the 9B-parameter model (Ollama) loads only when
+cognition is required. Hybrid Swift/SwiftUI + Python architecture over a Unix socket.
+Verified measurements:
+
+- 1,596-test suite (~10 s) with runtime liveness ledgers; a registry witness instrument
+  found 22 of 155 registry rows the tests never actually reached.
+- Cold start 20.7 s to first token; 0.36–0.77 s warm; idle footprint under 1 GB on an
+  18 GB machine; a lifecycle redesign cut measured swap from 17.8 GB to 7.3 GB.
+- Measured base-model swap: 10/10 instruction gate, 14/14 held-out honesty suite
+  (previous base: 9/14), 0 fabrications across 16 hand-inspected replies.
+- Independent local replication of Anthropic's 2025 agentic-misalignment methodology:
+  24 agentic runs + 12 comprehension probes, scoring pre-registered and unit-tested before
+  the first run, four-layer containment, every flag human-reviewed, and a documented
+  retraction of one cherry-picked finding the protocol caught.
+- LoRA fine-tuning on Apple MLX: rank 8, 0.06% trainable parameters (5.4M of 8.95B),
+  held-out validation loss 3.89 → 2.73, versioned adapters with one-command rollback,
+  enforced 0.30 word-overlap leakage gate between training and held-out sets.
+- Containment-first perception: the model can never choose a URL; SSRF validation;
+  ten adversarial injection images through the vision pipeline produced zero stored facts
+  and zero executed directives.
+
+## Other projects
+
+- **SentinelAI** (https://github.com/ElyesD1/SentinelAI): production multi-agent platform
+  scoring geopolitical & market risk for Gold, Oil, S&P 500, BTC, ETH — 7-agent LangGraph
+  pipeline with Monte Carlo + GARCH risk modeling, Qdrant semantic news search over
+  GDELT/FRED, sub-30 s end-to-end at $0 LLM cost via free-tier key rotation.
+- **ScribeAI**: meeting intelligence — real-time diarized transcription (EN/FR/AR/Tunisian,
+  ElevenLabs Scribe), 9-step AI analysis pipeline, RAG over ChromaDB, auto-generated
+  Mermaid architecture diagrams, zero cloud inference cost.
+- **ZK-Attest** (https://github.com/ElyesDarouich/zk-attest): privacy-preserving credential
+  verification — Groth16 zero-knowledge proofs (Circom/snarkjs), W3C Verifiable Credentials,
+  ERC-5192 soulbound trust chain on Hyperledger Besu, RFC 9162 transparency log.
+- **Claude Hive** (https://github.com/ElyesDarouich/claude-hive): coordination layer for
+  multiple Claude Code agents — live awareness, formal task delegation, secret-scrubbed
+  event streaming over Supabase Realtime, eight MCP tools.
+- **Agentic Valley** (https://github.com/ElyesDarouich/Agentic-Valley): VSCode extension
+  rendering multi-agent orchestration as a living pixel-art office (Claude Agent SDK).
+- Earlier: WABAG desktop apps (Electron), SquadLink, Dialex (iOS), Nomadly (Flutter),
+  Riftpedia (SwiftUI).
+
+## Certifications (verifiable)
+
+- Generative AI with Diffusion Models — NVIDIA DLI, 2025:
+  https://learn.nvidia.com/certificates?id=NBN_yYZrQritFRoiorrdZg
+- Applications of AI for Predictive Maintenance — NVIDIA DLI, 2025:
+  https://learn.nvidia.com/certificates?id=DfIs6wnhTa204pXqdLB7hw
+- Hashgraph Developer Course — The Hashgraph Association, 2025 (NFT credential)
+- AWS Academy Cloud Foundations — AWS Academy, 2025
+
+## Links
+
+- Portfolio: https://elyesdarouichportfolio.vercel.app/
+- CV (PDF): https://elyesdarouichportfolio.vercel.app/ (download link in hero section)
+- GitHub profile: https://github.com/ElyesD1
+- LinkedIn: https://linkedin.com/in/elyes-darouich

@@ -140,8 +140,8 @@ const About = () => {
                   <a href="mailto:elyes.darouich@talan.com" className="about-contact-link">
                     <Mail size={12} /> elyes.darouich@talan.com
                   </a>
-                  <a href="mailto:skyrexcgaming@gmail.com" className="about-contact-link">
-                    <Mail size={12} /> skyrexcgaming@gmail.com
+                  <a href="mailto:elyes.darouich1@gmail.com" className="about-contact-link">
+                    <Mail size={12} /> elyes.darouich1@gmail.com
                   </a>
                   <a href="tel:+21694906400" className="about-contact-link">
                     <Phone size={12} /> +216 94 906 400
