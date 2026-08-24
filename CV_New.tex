@@ -19,7 +19,7 @@
 
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
-\linespread{0.97}
+\linespread{0.955}
 
 % ---- Colors (single restrained accent; color does not affect ATS text) ----
 \definecolor{accent}{HTML}{22303F}
@@ -31,25 +31,25 @@
   {\large\bfseries\scshape\color{accent}}
   {}{0em}{}
   [\vspace{-3pt}{\color{rulegray}\titlerule[0.8pt]}]
-\titlespacing{\section}{0pt}{4pt}{4pt}
+\titlespacing{\section}{0pt}{3pt}{3pt}
 
 % ---- Helpers ----
 % \entry{Title}{Right meta}{Subtitle}{Right meta 2}
 \newcommand{\entry}[4]{%
-  \vspace{3pt}%
+  \vspace{2pt}%
   {\bfseries #1}\hfill{\small #2}\\[1pt]%
   {\small\itshape\color{muted} #3}\hfill{\small\color{muted} #4}%
 }
 
 % \project{Name}{Stack tags}{Description}
 \newcommand{\project}[3]{%
-  \vspace{3pt}%
+  \vspace{2pt}%
   {\bfseries #1}\hfill{\small\itshape\color{muted} #2}\\[1pt]%
   {\small #3}%
 }
 
 \newlist{bullets}{itemize}{1}
-\setlist[bullets]{leftmargin=1.4em,itemsep=2pt,topsep=2.5pt,parsep=0pt,label=\textbullet}
+\setlist[bullets]{leftmargin=1.4em,itemsep=1pt,topsep=2pt,parsep=0pt,label=\textbullet}
 
 %-----------------------------------------------------------
 \begin{document}
@@ -57,7 +57,7 @@
 % ---------------- HEADER (in body, not page header) ----------------
 \begin{center}
   {\Huge\bfseries\color{accent} Elyes Darouich}\\[4pt]
-  {\large\color{muted} AI \& Full-Stack Engineer}\\[6pt]
+  {\large\color{muted} AI Engineer --- Agents, RAG \& LLM Systems}\\[6pt]
   {\small Bizerte / Tunis, Tunisia \quad\textbar\quad +216 94 906 400 \quad\textbar\quad
   \href{mailto:elyes.darouich1@gmail.com}{elyes.darouich1@gmail.com} \quad\textbar\quad
   \href{mailto:elyes.darouich@esprit.tn}{elyes.darouich@esprit.tn}}\\[2pt]
@@ -67,16 +67,16 @@
 
 % ---------------- SUMMARY ----------------
 \section{Professional Summary}
-{\small AI engineer specializing in agentic systems, multi-agent orchestration, and production RAG/LLM pipelines on a strong full-stack foundation. Final-year Computer Engineering student delivering an end-of-studies AI ISO-compliance platform at Talan, built on guardrailed retrieval over Llama 3.3 70B with clean-architecture FastAPI services.}
+{\small AI engineer (National Engineering Degree, ESPRIT 2026) building production agentic systems, guardrailed RAG pipelines, and private on-premise LLM deployments. Delivered an AI ISO-compliance auditor at Talan --- clause-by-clause verdicts with cited evidence across 110 clauses on Llama 3.3 70B --- retained as an internal demonstrator. Builds and evaluates local LLM systems end to end: 1,596-test suites, pre-registered evaluations, LoRA fine-tuning on Apple MLX.}
 
 % ---------------- SKILLS ----------------
 \section{Technical Skills}
 {\small
-{\bfseries AI / ML:} LangGraph, Multi-Agent Orchestration, RAG, MCP, Claude Agent SDK, Prompt Engineering, LLM Guardrails, Vector Search (ChromaDB, Qdrant), Embeddings\\[3pt]
-{\bfseries Languages:} Python, TypeScript, JavaScript, Java, C++, C, Swift, Kotlin, Dart, Solidity, SQL\\[3pt]
-{\bfseries Frontend \& Mobile:} React, Next.js, Flutter, SwiftUI, Kotlin, Tailwind CSS\\[3pt]
-{\bfseries Backend \& Data:} FastAPI, NestJS, Flask, Node.js, Spring Boot, Celery, REST, WebSockets, PostgreSQL, MongoDB, Redis\\[3pt]
-{\bfseries DevOps \& Web3:} Docker, GitHub Actions CI/CD, Linux, Nginx, Vercel, Zero-Knowledge (Groth16, Circom, snarkjs), Hyperledger Besu, Solidity}
+{\bfseries AI / ML:} Multi-Agent Orchestration, LangGraph, RAG, LLM Guardrails \& Evaluation, LoRA Fine-Tuning (Apple MLX), On-Premise LLM Deployment (Ollama), MCP, Claude Agent SDK, Prompt Engineering, Vector Search (ChromaDB, Qdrant, sqlite-vec), Embeddings\\[3pt]
+{\bfseries Languages:} Python, TypeScript, JavaScript, Swift, Java, C++, Solidity, SQL\\[3pt]
+{\bfseries Backend \& Data:} FastAPI, NestJS, Flask, Node.js, Celery, REST, WebSockets, PostgreSQL, SQLite, MongoDB, Redis\\[3pt]
+{\bfseries Frontend \& Mobile:} React, Next.js, SwiftUI, Flutter, Tailwind CSS\\[3pt]
+{\bfseries DevOps \& Web3:} Docker, GitHub Actions CI/CD, Linux, Vercel, Zero-Knowledge (Groth16, Circom, snarkjs), Hyperledger Besu}
 
 % ---------------- EXPERIENCE ----------------
 \section{Experience}
@@ -85,28 +85,29 @@
 \begin{bullets}
   \item Architected ``SMI Virtual Auditor,'' an AI ISO-compliance audit platform producing clause-by-clause verdicts with cited evidence (ISO 9001/14001/27001, 110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B (Groq, GitHub Models, NVIDIA NIM).
   \item Engineered a 7-layer guardrail system (groundedness, fidelity, contradiction, confidence capping) that suppresses hallucinations, grounding verdicts via local bge-m3 embeddings on Ollama + ChromaDB.
-  \item Built a clean-architecture FastAPI backend (JWT RS256, 4-role RBAC, Celery, PostgreSQL/Redis/MinIO, Dockerized, 108 tests) and a React 18 + TypeScript + Zustand SPA with streaming RAG chat (SSE), PDF export, and bilingual FR/EN.
+  \item Built a clean-architecture FastAPI backend (JWT RS256, RBAC, Celery, PostgreSQL/Redis/MinIO, Docker, 108 tests) and a React 18 + TypeScript SPA with streaming RAG chat (SSE) and PDF export.
 \end{bullets}
 
 \entry{Software Engineering Intern --- Talan Tunisia}{Jul 2025 -- Sep 2025}{}{Tunis, Tunisia}
 \begin{bullets}
-  \item Built ``ProjectFlow,'' a cross-platform project-management platform (Flutter + NestJS) sustaining sub-150ms API responses for 100+ concurrent users at 78\% test coverage, with real-time Kanban and chat over WebSockets/Socket.IO.
-  \item Integrated an AI assistant on Google Gemini 2.0 Flash and JWT + Google OAuth with RBAC, shipped via Dockerized GitHub Actions CI/CD.
+  \item Built ``ProjectFlow'' (Flutter + NestJS): sub-150ms APIs for 100+ concurrent users at 78\% test coverage, real-time Kanban/chat over WebSockets, a Gemini 2.0 Flash assistant, JWT + Google OAuth RBAC, Dockerized CI/CD.
 \end{bullets}
 
 \entry{Flutter Developer Intern --- Vatech WABAG}{Summer 2023}{}{Tunis, Tunisia}
 \begin{bullets}
-  \item Built a cross-platform employee leave-management app on a REST API with secure auth, RBAC, and Firebase real-time push notifications keeping approval workflows in sync across devices.
+  \item Built a cross-platform employee leave-management app (REST API, secure auth with RBAC, Firebase real-time push).
 \end{bullets}
 
 % ---------------- PROJECTS ----------------
 \section{Projects}
 
+\project{EDITH --- Local-First Personal AI Companion (macOS)}{Python, Swift, Ollama, MLX, LoRA, SQLite}{100\% local persistent AI companion: an always-alive daemon wakes a 9B model only when cognition is required (cold 20.7s / warm 0.36--0.77s to first token, idle under 1~GB). 1,596-test suite; base-model swaps gated on measured probes (10/10 instruction, 14/14 held-out honesty); LoRA fine-tuning on Apple MLX (0.06\% trainable params, held-out val loss 3.89~\textrightarrow~2.73); independent replication of Anthropic's agentic-misalignment methodology --- 24 pre-registered runs, human-reviewed scoring.}
+
 \project{SentinelAI}{LangGraph, FastAPI, Celery, Redis, Qdrant}{Production multi-agent platform scoring geopolitical \& market risk for Gold/Oil/S\&P~500/BTC/ETH --- a 7-agent LangGraph pipeline with Monte~Carlo + GARCH risk, sub-30s end-to-end at \$0 LLM cost via free-tier key rotation.}
 
-\project{ZK-Attest}{Circom, snarkjs, Solidity, Hyperledger Besu, Next.js}{Privacy-preserving credential verification proving facts without revealing data --- Groth16 zero-knowledge proofs, W3C Verifiable Credentials, and an ERC-5192 soulbound trust chain on Hyperledger Besu (GDPR by design).}
+\project{ZK-Attest}{Circom, snarkjs, Solidity, Hyperledger Besu, Next.js}{Privacy-preserving credential verification proving facts without revealing data --- Groth16 zero-knowledge proofs, W3C Verifiable Credentials, and an ERC-5192 soulbound trust chain (GDPR by design).}
 
-\project{Agentic Valley}{Claude Agent SDK, TypeScript, Node.js, VSCode API}{VSCode extension visualizing multi-agent orchestration as a pixel-art office --- a main agent dispatches 7 specialized Claude Agent SDK agents via the Task tool, with reducer-driven sprite states.}
+\project{Agentic Valley}{Claude Agent SDK, TypeScript, VSCode API}{VSCode extension visualizing multi-agent orchestration as a living pixel-art office --- a main agent dispatches 7 specialized Claude Agent SDK agents via the Task tool.}
 
 
 % ---------------- EDUCATION ----------------
@@ -117,7 +118,7 @@
 % ---------------- CERTIFICATIONS & LANGUAGES ----------------
 \section{Certifications \& Languages}
 {\small
-{\bfseries Certifications:} AWS Cloud Foundations \textbullet\ NVIDIA Generative AI with Diffusion Models \textbullet\ Hedera Hashgraph Developer \textit{(2025)}\\[1pt]
+{\bfseries Certifications:} NVIDIA Generative AI with Diffusion Models \textbullet\ NVIDIA Applications of AI for Predictive Maintenance \textbullet\ Hedera Hashgraph Developer \textbullet\ AWS Cloud Foundations \textit{(2025)}\\[1pt]
 {\bfseries Languages:} Arabic (Native) \textbullet\ English (C1) \textbullet\ French (B2)}
 
 \end{document}
