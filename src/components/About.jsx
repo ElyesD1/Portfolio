@@ -134,14 +134,11 @@ const About = () => {
                 </div>
                 <div className="about-contact-col">
                   <span className="kicker about-block-label">DIRECT</span>
-                  <a href="mailto:elyes.darouich@esprit.tn" className="about-contact-link">
-                    <Mail size={12} /> elyes.darouich@esprit.tn
-                  </a>
-                  <a href="mailto:elyes.darouich@talan.com" className="about-contact-link">
-                    <Mail size={12} /> elyes.darouich@talan.com
-                  </a>
                   <a href="mailto:elyes.darouich1@gmail.com" className="about-contact-link">
                     <Mail size={12} /> elyes.darouich1@gmail.com
+                  </a>
+                  <a href="mailto:elyes.darouich@esprit.tn" className="about-contact-link">
+                    <Mail size={12} /> elyes.darouich@esprit.tn
                   </a>
                   <a href="tel:+21694906400" className="about-contact-link">
                     <Phone size={12} /> +216 94 906 400

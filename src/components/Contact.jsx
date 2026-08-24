@@ -11,9 +11,8 @@ const SOCIALS = [
 ]
 
 const CORRESPONDENCE = [
-  { k: 'EMAIL — ACADEMIC', v: 'elyes.darouich@esprit.tn', href: 'mailto:elyes.darouich@esprit.tn' },
-  { k: 'EMAIL — WORK', v: 'elyes.darouich@talan.com', href: 'mailto:elyes.darouich@talan.com' },
   { k: 'EMAIL — PERSONAL', v: 'elyes.darouich1@gmail.com', href: 'mailto:elyes.darouich1@gmail.com' },
+  { k: 'EMAIL — ACADEMIC', v: 'elyes.darouich@esprit.tn', href: 'mailto:elyes.darouich@esprit.tn' },
   { k: 'DIRECT LINE', v: '+216 94 906 400', href: 'tel:+21694906400' },
   { k: 'LOCATION', v: 'Bizerte / Tunis, TN', href: null },
 ]
