@@ -25,6 +25,7 @@ const fade = (delay = 0, y = 24) => ({
 
 const Contact = () => {
   const { t } = useTranslation()
+  const rows = [...CORRESPONDENCE, { k: 'MOBILITY', v: t('contact.mobility'), href: null }]
 
   return (
     <section id="contact" className="section contact-section">
@@ -55,7 +56,7 @@ const Contact = () => {
             <motion.div className="contact-ledger" {...fade(0.1)}>
               <span className="kicker contact-block-label">CORRESPONDENCE</span>
               <div className="contact-rows">
-                {CORRESPONDENCE.map((c) => (
+                {rows.map((c) => (
                   <div key={c.k} className="contact-row">
                     <span className="contact-row-k">{c.k}</span>
                     <span className="contact-row-dots" />

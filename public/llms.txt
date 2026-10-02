@@ -3,7 +3,8 @@
 > AI engineer (Bizerte / Tunis, Tunisia) building production agentic and RAG systems:
 > multi-agent orchestration, guardrailed retrieval pipelines, and private on-premise
 > LLM deployment — generative AI that does not require handing your data to a cloud API.
-> National Engineering Degree in Computer Engineering (highest distinction), ESPRIT, 2026.
+> National Engineering Degree in Computer Engineering — Mobile Information Systems (SIM),
+> highest distinction, ESPRIT, 2026.
 > EU citizen, open to relocation.
 > Languages: Arabic (native), French (native), English (C1).
 > Contact: elyes.darouich1@gmail.com · https://linkedin.com/in/elyes-darouich

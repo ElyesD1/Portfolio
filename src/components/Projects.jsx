@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Github, Play, ArrowUpRight } from 'lucide-react'
+import { Github, Play, ArrowUpRight, FileText } from 'lucide-react'
 import './Projects.css'
 
 const ALL_PROJECTS = [
@@ -12,6 +12,7 @@ const ALL_PROJECTS = [
     year: '2026',
     tech: ['Python', 'Swift', 'SwiftUI', 'Ollama', 'MLX', 'LoRA', 'SQLite', 'sqlite-vec', 'whisper.cpp', 'ONNX'],
     github: null,
+    writeup: { href: 'https://claude.ai/artifact/7TTKjre9CBnbJv1ziY4zhn', label: 'MISALIGNMENT STUDY — WRITE-UP' },
     video: null,
   },
   {
@@ -265,6 +266,12 @@ const ExhibitDetail = ({ project }) => {
           {project.github && (
             <a href={project.github} target="_blank" rel="noreferrer" className="exh-link">
               <Github size={13} /> VIEW SOURCE <ArrowUpRight size={12} />
+            </a>
+          )}
+
+          {project.writeup && (
+            <a href={project.writeup.href} target="_blank" rel="noreferrer" className="exh-link">
+              <FileText size={13} /> {project.writeup.label} <ArrowUpRight size={12} />
             </a>
           )}
         </div>

@@ -120,11 +120,11 @@ const resources = {
             ]
           },
           esprit: {
-            title: "Computer Engineering — Software & AI",
+            title: "Computer Engineering — Mobile Information Systems (SIM)",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "5-year National Engineering Degree, graduated 2026, highest distinction — completed end-of-studies project (PFE) at Talan Tunisia building the SMI Virtual Auditor",
+            description: "5-year National Engineering Degree, graduated 2026, highest distinction — trained in mobile information systems, then moved into applied AI with the end-of-studies project (PFE) at Talan Tunisia: the SMI Virtual Auditor, an AI-powered ISO compliance auditor",
             achievements: [
-              "Completed the full 5-year engineering cycle, specializing in software engineering, AI integration and cross-platform mobile development",
+              "Completed the full 5-year engineering cycle in the Mobile Information Systems (SIM) track — software engineering and cross-platform mobile development",
               "Delivered the end-of-studies project (PFE) at Talan Tunisia — an AI-powered ISO compliance auditor (RAG + LLM)",
               "Completed a prior engineering internship at Talan building the ProjectFlow platform",
               "Advanced coursework in software architecture, distributed systems, AI/ML and DevOps",
@@ -475,6 +475,7 @@ const resources = {
       contact: {
         title: "Get In Touch",
         subtitle: "Let's work together",
+        mobility: "EU citizen · open to relocation",
         description: "I'm always interested in new opportunities and exciting projects. Whether you want to discuss a potential collaboration or just say hello, feel free to reach out!",
         form: {
           name: "Your Name",
@@ -626,11 +627,11 @@ const resources = {
             ]
           },
           esprit: {
-            title: "Ingénierie Informatique — Logiciel & IA",
+            title: "Génie Informatique — Systèmes d'Information Mobiles (SIM)",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "Diplôme National d'Ingénieur (5 ans), obtenu en 2026 avec la plus haute mention — projet de fin d'études (PFE) accompli chez Talan Tunisie sur le SMI Virtual Auditor",
+            description: "Diplôme National d'Ingénieur (5 ans), obtenu en 2026 avec la plus haute mention — formé aux systèmes d'information mobiles, puis orienté vers l'IA appliquée avec le projet de fin d'études (PFE) chez Talan Tunisie : le SMI Virtual Auditor, un auditeur de conformité ISO alimenté par l'IA",
             achievements: [
-              "Accompli le cycle d'ingénieur complet de 5 ans, spécialisé en génie logiciel, intégration IA et développement mobile multiplateforme",
+              "Accompli le cycle d'ingénieur complet de 5 ans dans l'option Systèmes d'Information Mobiles (SIM) — génie logiciel et développement mobile multiplateforme",
               "Réalisé le projet de fin d'études (PFE) chez Talan Tunisie — un auditeur de conformité ISO alimenté par l'IA (RAG + LLM)",
               "Accompli un précédent stage d'ingénieur chez Talan sur la plateforme ProjectFlow",
               "Cours avancés en architecture logicielle, systèmes distribués, IA/ML et DevOps",
@@ -979,6 +980,7 @@ const resources = {
       contact: {
         title: "Entrer en Contact",
         subtitle: "Travaillons ensemble",
+        mobility: "Citoyen de l'UE · ouvert à la mobilité",
         description: "Je suis toujours intéressé par de nouvelles opportunités et projets passionnants. Que vous souhaitiez discuter d'une collaboration potentielle ou simplement dire bonjour, n'hésitez pas à me contacter !",
         form: {
           name: "Votre Nom",
