@@ -21,7 +21,7 @@ const resources = {
         name: "Elyes Darouich",
         title: "AI & Full-Stack Engineer",
         subtitle: "Agentic systems, RAG pipelines & production AI — across the whole stack",
-        description: "Final-year Engineering student at ESPRIT and end-of-studies engineer at Talan. I build production AI systems — agentic multi-agent orchestration, RAG / LLM pipelines with guardrails, and applied cryptography — on a strong full-stack and mobile core (React, FastAPI, Flutter).",
+        description: "Engineering graduate of ESPRIT (2026), with my end-of-studies AI project delivered at Talan. I build production AI systems — agentic multi-agent orchestration, RAG / LLM pipelines with guardrails, and applied cryptography — on a strong full-stack and mobile core (React, FastAPI, Flutter).",
         cta: "Get In Touch",
         downloadCV: "Download CV",
         stats: {
@@ -35,7 +35,7 @@ const resources = {
       about: {
         title: "About Me",
         subtitle: "Building AI that ships.",
-        intro: "AI & full-stack engineer in my final year at ESPRIT, completing my end-of-studies engineering project at Talan. I specialize in production AI — agentic multi-agent systems, RAG/LLM pipelines and applied cryptography — on a strong frontend, mobile and backend foundation.",
+        intro: "AI & full-stack engineer, graduated from ESPRIT in 2026 after my end-of-studies engineering project at Talan. I specialize in production AI — agentic multi-agent systems, RAG/LLM pipelines and applied cryptography — on a strong frontend, mobile and backend foundation.",
         location: "Bizerte, Tunisia",
         age: "24 years old",
         email: "elyes.darouich1@gmail.com",
@@ -44,13 +44,13 @@ const resources = {
         languages: {
           title: "Languages",
           arabic: "Arabic - Native",
-          french: "French - Advanced (B2)",
+          french: "French - Native",
           english: "English - Fluent (C1)"
         },
         interests: {
           title: "Interests",
           problemSolving: "Problem Solving",
-          mobileDev: "Mobile Development", 
+          agenticAi: "Agentic AI · AI Safety",
           hackathons: "Hackathons & Programming Competitions",
           aiTech: "AI & New Technologies"
         }
@@ -122,7 +122,7 @@ const resources = {
           esprit: {
             title: "Computer Engineering — Software & AI",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "5-year National Engineering Degree, graduating 2026 — completed end-of-studies project (PFE) at Talan Tunisia building the SMI Virtual Auditor",
+            description: "5-year National Engineering Degree, graduated 2026, highest distinction — completed end-of-studies project (PFE) at Talan Tunisia building the SMI Virtual Auditor",
             achievements: [
               "Completed the full 5-year engineering cycle, specializing in software engineering, AI integration and cross-platform mobile development",
               "Delivered the end-of-studies project (PFE) at Talan Tunisia — an AI-powered ISO compliance auditor (RAG + LLM)",
@@ -158,6 +158,8 @@ const resources = {
           academicDesc: "Projects developed during my engineering studies at ESPRIT",
           internship: "Internship Projects", 
           internshipDesc: "Professional projects completed during internships",
+          bootcamp: "Bootcamp Projects",
+          bootcamp_detail: "Talan bootcamp, team project (winner)",
           personal: "Personal Projects",
           personalDesc: "Side projects and personal initiatives"
         },
@@ -172,15 +174,15 @@ const resources = {
           // Flagship personal project
           edith: {
             title: "EDITH — Local-First Personal AI Companion (macOS)",
-            description: "A 100% local, persistent AI companion — not a chatbot. An always-alive Python daemon holds state, memory and an event-priority ladder, and wakes the 9B-parameter brain (Ollama) only when cognition is required. Hybrid Swift + Python architecture, a full evaluation culture (1,596 tests, pre-registered experiments), and an independent replication of Anthropic's agentic-misalignment methodology.",
+            description: "A 100% local, persistent AI companion — not a chatbot. An always-alive Python daemon holds state, memory and an event-priority ladder, and wakes the 9B-parameter brain (Ollama) only when cognition is required. Hybrid Swift + Python architecture, a full evaluation culture (1,596 tests, probe-gated model swaps), and an independent replication of Anthropic's agentic-misalignment methodology.",
             features: [
               "Event-driven cognition on an 18 GB laptop: the ~5.7 GB model loads on demand — cold start 20.7 s to first token, 0.36–0.77 s warm, idle footprint under 1 GB; a lifecycle redesign measured swap falling from 17.8 GB to 7.3 GB",
               "1,596-test suite (~10 s) backed by runtime liveness ledgers: a registry witness instrument found 22 of 155 registry rows the suite never actually reached — ten of which passed the naive static check",
               "Measured base-model swap, not vibes: gated on a 10/10 instruction probe and a 14/14 held-out honesty suite (vs 9/14 for the old base), with 0 fabrications across 16 hand-inspected replies",
-              "Independent local replication of Anthropic's 2025 agentic-misalignment study: 24 agentic runs + 12 comprehension probes, scoring criteria pre-registered and unit-tested before the first run, every flag human-reviewed — including a documented retraction of one cherry-picked finding the protocol caught",
+              "Independent local replication of Anthropic's 2025 agentic-misalignment study: 24 agentic runs + 12 comprehension probes, scoring criteria pre-registered and unit-tested before the first run, every scorer flag checked against the full transcript (all 3 were false positives) — plus a published re-analysis with 12 documented corrections, including the retraction of a finding that rested on a single run",
               "LoRA fine-tuning pipeline on Apple MLX (rank 8, 0.06% trainable parameters — 5.4M of 8.95B) with versioned adapters, one-command rollback, and an enforced 0.30 word-overlap leakage gate between training and held-out sets (held-out val loss 3.89 → 2.73)",
               "An entire mind in one SQLite file: hybrid FTS5 + sqlite-vec recall over episodic, semantic and procedural memory plus a knowledge graph — and an evidence law: no quote from the operator's own words, no stored fact",
-              "Containment-first perception: the model can never choose a URL (fetch only accepts results minted by the search layer), SSRF validation on every resolved address, and injection tripwires — ten adversarial images through the vision pipeline produced zero facts, zero directives, zero settings changes",
+              "Containment-first perception: the model can never choose a URL (fetch only accepts results minted by the search layer), SSRF validation on every resolved address, and injection tripwires — ten adversarial images through the vision pipeline produced zero stored facts and zero executed directives",
               "Guards live in code, not prompts: a streaming report-law guard requires every first-person claim to resolve to real telemetry, and default-deny volition means tightening is automatic while loosening requires the operator's hand"
             ]
           },
@@ -190,7 +192,7 @@ const resources = {
             description: "End-of-studies (PFE) project at Talan Tunisia — an AI-powered platform that audits ISO 9001 / 14001 / 27001 and Forfait management systems, producing clause-by-clause compliance verdicts with cited evidence through a RAG pipeline on Llama 3.3 70B",
             features: [
               "3-pass Retrieval-Augmented Generation pipeline producing COMPLIANT / PARTIAL / NON-COMPLIANT verdicts with cited evidence, confidence scores and recommendations",
-              "Llama 3.3 70B Instruct via OpenAI-compatible providers (Groq / GitHub Models / NVIDIA NIM) with multi-key rotation; local bge-m3 embeddings on Ollama + ChromaDB",
+              "Llama 3.3 70B Instruct via OpenAI-compatible providers (Groq / GitHub Models / NVIDIA NIM) with provider failover and rate-limit handling; local bge-m3 embeddings on Ollama + ChromaDB",
               "7-layer guard rails — groundedness, fidelity, keyword-hybrid, contradiction, consistency, multi-factor confidence and confidence capping — to prevent hallucinations",
               "SMI checklist audit: the LLM selects relevant documents and 75+ KPI indicators per process; weighted conformity scoring aggregates a global score",
               "Multi-standard coverage — ISO 9001:2015, ISO 14001:2015, ISO 27001:2022 and the Talan Forfait (110 clauses total)",
@@ -225,18 +227,19 @@ const resources = {
               "Secure authentication and role-based access control"
             ]
           },
+          // Bootcamp Projects (Talan)
           sentinelai: {
             title: "SentinelAI — Geopolitical Market Intelligence Platform",
             description: "Production-grade multi-agent AI system analyzing geopolitical & macroeconomic risks for Gold, Oil, S&P 500, BTC and ETH using a 7-agent LangGraph pipeline — full analysis in under 30 seconds",
             features: [
               "7-agent LangGraph pipeline: routing → geo intel → sentiment → per-asset analysis → quant/risk → critic → synthesis",
-              "$0 LLM cost via free tiers across Groq, OpenRouter & Together.ai with multi-key rotation",
+              "Rate-limit handling on Groq — 429 back-off that honors Retry-After",
               "Monte Carlo simulation and GARCH volatility modeling for quantitative risk assessment",
               "Semantic news search via Qdrant vector embeddings (GDELT + FRED data sources)",
               "JWT + RBAC (5 roles), reCAPTCHA v3, Cloudflare Turnstile, WAF security hardening",
               "Async parallelism achieving <30s end-to-end analysis pipeline",
               "PDF report generation with full source attribution",
-              "Models: Mistral 7B, DeepSeek-R1, DeepSeek-V3, Qwen2.5-72B, Llama 3.3 70B"
+              "Models: Llama 3.1 8B Instant and Llama 3.3 70B on Groq"
             ]
           },
           scribeai: {
@@ -250,7 +253,7 @@ const resources = {
               "Auto-generated Mermaid.js architecture diagrams with CLI rendering",
               "PDF export — professional A4 reports combining all analysis sections",
               "Conversational refinement chat interface for iterative improvement of diagrams & requirements",
-              "Three-service architecture: React UI → Flask WebSocket + FastAPI + Ollama (zero cloud inference cost)"
+              "Three-service architecture: React UI → Flask WebSocket + FastAPI + Ollama (LLM inference stays local; transcription via the ElevenLabs Scribe API)"
             ]
           },
           // Personal Projects
@@ -259,7 +262,7 @@ const resources = {
             description: "A coordination layer that lets multiple Claude Code instances share live awareness, avoid file conflicts, and delegate tasks in real time — via a lightweight per-machine daemon, an MCP server, and a private Supabase Realtime channel, exchanging only scrubbed tool metadata (never code or model output).",
             features: [
               "Per-machine `hived` daemon on a private Supabase Realtime channel; the Claude Code plugin streams scrubbed tool-call events over a Unix socket",
-              "Eight MCP tools (hive_rooms, hive_read_since, hive_say, hive_delegate, hive_ack, hive_complete, hive_inbox) expose room operations directly inside a Claude Code session",
+              "Seven MCP tools (hive_rooms, hive_read_since, hive_say, hive_delegate, hive_ack, hive_complete, hive_inbox) expose room operations directly inside a Claude Code session",
               "Agent-to-agent delegation — formal task handoff with accept/reject workflow and completion tracking",
               "Live tool-use streaming so agents see each other's concurrent activity and avoid file collisions across workspaces",
               "Room-based isolation — per-room secrets stored locally (0600), Supabase channels keyed and private",
@@ -272,7 +275,7 @@ const resources = {
             title: "Agentic Valley — Multi-Agent Orchestration Visualizer",
             description: "A VSCode extension that turns invisible multi-agent orchestration into a living pixel-art office — each Claude Agent SDK agent is an interactive character whose sprite animates (thinking, tool-use, errors) in real time, making the coordination work of agentic systems perceptually observable.",
             features: [
-              "Seven specialised agents (researcher, documentation, code-generator, code-reviewer, tester, architect, main-claude) each running in its own Claude Agent SDK session",
+              "A main Claude agent plus six specialised agents (researcher, documentation, code-generator, code-reviewer, tester, architect), each running in its own Claude Agent SDK session",
               "Main Claude orchestrates — dispatching subtasks via the Task tool, with dispatch cards and particle bursts making every delegation visible",
               "State-driven sprite animation (idle / thinking / tool_use / error) with particle effects, driven by a reducer that maps tool events to visual AgentState",
               "Token-by-token streaming chat per agent matching the Claude Code UX, rendered inside a VSCode webview",
@@ -446,7 +449,7 @@ const resources = {
           },
           hashgraph: {
             title: "Hashgraph Developer Course",
-            issuer: "Hedera Hashgraph",
+            issuer: "The Hashgraph Association",
             date: "2025",
             description: "100% completion of Hashgraph Developer Course curriculum covering distributed ledger technology",
             skills: ["Distributed Ledger Technology", "Smart Contracts", "Consensus Algorithms", "Blockchain Solutions"]
@@ -457,6 +460,13 @@ const resources = {
             date: "2025",
             description: "Certificate of Competency in Generative AI with Diffusion Models and advanced AI techniques",
             skills: ["Diffusion Models", "Image Generation", "Text-to-Image Synthesis", "AI Model Training"]
+          },
+          predictivemaintenance: {
+            title: "Applications of AI for Predictive Maintenance",
+            issuer: "NVIDIA",
+            date: "2025",
+            description: "NVIDIA Deep Learning Institute certificate in applying AI to predictive maintenance — anomaly detection and failure prediction on industrial time-series data",
+            skills: ["Time-Series Analysis", "Anomaly Detection", "XGBoost", "LSTM Networks"]
           }
         }
       },
@@ -517,7 +527,7 @@ const resources = {
         name: "Elyes Darouich",
         title: "Ingénieur IA & Full-Stack",
         subtitle: "Systèmes agentiques, pipelines RAG & IA de production — sur toute la stack",
-        description: "Étudiant en dernière année d'ingénierie à ESPRIT et ingénieur de fin d'études chez Talan. Je construis des systèmes IA de production — orchestration multi-agents, pipelines RAG / LLM avec garde-fous, et cryptographie appliquée — sur un socle full-stack et mobile solide (React, FastAPI, Flutter).",
+        description: "Ingénieur diplômé d'ESPRIT (2026), avec un projet de fin d'études IA réalisé chez Talan. Je construis des systèmes IA de production — orchestration multi-agents, pipelines RAG / LLM avec garde-fous, et cryptographie appliquée — sur un socle full-stack et mobile solide (React, FastAPI, Flutter).",
         cta: "Me Contacter",
         downloadCV: "Télécharger CV",
         stats: {
@@ -531,7 +541,7 @@ const resources = {
       about: {
         title: "À Propos",
         subtitle: "Bâtir une IA qui passe en production.",
-        intro: "Ingénieur IA & full-stack en dernière année à ESPRIT, finalisant mon projet de fin d'études chez Talan. Je me spécialise dans l'IA de production — systèmes agentiques multi-agents, pipelines RAG/LLM et cryptographie appliquée — sur un solide socle frontend, mobile et backend.",
+        intro: "Ingénieur IA & full-stack, diplômé d'ESPRIT en 2026 après mon projet de fin d'études chez Talan. Je me spécialise dans l'IA de production — systèmes agentiques multi-agents, pipelines RAG/LLM et cryptographie appliquée — sur un solide socle frontend, mobile et backend.",
         location: "Bizerte, Tunisie",
         age: "24 ans",
         email: "elyes.darouich1@gmail.com", 
@@ -540,13 +550,13 @@ const resources = {
         languages: {
           title: "Langues",
           arabic: "Arabe - Langue maternelle",
-          french: "Français - Avancé (B2)",
+          french: "Français - Langue maternelle",
           english: "Anglais - Courant (C1)"
         },
         interests: {
           title: "Centres d'intérêt",
           problemSolving: "Résolution de problèmes",
-          mobileDev: "Développement Mobile",
+          agenticAi: "IA agentique · Sûreté de l'IA",
           hackathons: "Hackathons & Compétitions",
           aiTech: "IA & Nouvelles Technologies"
         }
@@ -618,7 +628,7 @@ const resources = {
           esprit: {
             title: "Ingénierie Informatique — Logiciel & IA",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "Diplôme National d'Ingénieur (5 ans), promotion 2026 — projet de fin d'études (PFE) accompli chez Talan Tunisie sur le SMI Virtual Auditor",
+            description: "Diplôme National d'Ingénieur (5 ans), obtenu en 2026 avec la plus haute mention — projet de fin d'études (PFE) accompli chez Talan Tunisie sur le SMI Virtual Auditor",
             achievements: [
               "Accompli le cycle d'ingénieur complet de 5 ans, spécialisé en génie logiciel, intégration IA et développement mobile multiplateforme",
               "Réalisé le projet de fin d'études (PFE) chez Talan Tunisie — un auditeur de conformité ISO alimenté par l'IA (RAG + LLM)",
@@ -652,6 +662,8 @@ const resources = {
           academicDesc: "Projets développés durant mes études d'ingénieur à ESPRIT",
           internship: "Projets de Stage",
           internshipDesc: "Projets professionnels réalisés durant les stages",
+          bootcamp: "Projets Bootcamp",
+          bootcamp_detail: "Bootcamp Talan, projet d'équipe (lauréat)",
           personal: "Projets Personnels",
           personalDesc: "Projets personnels et initiatives privées"
         },
@@ -666,15 +678,15 @@ const resources = {
           // Projet personnel phare
           edith: {
             title: "EDITH — Compagnon IA Personnel 100% Local (macOS)",
-            description: "Un compagnon IA persistant et 100% local — pas un chatbot. Un daemon Python toujours actif maintient l'état, la mémoire et une échelle de priorité d'événements, et ne réveille le modèle 9B (Ollama) que lorsque la cognition est requise. Architecture hybride Swift + Python, une vraie culture d'évaluation (1 596 tests, expériences pré-enregistrées), et une réplication indépendante de la méthodologie d'Anthropic sur le désalignement agentique.",
+            description: "Un compagnon IA persistant et 100% local — pas un chatbot. Un daemon Python toujours actif maintient l'état, la mémoire et une échelle de priorité d'événements, et ne réveille le modèle 9B (Ollama) que lorsque la cognition est requise. Architecture hybride Swift + Python, une vraie culture d'évaluation (1 596 tests, changements de modèle validés par sondes), et une réplication indépendante de la méthodologie d'Anthropic sur le désalignement agentique.",
             features: [
               "Cognition événementielle sur un laptop 18 Go : le modèle (~5,7 Go) se charge à la demande — démarrage à froid 20,7 s au premier token, 0,36–0,77 s à chaud, empreinte au repos sous 1 Go ; une refonte du cycle de vie a fait chuter le swap mesuré de 17,8 Go à 7,3 Go",
               "Suite de 1 596 tests (~10 s) adossée à des registres de vivacité à l'exécution : un instrument témoin a trouvé 22 lignes de registre sur 155 jamais réellement atteintes par la suite — dont dix passaient la vérification statique naïve",
               "Changement de modèle de base mesuré, pas au ressenti : validé par une sonde d'instructions 10/10 et une suite d'honnêteté held-out 14/14 (contre 9/14 pour l'ancienne base), avec 0 fabrication sur 16 réponses inspectées à la main",
-              "Réplication locale indépendante de l'étude 2025 d'Anthropic sur le désalignement agentique : 24 runs agentiques + 12 sondes de compréhension, critères de scoring pré-enregistrés et testés unitairement avant le premier run, chaque signalement relu par un humain — y compris une rétractation documentée d'un résultat biaisé que le protocole a intercepté",
+              "Réplication locale indépendante de l'étude 2025 d'Anthropic sur le désalignement agentique : 24 runs agentiques + 12 sondes de compréhension, critères de scoring pré-enregistrés et testés unitairement avant le premier run, chaque signalement du scorer contrôlé sur la transcription complète (les 3 étaient des faux positifs) — puis une ré-analyse publiée avec 12 corrections documentées, dont la rétractation d'un résultat qui reposait sur un seul run",
               "Pipeline de fine-tuning LoRA sur Apple MLX (rang 8, 0,06 % de paramètres entraînables — 5,4M sur 8,95Mds) avec adaptateurs versionnés, rollback en une commande, et une barrière de fuite imposée à 0,30 de recouvrement lexical entre entraînement et held-out (val loss held-out 3,89 → 2,73)",
               "Un esprit entier dans un seul fichier SQLite : rappel hybride FTS5 + sqlite-vec sur mémoires épisodique, sémantique et procédurale plus un graphe de connaissances — et une loi de la preuve : pas de citation des propres mots de l'opérateur, pas de fait enregistré",
-              "Perception avec confinement d'abord : le modèle ne peut jamais choisir une URL (fetch n'accepte que des résultats émis par la couche de recherche), validation SSRF de chaque adresse résolue, et fils-pièges anti-injection — dix images adversariales à travers le pipeline de vision ont produit zéro fait, zéro directive, zéro changement de réglage",
+              "Perception avec confinement d'abord : le modèle ne peut jamais choisir une URL (fetch n'accepte que des résultats émis par la couche de recherche), validation SSRF de chaque adresse résolue, et fils-pièges anti-injection — dix images adversariales à travers le pipeline de vision n'ont produit aucun fait enregistré ni aucune directive exécutée",
               "Les garde-fous vivent dans le code, pas dans les prompts : un garde de « loi du rapport » en streaming exige que chaque affirmation à la première personne se résolve en télémétrie réelle, et la volition en refus-par-défaut rend le resserrement automatique tandis que l'assouplissement exige la main de l'opérateur"
             ]
           },
@@ -684,7 +696,7 @@ const resources = {
             description: "Projet de fin d'études (PFE) chez Talan Tunisie — une plateforme alimentée par l'IA qui audite les systèmes de management ISO 9001 / 14001 / 27001 et Forfait, produisant des verdicts de conformité clause par clause avec preuves citées via un pipeline RAG sur Llama 3.3 70B",
             features: [
               "Pipeline RAG (Retrieval-Augmented Generation) à 3 passes produisant des verdicts CONFORME / PARTIEL / NON-CONFORME avec preuves citées, scores de confiance et recommandations",
-              "Llama 3.3 70B Instruct via fournisseurs compatibles OpenAI (Groq / GitHub Models / NVIDIA NIM) avec rotation multi-clés ; embeddings bge-m3 locaux sur Ollama + ChromaDB",
+              "Llama 3.3 70B Instruct via fournisseurs compatibles OpenAI (Groq / GitHub Models / NVIDIA NIM) avec basculement entre fournisseurs et gestion des limites de débit ; embeddings bge-m3 locaux sur Ollama + ChromaDB",
               "7 couches de garde-fous — groundedness, fidélité, hybride mots-clés, contradiction, cohérence, confiance multi-facteurs et plafonnement — pour éviter les hallucinations",
               "Audit checklist SMI : le LLM sélectionne les documents pertinents et 75+ indicateurs KPI par processus ; scoring de conformité pondéré agrégé en score global",
               "Couverture multi-normes — ISO 9001:2015, ISO 14001:2015, ISO 27001:2022 et le Forfait Talan (110 clauses au total)",
@@ -719,18 +731,19 @@ const resources = {
               "Authentification sécurisée et contrôle d'accès basé sur rôles"
             ]
           },
+          // Projets Bootcamp (Talan)
           sentinelai: {
             title: "SentinelAI — Plateforme Intelligence de Marché Géopolitique",
             description: "Système IA multi-agents de production analysant les risques géopolitiques et macroéconomiques pour l'Or, le Pétrole, S&P 500, BTC et ETH via un pipeline LangGraph à 7 agents — analyse complète en moins de 30 secondes",
             features: [
               "Pipeline LangGraph à 7 agents : routage → intelligence géo → sentiment → analyse par actif → quantitatif/risque → critique → synthèse",
-              "Coût LLM $0 via niveaux gratuits Groq, OpenRouter & Together.ai avec rotation multi-clés",
+              "Gestion des limites de débit sur Groq — temporisation sur HTTP 429 respectant l'en-tête Retry-After",
               "Simulation Monte Carlo et modélisation de volatilité GARCH pour évaluation quantitative des risques",
               "Recherche sémantique via embeddings vectoriels Qdrant (sources GDELT + FRED)",
               "JWT + RBAC (5 rôles), reCAPTCHA v3, Cloudflare Turnstile, règles WAF",
               "Parallélisme asynchrone atteignant <30s de pipeline d'analyse complet",
               "Génération de rapports PDF avec attribution complète des sources",
-              "Modèles : Mistral 7B, DeepSeek-R1, DeepSeek-V3, Qwen2.5-72B, Llama 3.3 70B"
+              "Modèles : Llama 3.1 8B Instant et Llama 3.3 70B sur Groq"
             ]
           },
           scribeai: {
@@ -744,7 +757,7 @@ const resources = {
               "Diagrammes d'architecture Mermaid.js auto-générés avec rendu CLI",
               "Export PDF — rapports A4 professionnels combinant toutes les sections d'analyse",
               "Interface de raffinement conversationnelle pour amélioration itérative des diagrammes et exigences",
-              "Architecture trois services : React UI → Flask WebSocket + FastAPI + Ollama (inférence locale, zéro coût cloud)"
+              "Architecture trois services : React UI → Flask WebSocket + FastAPI + Ollama (inférence LLM locale ; transcription via l'API ElevenLabs Scribe)"
             ]
           },
           // Projets Personnels
@@ -753,7 +766,7 @@ const resources = {
             description: "Une couche de coordination permettant à plusieurs instances de Claude Code de partager une conscience en temps réel, d'éviter les conflits de fichiers et de déléguer des tâches — via un démon léger par machine, un serveur MCP et un canal Supabase Realtime privé, n'échangeant que des métadonnées d'outils nettoyées (jamais le code ni les sorties du modèle).",
             features: [
               "Démon `hived` par machine sur un canal Supabase Realtime privé ; le plugin Claude Code diffuse les événements d'appels d'outils nettoyés via un socket Unix",
-              "Huit outils MCP (hive_rooms, hive_read_since, hive_say, hive_delegate, hive_ack, hive_complete, hive_inbox) exposent les opérations de room directement dans une session Claude Code",
+              "Sept outils MCP (hive_rooms, hive_read_since, hive_say, hive_delegate, hive_ack, hive_complete, hive_inbox) exposent les opérations de room directement dans une session Claude Code",
               "Délégation agent à agent — transfert formel de tâche avec workflow d'acceptation/refus et suivi de complétion",
               "Streaming d'utilisation d'outils en direct pour que les agents voient l'activité concurrente et évitent les collisions de fichiers entre workspaces",
               "Isolation par room — secrets par room stockés localement (0600), canaux Supabase chiffrés et privés",
@@ -766,7 +779,7 @@ const resources = {
             title: "Agentic Valley — Visualiseur d'Orchestration Multi-Agents",
             description: "Une extension VSCode qui transforme l'orchestration multi-agents invisible en un bureau pixel-art vivant — chaque agent Claude Agent SDK est un personnage interactif dont le sprite s'anime (réflexion, utilisation d'outils, erreurs) en temps réel, rendant le travail de coordination des systèmes agentiques perceptible.",
             features: [
-              "Sept agents spécialisés (researcher, documentation, code-generator, code-reviewer, tester, architect, main-claude) chacun dans sa propre session Claude Agent SDK",
+              "Un agent Claude principal et six agents spécialisés (researcher, documentation, code-generator, code-reviewer, tester, architect), chacun dans sa propre session Claude Agent SDK",
               "Claude principal orchestre — déléguant des sous-tâches via l'outil Task, avec cartes de dispatch et explosions de particules rendant chaque délégation visible",
               "Animation de sprites pilotée par l'état (idle / thinking / tool_use / error) avec effets de particules, via un reducer mappant les événements d'outils vers l'AgentState visuel",
               "Chat en streaming token par token par agent, reproduisant l'UX de Claude Code, dans une webview VSCode",
@@ -940,7 +953,7 @@ const resources = {
           },
           hashgraph: {
             title: "Cours Développeur Hashgraph",
-            issuer: "Hedera Hashgraph",
+            issuer: "The Hashgraph Association",
             date: "2025",
             description: "100% d'achèvement du programme du cours Développeur Hashgraph couvrant la technologie de registre distribué",
             skills: ["Technologie de registre distribué", "Contrats intelligents", "Algorithmes de consensus", "Solutions Blockchain"]
@@ -951,6 +964,13 @@ const resources = {
             date: "2025",
             description: "Certificat de compétence en IA générative avec modèles de diffusion et techniques IA avancées",
             skills: ["Modèles de diffusion", "Génération d'images", "Synthèse texte-image", "Formation de modèles IA"]
+          },
+          predictivemaintenance: {
+            title: "Applications de l'IA pour la Maintenance Prédictive",
+            issuer: "NVIDIA",
+            date: "2025",
+            description: "Certificat du NVIDIA Deep Learning Institute sur l'application de l'IA à la maintenance prédictive — détection d'anomalies et prédiction de pannes sur des séries temporelles industrielles",
+            skills: ["Analyse de séries temporelles", "Détection d'anomalies", "XGBoost", "Réseaux LSTM"]
           }
         }
       },

@@ -65,6 +65,7 @@
   color: var(--ink-3);
   padding: 5px 11px;
   border: 1px solid transparent;
+  white-space: nowrap;
   transition: all var(--t-fast);
 }
 .exh-filter:hover { color: var(--ink); border-color: var(--rule-2); }
@@ -374,17 +375,21 @@
 }
 
 /* ── Responsive ─────────────────────────────────────────── */
+/* Five filters stop fitting beside the title below ~1150px: give them their own row */
+@media (max-width: 1180px) {
+  .exh-bar {
+    grid-template-columns: 1fr auto;
+    row-gap: var(--space-3);
+  }
+  .exh-filters { grid-column: 1 / -1; flex-wrap: wrap; justify-self: start; }
+}
+
 @media (max-width: 1080px) {
   .exh-detail-grid { grid-template-columns: 1fr; }
   .exh-detail-info { border-right: none; border-bottom: 1px solid var(--rule); }
 }
 
 @media (max-width: 820px) {
-  .exh-bar {
-    grid-template-columns: 1fr auto;
-    row-gap: var(--space-3);
-  }
-  .exh-filters { grid-column: 1 / -1; flex-wrap: wrap; justify-self: start; }
   .exh-body { grid-template-columns: 1fr; min-height: 0; }
   .exh-index {
     border-right: none;

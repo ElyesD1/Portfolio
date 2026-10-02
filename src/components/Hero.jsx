@@ -29,7 +29,7 @@ const Hero = () => {
   const findings = [
     { k: 'YEARS @ ESPRIT', v: '05' },
     { k: 'PROJECTS SHIPPED', v: '14' },
-    { k: 'INTERNSHIPS', v: '05' },
+    { k: 'INTERNSHIPS', v: '04' },
   ]
 
   return (

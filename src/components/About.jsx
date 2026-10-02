@@ -25,7 +25,7 @@ const About = () => {
 
   const langs = [
     { raw: t('about.languages.arabic'), pct: 100 },
-    { raw: t('about.languages.french'), pct: 72 },
+    { raw: t('about.languages.french'), pct: 100 },
     { raw: t('about.languages.english'), pct: 92 },
   ].map((l) => {
     const [name, ...rest] = l.raw.split(/\s[–-]\s/)
@@ -34,7 +34,7 @@ const About = () => {
 
   const interests = [
     t('about.interests.problemSolving'),
-    t('about.interests.mobileDev'),
+    t('about.interests.agenticAi'),
     t('about.interests.hackathons'),
     t('about.interests.aiTech'),
   ]
@@ -136,9 +136,6 @@ const About = () => {
                   <span className="kicker about-block-label">DIRECT</span>
                   <a href="mailto:elyes.darouich1@gmail.com" className="about-contact-link">
                     <Mail size={12} /> elyes.darouich1@gmail.com
-                  </a>
-                  <a href="mailto:elyes.darouich@esprit.tn" className="about-contact-link">
-                    <Mail size={12} /> elyes.darouich@esprit.tn
                   </a>
                   <a href="tel:+21694906400" className="about-contact-link">
                     <Phone size={12} /> +216 94 906 400

@@ -27,7 +27,7 @@ const ALL_PROJECTS = [
   {
     key: 'sentinelai',
     num: '02',
-    type: 'internship',
+    type: 'bootcamp',
     year: '2026',
     tech: ['React', 'FastAPI', 'LangGraph', 'Python', 'Celery', 'Redis', 'MongoDB', 'Qdrant', 'Groq', 'Docker'],
     github: null,
@@ -37,7 +37,7 @@ const ALL_PROJECTS = [
   {
     key: 'scribeai',
     num: '03',
-    type: 'internship',
+    type: 'bootcamp',
     year: '2026',
     tech: ['React', 'Flask', 'FastAPI', 'Ollama', 'ChromaDB', 'ElevenLabs', 'Mermaid.js', 'Python'],
     github: null,
@@ -150,7 +150,7 @@ const ALL_PROJECTS = [
   },
 ]
 
-const FILTERS = ['all', 'internship', 'academic', 'personal']
+const FILTERS = ['all', 'internship', 'bootcamp', 'academic', 'personal']
 
 // ── Exhibit footage viewer ───────────────────────────────────────────
 const ExhibitViewer = ({ video, videoType, title, refLabel }) => {
@@ -230,7 +230,8 @@ const ExhibitDetail = ({ project }) => {
       <div className="exh-detail-grid">
         <div className="exh-detail-info">
           <div className="exh-detail-titleblock">
-            <span className="exh-detail-class">{t(`projects.categories.${project.type}`)}</span>
+            {/* 'detail' context: uses e.g. categories.bootcamp_detail when defined, else the filter label */}
+            <span className="exh-detail-class">{t(`projects.categories.${project.type}`, { context: 'detail' })}</span>
             <h3 className="exh-detail-title">{t(`projects.content.${project.key}.title`)}</h3>
           </div>
 

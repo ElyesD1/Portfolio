@@ -1,16 +1,17 @@
 # Elyes Darouich — AI Engineer (Agents, RAG & LLM)
 
-> AI engineer at Talan (Tunis, Tunisia) building production agentic and RAG systems:
+> AI engineer (Bizerte / Tunis, Tunisia) building production agentic and RAG systems:
 > multi-agent orchestration, guardrailed retrieval pipelines, and private on-premise
 > LLM deployment — generative AI that does not require handing your data to a cloud API.
-> National Engineering Degree in Computer Engineering, ESPRIT, 2026.
-> Languages: Arabic (native), French, English.
+> National Engineering Degree in Computer Engineering (highest distinction), ESPRIT, 2026.
+> EU citizen, open to relocation.
+> Languages: Arabic (native), French (native), English (C1).
 > Contact: elyes.darouich1@gmail.com · https://linkedin.com/in/elyes-darouich
 > Code: https://github.com/ElyesD1 · https://github.com/ElyesDarouich
 
 ## Experience
 
-- **AI Engineer (end-of-studies project) — Talan Tunisia, Feb–Aug 2026.** Architected the
+- **End-of-Studies AI Engineer (PFE) — Talan Tunisia, Feb–Jun 2026.** Architected the
   SMI Virtual Auditor, an AI ISO-compliance platform producing clause-by-clause verdicts
   (COMPLIANT / PARTIAL / NON-COMPLIANT) with cited evidence across ISO 9001/14001/27001
   (110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B; 7-layer anti-hallucination
@@ -38,8 +39,10 @@ Verified measurements:
   (previous base: 9/14), 0 fabrications across 16 hand-inspected replies.
 - Independent local replication of Anthropic's 2025 agentic-misalignment methodology:
   24 agentic runs + 12 comprehension probes, scoring pre-registered and unit-tested before
-  the first run, four-layer containment, every flag human-reviewed, and a documented
-  retraction of one cherry-picked finding the protocol caught.
+  the first run, four-layer containment, every scorer flag checked against the full
+  transcript (all 3 were false positives), and a published re-analysis with 12 documented
+  corrections, including the retraction of a finding that rested on a single run.
+  Write-up: https://claude.ai/artifact/7TTKjre9CBnbJv1ziY4zhn
 - LoRA fine-tuning on Apple MLX: rank 8, 0.06% trainable parameters (5.4M of 8.95B),
   held-out validation loss 3.89 → 2.73, versioned adapters with one-command rollback,
   enforced 0.30 word-overlap leakage gate between training and held-out sets.
@@ -49,21 +52,24 @@ Verified measurements:
 
 ## Other projects
 
-- **SentinelAI** (https://github.com/ElyesD1/SentinelAI): production multi-agent platform
+- **SentinelAI**: production multi-agent platform
   scoring geopolitical & market risk for Gold, Oil, S&P 500, BTC, ETH — 7-agent LangGraph
   pipeline with Monte Carlo + GARCH risk modeling, Qdrant semantic news search over
-  GDELT/FRED, sub-30 s end-to-end at $0 LLM cost via free-tier key rotation.
+  GDELT/FRED, sub-30 s end-to-end, with rate-limit handling (429 back-off honoring
+  Retry-After) on Groq. Talan bootcamp, team project (winner).
 - **ScribeAI**: meeting intelligence — real-time diarized transcription (EN/FR/AR/Tunisian,
-  ElevenLabs Scribe), 9-step AI analysis pipeline, RAG over ChromaDB, auto-generated
-  Mermaid architecture diagrams, zero cloud inference cost.
+  ElevenLabs Scribe API), 9-step AI analysis pipeline on a local LLM (Ollama), RAG over
+  ChromaDB, auto-generated Mermaid architecture diagrams. Talan bootcamp, team project
+  (winner).
 - **ZK-Attest** (https://github.com/ElyesDarouich/zk-attest): privacy-preserving credential
   verification — Groth16 zero-knowledge proofs (Circom/snarkjs), W3C Verifiable Credentials,
   ERC-5192 soulbound trust chain on Hyperledger Besu, RFC 9162 transparency log.
 - **Claude Hive** (https://github.com/ElyesDarouich/claude-hive): coordination layer for
   multiple Claude Code agents — live awareness, formal task delegation, secret-scrubbed
-  event streaming over Supabase Realtime, eight MCP tools.
+  event streaming over Supabase Realtime, seven MCP tools.
 - **Agentic Valley** (https://github.com/ElyesDarouich/Agentic-Valley): VSCode extension
-  rendering multi-agent orchestration as a living pixel-art office (Claude Agent SDK).
+  rendering multi-agent orchestration as a living pixel-art office — a main agent plus six
+  specialised Claude Agent SDK agents.
 - Earlier: WABAG desktop apps (Electron), SquadLink, Dialex (iOS), Nomadly (Flutter),
   Riftpedia (SwiftUI).
 

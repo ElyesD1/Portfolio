@@ -10,6 +10,13 @@ const CERTS = [
   { key: 'aws', ref: 'CRED·01', accent: '#FF9900', label: 'Cloud', view: awsCert },
   { key: 'hashgraph', ref: 'CRED·02', accent: '#7FE9D0', label: 'Blockchain', view: hashgraphCert },
   { key: 'generativeai', ref: 'CRED·03', accent: '#C5F74F', label: 'AI / ML', view: nvidiaCert },
+  {
+    key: 'predictivemaintenance',
+    ref: 'CRED·04',
+    accent: '#76B900',
+    label: 'AI / ML',
+    view: 'https://learn.nvidia.com/certificates?id=DfIs6wnhTa204pXqdLB7hw',
+  },
 ]
 
 const Certificates = () => {

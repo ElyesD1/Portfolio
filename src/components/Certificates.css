@@ -21,7 +21,7 @@
 
 .certs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border: 1px solid var(--rule-2);
 }
 
@@ -35,7 +35,8 @@
   transition: background var(--t-normal);
   overflow: hidden;
 }
-.cert-card:last-child { border-right: none; }
+.cert-card:nth-child(2n) { border-right: none; }
+.cert-card:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
 .cert-card:hover { background: rgba(236, 231, 219, 0.02); }
 
 /* Brand accent leader */
