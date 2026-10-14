@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import './Skills.css'
 
 const DOMAINS = [
-  { ref: 'C·01', name: 'AI Agents & Orchestration', level: 'LEAD', score: 5, skills: ['LangGraph', 'Multi-agent', 'MCP', 'Claude Agent SDK', 'Tool-use', 'Task Delegation'] },
-  { ref: 'C·02', name: 'RAG & LLM Engineering', level: 'LEAD', score: 5, skills: ['RAG Pipelines', 'Vector Search', 'Embeddings', 'Guardrails', 'Prompt Engineering', 'Llama · Groq · Ollama'] },
-  { ref: 'C·03', name: 'Frontend & Mobile', level: 'LEAD', score: 5, skills: ['React', 'Next.js', 'TypeScript', 'Flutter', 'SwiftUI', 'Kotlin'] },
+  { ref: 'C·01', name: 'AI Agents & Orchestration', level: 'CORE', score: 5, skills: ['LangGraph', 'Multi-agent', 'MCP', 'Claude Agent SDK', 'Tool-use', 'Task Delegation'] },
+  { ref: 'C·02', name: 'RAG & LLM Engineering', level: 'CORE', score: 5, skills: ['RAG Pipelines', 'Vector Search', 'Embeddings', 'Guardrails', 'Prompt Engineering', 'Llama · Groq · Ollama'] },
+  { ref: 'C·03', name: 'Frontend & Mobile', level: 'CORE', score: 5, skills: ['React', 'Next.js', 'TypeScript', 'Flutter', 'SwiftUI', 'Kotlin'] },
   { ref: 'C·04', name: 'Backend & APIs', level: 'ADVANCED', score: 4, skills: ['FastAPI', 'NestJS', 'Flask', 'Celery', 'WebSockets', 'REST'] },
   { ref: 'C·05', name: 'Data & Infrastructure', level: 'ADVANCED', score: 4, skills: ['PostgreSQL', 'MongoDB', 'Redis', 'ChromaDB', 'Qdrant', 'Docker'] },
   { ref: 'C·06', name: 'Applied Crypto / ZK', level: 'PROFICIENT', score: 3, skills: ['Zero-Knowledge', 'Groth16', 'Circom', 'snarkjs', 'Solidity'] },
@@ -19,16 +19,15 @@ const STACK = [
   {
     label: 'LANGUAGES',
     items: [
+      { n: 'Python', i: 'python/python-original' },
       { n: 'TypeScript', i: 'typescript/typescript-original' },
       { n: 'JavaScript', i: 'javascript/javascript-original' },
-      { n: 'Python', i: 'python/python-original' },
       { n: 'Java', i: 'java/java-original' },
       { n: 'C++', i: 'cplusplus/cplusplus-original' },
       { n: 'C', i: 'c/c-original' },
       { n: 'Swift', i: 'swift/swift-original' },
       { n: 'Kotlin', i: 'kotlin/kotlin-original' },
       { n: 'Dart', i: 'dart/dart-original' },
-      { n: 'PHP', i: 'php/php-original' },
     ],
   },
   {
@@ -49,8 +48,6 @@ const STACK = [
       { n: 'NestJS', i: 'nestjs/nestjs-original' },
       { n: 'Flask', i: 'flask/flask-original', dark: true },
       { n: 'Node.js', i: 'nodejs/nodejs-original' },
-      { n: 'Spring', i: 'spring/spring-original' },
-      { n: 'Symfony', i: 'symfony/symfony-original', dark: true },
     ],
   },
   {

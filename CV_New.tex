@@ -1,25 +1,40 @@
 %-----------------------------------------------------------
 % Resume — Elyes Darouich
-% AI & Full-Stack Engineer
+% AI Engineer — Agents, RAG & LLM Systems
 % Single-column, ATS / AI-screening optimized (2026)
 % No icons, no tables, no graphics — clean machine-parseable text.
+% A4 for European applications. Interword spaces are at least 3.3 pt, wider than the
+% 3 pt tolerance some PDF readers use to join characters into words.
 %-----------------------------------------------------------
-\documentclass[letterpaper,10pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
 \usepackage{helvet}                     % Arial-equivalent, ATS-safe
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[left=0.5in,right=0.5in,top=0.36in,bottom=0.36in]{geometry}
+\usepackage[left=0.45in,right=0.45in,top=0.32in,bottom=0.3in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Elyes Darouich - CV - AI Engineer},
+  pdfauthor={Elyes Darouich},
+  pdfsubject={AI Engineer - Agents, RAG and LLM Systems},
+  pdfkeywords={AI engineer, agents, RAG, LLM, Python, FastAPI, LangGraph}
+}
+
+% ---- Text layer: Unicode mapping; spaces wide enough to separate words ----
+\input{glyphtounicode}
+\pdfgentounicode=1
+\newcommand{\readablespacing}{\spaceskip=3.3pt plus 1.2pt minus 0.1pt\relax}
 
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
 \linespread{0.955}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 
 % ---- Colors (single restrained accent; color does not affect ATS text) ----
 \definecolor{accent}{HTML}{22303F}
@@ -28,10 +43,10 @@
 
 % ---- Section headings ----
 \titleformat{\section}
-  {\large\bfseries\scshape\color{accent}}
+  {\large\bfseries\color{accent}}
   {}{0em}{}
   [\vspace{-3pt}{\color{rulegray}\titlerule[0.8pt]}]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\section}{0pt}{2pt}{2pt}
 
 % ---- Helpers ----
 % \entry{Title}{Right meta}{Subtitle}{Right meta 2}
@@ -53,28 +68,32 @@
 
 %-----------------------------------------------------------
 \begin{document}
+\raggedright
+\readablespacing
 
 % ---------------- HEADER (in body, not page header) ----------------
 \begin{center}
-  {\Huge\bfseries\color{accent} Elyes Darouich}\\[4pt]
-  {\large\color{muted} AI Engineer --- Agents, RAG \& LLM Systems}\\[6pt]
-  {\small Bizerte / Tunis, Tunisia \quad\textbar\quad EU citizen, open to relocation \quad\textbar\quad +216 94 906 400 \quad\textbar\quad
-  \href{mailto:elyes.darouich1@gmail.com}{elyes.darouich1@gmail.com}}\\[2pt]
-  {\small
-  \href{https://github.com/ElyesD1}{github.com/ElyesD1} \ \textbar\ \href{https://github.com/ElyesDarouich}{github.com/ElyesDarouich} \ \textbar\ \href{https://linkedin.com/in/elyes-darouich}{linkedin.com/in/elyes-darouich} \ \textbar\ \href{https://elyesdarouichportfolio.vercel.app}{Portfolio} \ \textbar\ \href{https://claude.ai/artifact/7TTKjre9CBnbJv1ziY4zhn}{Misalignment write-up}}
+  {\spaceskip=0pt\relax\Huge\bfseries\color{accent} Elyes Darouich}\\[4pt]
+  {\spaceskip=0pt\relax\large\color{muted} AI Engineer --- Agents, RAG \& LLM Systems}\\[6pt]
+  {\small French citizen (EU), no work permit needed in the EU/EEA or Switzerland \quad\textbar\quad Based in Bizerte, Tunisia, open to relocation}\\[2pt]
+  {\small +216 94 906 400 \quad\textbar\quad
+  \href{mailto:elyes.darouich1@gmail.com}{elyes.darouich1@gmail.com} \quad\textbar\quad
+  \href{https://elyesdarouichportfolio.vercel.app}{elyesdarouichportfolio.vercel.app}}\\[2pt]
+  {\small \href{https://github.com/ElyesD1}{github.com/ElyesD1} \quad\textbar\quad
+  \href{https://linkedin.com/in/elyes-darouich}{linkedin.com/in/elyes-darouich}}
 \end{center}
 
 % ---------------- SUMMARY ----------------
 \section{Professional Summary}
-{\small AI engineer (National Engineering Degree, ESPRIT 2026) building production agentic systems, guardrailed RAG pipelines, and private on-premise LLM deployments. Delivered an AI ISO-compliance auditor at Talan --- clause-by-clause verdicts with cited evidence across 110 clauses on Llama 3.3 70B --- retained as an internal demonstrator. Builds and evaluates local LLM systems end to end: a 1,596-test suite, a pre-registered misalignment evaluation, LoRA fine-tuning on Apple MLX.}
+{\small AI engineer and 2026 ESPRIT engineering graduate (Master\textquotesingle s level). My end-of-studies project at Talan, an AI ISO-compliance auditor giving cited, clause-by-clause verdicts across 110 clauses on Llama 3.3 70B, was rated ``Excellent'' by the jury (18.25/20 at the defense) and kept by Talan as an internal demonstrator. I build and evaluate LLM systems end to end: multi-agent orchestration, guardrailed RAG, a 1,596-test suite and LoRA fine-tuning on Apple MLX.}
 
 % ---------------- SKILLS ----------------
 \section{Technical Skills}
 {\small
-{\bfseries AI / ML:} Multi-Agent Orchestration, LangGraph, RAG, LLM Guardrails \& Evaluation, LoRA Fine-Tuning (Apple MLX), On-Premise LLM Deployment (Ollama), MCP, Claude Agent SDK, Prompt Engineering, Vector Search (ChromaDB, Qdrant, sqlite-vec), Embeddings\\[3pt]
-{\bfseries Languages:} Python, TypeScript, JavaScript, Swift, Java, C++, Solidity, SQL\\[3pt]
-{\bfseries Backend \& Data:} FastAPI, NestJS, Flask, Node.js, Celery, REST, WebSockets, PostgreSQL, SQLite, MongoDB, Redis\\[3pt]
-{\bfseries Frontend \& Mobile:} React, Next.js, SwiftUI, Flutter, Tailwind CSS\\[3pt]
+{\bfseries AI / ML:} Multi-Agent Orchestration, LangGraph, RAG, LLM Guardrails \& Evaluation, LoRA Fine-Tuning (Apple MLX), On-Premise LLM Deployment (Ollama), MCP, Claude Agent SDK, Vector Search \& Embeddings (ChromaDB, Qdrant, sqlite-vec)\\[2pt]
+{\bfseries Languages:} Python, TypeScript, JavaScript, Swift, Java, C++, Solidity, SQL\\[2pt]
+{\bfseries Backend \& Data:} FastAPI, NestJS, Flask, Node.js, Celery, REST, WebSockets, PostgreSQL, SQLite, MongoDB, Redis\\[2pt]
+{\bfseries Frontend \& Mobile:} React, Next.js, SwiftUI, Flutter, Tailwind CSS\\[2pt]
 {\bfseries DevOps \& Web3:} Docker, GitHub Actions CI/CD, Linux, Vercel, Zero-Knowledge (Groth16, Circom, snarkjs), Hyperledger Besu}
 
 % ---------------- EXPERIENCE ----------------
@@ -82,42 +101,44 @@
 
 \entry{End-of-Studies AI Engineer (PFE) --- Talan Tunisia}{Feb 2026 -- Jun 2026}{}{Tunis, Tunisia}
 \begin{bullets}
-  \item Architected ``SMI Virtual Auditor,'' an AI ISO-compliance audit platform producing clause-by-clause verdicts with cited evidence (ISO 9001/14001/27001, 110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B (Groq, GitHub Models, NVIDIA NIM).
+  \item Architected ``SMI Virtual Auditor,'' an AI ISO-compliance auditor giving cited, clause-by-clause verdicts (ISO 9001/14001/27001, 110 clauses) via 3-pass RAG on Llama 3.3 70B (Groq, GitHub Models, NVIDIA NIM).
   \item Engineered a 7-layer guardrail system (groundedness, fidelity, contradiction, confidence capping) that suppresses hallucinations, grounding verdicts via local bge-m3 embeddings on Ollama + ChromaDB.
-  \item Built a clean-architecture FastAPI backend (JWT RS256, RBAC, Celery, PostgreSQL/Redis/MinIO, Docker, 108 tests) and a React 18 + TypeScript SPA with streaming RAG chat (SSE) and PDF export.
+  \item Built a clean-architecture FastAPI backend (JWT RS256, RBAC, Celery, PostgreSQL/Redis/MinIO, Docker, 108 tests) and a React 18 + TypeScript SPA with streaming RAG chat and PDF export.
 \end{bullets}
 
 \entry{Software Engineering Intern --- Talan Tunisia}{Jul 2025 -- Sep 2025}{}{Tunis, Tunisia}
 \begin{bullets}
-  \item Built ``ProjectFlow'' (Flutter + NestJS): sub-150ms APIs for 100+ concurrent users at 78\% test coverage, real-time Kanban/chat over WebSockets, a Gemini 2.0 Flash assistant, JWT + Google OAuth RBAC, Dockerized CI/CD.
+  \item Built ``ProjectFlow'' (Flutter + NestJS): APIs under 150 ms for 100+ concurrent users at 78\% test coverage, real-time Kanban and chat over WebSockets, Gemini 2.0 Flash assistant, JWT + Google OAuth RBAC, Dockerized CI/CD.
 \end{bullets}
 
 \entry{Flutter Developer Intern --- Vatech WABAG}{Summer 2023}{}{Tunis, Tunisia}
 \begin{bullets}
-  \item Built a cross-platform employee leave-management app (REST API, secure auth with RBAC, Firebase real-time push).
+  \item Built a cross-platform leave-management app (REST API, secure auth with RBAC, Firebase push notifications).
 \end{bullets}
 
 % ---------------- PROJECTS ----------------
 \section{Projects}
 
-\project{EDITH --- Local-First Personal AI Companion (macOS)}{Python, Swift, Ollama, MLX, LoRA, SQLite}{100\% local persistent AI companion: an always-alive daemon wakes a 9B model only when cognition is required (cold 20.7s / warm 0.36--0.77s to first token, idle under 1~GB). 1,596-test suite; base-model swaps gated on measured probes (10/10 instruction, 14/14 held-out honesty); LoRA fine-tuning on Apple MLX (0.06\% trainable params, held-out val loss 3.89~\textrightarrow~2.73); independent replication of Anthropic's agentic-misalignment methodology --- 24 runs with pre-registered scoring, every scorer flag checked against the full transcript.}
+\project{EDITH --- Local-First Personal AI Companion (macOS)}{Python, Swift, Ollama, MLX, LoRA, SQLite}{Fully local, persistent AI companion: an always-on daemon wakes a 9B model only when it is needed (cold start 20.7 s, warm 0.36--0.77 s to first token, under 1 GB idle). 1,596-test suite; base-model swaps gated on measured probes (10/10 instruction following, 14/14 held-out honesty); LoRA on Apple MLX (0.06\% of parameters trainable, held-out validation loss 3.89 to 2.73).}
 
-\project{SentinelAI}{LangGraph, FastAPI, Celery, Redis, Qdrant}{Production multi-agent platform scoring geopolitical \& market risk for Gold/Oil/S\&P~500/BTC/ETH --- a 7-agent LangGraph pipeline with Monte~Carlo + GARCH risk, sub-30s end-to-end, with rate-limit handling (429 back-off honoring Retry-After) on Groq.}
+\project{Agentic Misalignment Replication --- AI Safety Research}{Python, Ollama, pre-registered evaluation}{Independent replication of Anthropic's agentic-misalignment methodology on EDITH's 9B model, persona as the only variable: 24 runs, pre-registered scoring, every scorer flag checked against the full transcript. Reports zero harmful attempts as uninterpretable, not safe; proposes in-task comprehension as a validity gate; documents a retracted interim finding. Write-up: \href{https://claude.ai/artifact/7TTKjre9CBnbJv1ziY4zhn}{claude.ai/artifact/7TTKjre9CBnbJv1ziY4zhn}}
 
-\project{ZK-Attest}{Circom, snarkjs, Solidity, Hyperledger Besu, Next.js}{Privacy-preserving credential verification proving facts without revealing data --- Groth16 zero-knowledge proofs, W3C Verifiable Credentials, and an ERC-5192 soulbound trust chain (GDPR by design).}
+\project{SentinelAI}{LangGraph, FastAPI, Celery, Redis, Qdrant}{Won Talan's three-day pre-hire bootcamp leading a randomly assigned team of 5--6: a 7-agent LangGraph platform scoring geopolitical and market risk (gold, oil, S\&P 500, BTC, ETH) with Monte Carlo and GARCH models, under 30 s end to end.}
 
-\project{Agentic Valley}{Claude Agent SDK, TypeScript, VSCode API}{VSCode extension visualizing multi-agent orchestration as a living pixel-art office --- a main agent plus 6 specialized agents, each its own Claude Agent SDK session, with every Task-tool delegation animated live.}
+\project{ZK-Attest}{Circom, snarkjs, Solidity, Hyperledger Besu, Next.js}{Privacy-preserving credential verification that proves facts without revealing the underlying data: Groth16 zero-knowledge proofs, W3C Verifiable Credentials and an ERC-5192 soulbound trust chain (GDPR by design).}
 
+\project{Agentic Valley}{Claude Agent SDK, TypeScript, VS Code API}{VS Code extension showing multi-agent orchestration as a live pixel-art office: a main agent plus 6 specialized agents, each its own Claude Agent SDK session, with every delegation animated in real time.}
 
 % ---------------- EDUCATION ----------------
 \section{Education}
-{\bfseries National Engineering Degree, Computer Engineering (highest distinction) --- ESPRIT, Tunis}\hfill{\small 2021 -- 2026}\\[3pt]
+{\bfseries National Engineering Degree in Computer Engineering (Master\textquotesingle s level) --- ESPRIT, Tunis}\hfill{\small 2021 -- Sep 2026}\\[1pt]
+{\small Specialty: Mobile Information Systems. End-of-studies project rated ``Excellent'' by the jury (18.25/20 at the defense).}\\[2pt]
 {\bfseries Baccalaureate in Computer Science}\hfill{\small 2021}
 
 % ---------------- CERTIFICATIONS & LANGUAGES ----------------
 \section{Certifications \& Languages}
-{\small\raggedright
-{\bfseries Certifications:} NVIDIA Generative AI with Diffusion Models~\textbullet\ NVIDIA Applications of AI for Predictive Maintenance~\textbullet\ \mbox{Hashgraph Developer Course}~\textbullet\ \mbox{AWS Academy Cloud Foundations} \textit{(2025)}\\[1pt]
-{\bfseries Languages:} Arabic (Native) \textbullet\ French (Native) \textbullet\ English (C1)\par}
+{\small
+{\bfseries Certifications (2025):} NVIDIA DLI Generative AI with Diffusion Models \textbullet\ NVIDIA DLI Applications of AI for Predictive Maintenance \textbullet\ Hashgraph Developer Course \textbullet\ AWS Academy Cloud Foundations (course badge)\\[1pt]
+{\bfseries Languages:} Arabic (native) \textbullet\ French (native) \textbullet\ English (C1)\par}
 
 \end{document}

@@ -1,11 +1,12 @@
 # Elyes Darouich — AI Engineer (Agents, RAG & LLM)
 
-> AI engineer (Bizerte / Tunis, Tunisia) building production agentic and RAG systems:
+> AI engineer (based in Bizerte, Tunisia; French citizen, EU) building agentic and RAG systems:
 > multi-agent orchestration, guardrailed retrieval pipelines, and private on-premise
 > LLM deployment — generative AI that does not require handing your data to a cloud API.
-> National Engineering Degree in Computer Engineering — Mobile Information Systems (SIM),
-> highest distinction, ESPRIT, 2026.
-> EU citizen, open to relocation.
+> National Engineering Degree in Computer Engineering (Master's level) — Mobile Information
+> Systems (SIM), ESPRIT, 2026. End-of-studies project rated "Excellent" by the jury (18.25/20 at
+> the defense).
+> French citizen (EU): no work permit needed in the EU/EEA or Switzerland; open to relocation.
 > Languages: Arabic (native), French (native), English (C1).
 > Contact: elyes.darouich1@gmail.com · https://linkedin.com/in/elyes-darouich
 > Code: https://github.com/ElyesD1 · https://github.com/ElyesDarouich
@@ -18,7 +19,8 @@
   (110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B; 7-layer anti-hallucination
   guardrails; clean-architecture FastAPI backend (JWT RS256, RBAC, Celery, PostgreSQL,
   Redis, MinIO, Docker, 108 tests) and a React 18 + TypeScript SPA with streaming RAG chat.
-  Retained by Talan as an internal demonstrator.
+  Retained by Talan as an internal demonstrator; rated "Excellent" by the jury (18.25/20 at
+  the defense).
 - **Software Engineering Intern — Talan Tunisia, Jul–Sep 2025.** ProjectFlow: cross-platform
   project management (Flutter + NestJS), sub-150 ms API responses for 100+ concurrent users,
   78% test coverage, Gemini 2.0 Flash assistant, WebSocket real-time collaboration.
@@ -53,7 +55,7 @@ Verified measurements:
 
 ## Other projects
 
-- **SentinelAI**: production multi-agent platform
+- **SentinelAI**: multi-agent platform, winning project of Talan's three-day pre-hire bootcamp;
   scoring geopolitical & market risk for Gold, Oil, S&P 500, BTC, ETH — 7-agent LangGraph
   pipeline with Monte Carlo + GARCH risk modeling, Qdrant semantic news search over
   GDELT/FRED, sub-30 s end-to-end, with rate-limit handling (429 back-off honoring

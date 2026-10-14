@@ -16,11 +16,11 @@ const About = () => {
 
   const particulars = [
     { k: 'NAME', v: 'Elyes Darouich' },
-    { k: 'CLASSIFICATION', v: 'AI & Full-Stack Engineer' },
+    { k: 'CLASSIFICATION', v: 'AI Engineer' },
     { k: 'INSTITUTION', v: 'ESPRIT — Eng. Cycle ’26' },
     { k: 'BASED IN', v: t('about.location') },
-    { k: 'DATE OF BIRTH', v: '07 · 03 · 2002' },
-    { k: 'AGE', v: t('about.age') },
+    { k: 'CITIZENSHIP', v: t('about.citizenship') },
+    { k: 'WORK RIGHTS', v: t('about.workRights') },
   ]
 
   const langs = [

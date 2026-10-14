@@ -25,13 +25,6 @@ const ITEMS = [
     tech: ['Flutter', 'REST API', 'Firebase', 'Push Notifications'],
   },
   {
-    key: 'vatech2022',
-    type: 'internship',
-    period: 'Summer 2022',
-    location: 'Tunis, TN',
-    tech: ['Team Collaboration', 'Project Management'],
-  },
-  {
     key: 'esprit',
     type: 'education',
     period: '2021 – 2026',

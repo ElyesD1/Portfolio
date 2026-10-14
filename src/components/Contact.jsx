@@ -13,7 +13,7 @@ const SOCIALS = [
 const CORRESPONDENCE = [
   { k: 'EMAIL', v: 'elyes.darouich1@gmail.com', href: 'mailto:elyes.darouich1@gmail.com' },
   { k: 'DIRECT LINE', v: '+216 94 906 400', href: 'tel:+21694906400' },
-  { k: 'LOCATION', v: 'Bizerte / Tunis, TN', href: null },
+  { k: 'LOCATION', v: 'Bizerte, Tunisia', href: null },
 ]
 
 const fade = (delay = 0, y = 24) => ({
@@ -102,7 +102,7 @@ const Contact = () => {
                 <div className="contact-signoff-body">
                   <span className="contact-signoff-mark">ED</span>
                   <div className="contact-signoff-meta">
-                    <span>REF · ED—2026 · TUNIS, TN</span>
+                    <span>REF · ED—2026 · BIZERTE, TN</span>
                     <span>STATUS · OPEN TO OPPORTUNITIES</span>
                     <span>VERIFIED · 2026</span>
                   </div>

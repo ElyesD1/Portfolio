@@ -19,9 +19,9 @@ const resources = {
       hero: {
         greeting: "Hi, I'm",
         name: "Elyes Darouich",
-        title: "AI & Full-Stack Engineer",
-        subtitle: "Agentic systems, RAG pipelines & production AI — across the whole stack",
-        description: "Engineering graduate of ESPRIT (2026), with my end-of-studies AI project delivered at Talan. I build production AI systems — agentic multi-agent orchestration, RAG / LLM pipelines with guardrails, and applied cryptography — on a strong full-stack and mobile core (React, FastAPI, Flutter).",
+        title: "AI Engineer",
+        subtitle: "Agents, RAG & LLM systems — across the whole stack",
+        description: "Engineering graduate of ESPRIT (2026, Master's level) and French citizen (EU). My end-of-studies AI project at Talan, an ISO-compliance auditor with cited, clause-by-clause verdicts, was rated 'Excellent' by the jury (18.25/20 at the defense). I build AI systems you can check: multi-agent orchestration, RAG / LLM pipelines with guardrails, and measured evaluation, on a strong full-stack and mobile core (React, FastAPI, Flutter).",
         cta: "Get In Touch",
         downloadCV: "Download CV",
         stats: {
@@ -34,13 +34,14 @@ const resources = {
       // About Section
       about: {
         title: "About Me",
-        subtitle: "Building AI that ships.",
-        intro: "AI & full-stack engineer, graduated from ESPRIT in 2026 after my end-of-studies engineering project at Talan. I specialize in production AI — agentic multi-agent systems, RAG/LLM pipelines and applied cryptography — on a strong frontend, mobile and backend foundation.",
+        subtitle: "Building AI you can check.",
+        intro: "AI engineer with a full-stack core, graduated from ESPRIT in 2026 (National Engineering Degree, Master's level) after my end-of-studies project at Talan, rated 'Excellent' by the jury. I specialize in agentic AI (multi-agent systems, RAG/LLM pipelines with guardrails, evaluation) and applied cryptography, on a strong frontend, mobile and backend foundation.",
         location: "Bizerte, Tunisia",
-        age: "24 years old",
+        citizenship: "French (EU)",
+        workRights: "EU/EEA & Switzerland, no permit needed",
         email: "elyes.darouich1@gmail.com",
         phone: "+216 94 906 400",
-        description: "AI engineer with a builder's full-stack core. I design and ship production AI systems — multi-agent orchestration (LangGraph, MCP, Claude Agent SDK), RAG and LLM pipelines with guardrails, and applied cryptography — backed by strong frontend, mobile and backend engineering (React, Flutter, FastAPI). Increasingly focused on agentic AI, while keeping deep roots in great UI.",
+        description: "AI engineer with a builder's full-stack core. I design and build AI systems you can check — multi-agent orchestration (LangGraph, MCP, Claude Agent SDK), RAG and LLM pipelines with guardrails and cited evidence, measured evaluation and applied cryptography — backed by strong frontend, mobile and backend engineering (React, Flutter, FastAPI). Increasingly focused on agentic AI, while keeping deep roots in great UI.",
         languages: {
           title: "Languages",
           arabic: "Arabic - Native",
@@ -68,21 +69,22 @@ const resources = {
         },
         content: {
           talanPfe: {
-            title: "End-of-Studies (PFE) Engineering Intern — AI & Full-Stack",
+            title: "End-of-Studies AI Engineer (PFE)",
             company: "Talan Tunisia",
             description: "SMI Virtual Auditor — AI-powered ISO 9001 / 14001 / 27001 compliance audit platform built on a RAG pipeline",
             achievements: [
+              "Rated 'Excellent' by the jury (18.25/20 at the defense); kept by Talan as an internal demonstrator",
               "Built an AI compliance-audit platform delivering clause-by-clause verdicts (COMPLIANT / PARTIAL / NON-COMPLIANT) for ISO 9001, 14001, 27001 and the Talan Forfait standard",
               "Engineered a 3-pass Retrieval-Augmented Generation pipeline (Llama 3.3 70B via Groq / GitHub Models / NVIDIA NIM) with local bge-m3 embeddings on Ollama + ChromaDB vector store",
               "Designed 7-layer guard rails (groundedness, fidelity, contradiction, confidence capping) to suppress LLM hallucinations on audit evidence",
               "Architected a Clean-Architecture FastAPI backend with JWT RS256 auth, role-based access (4 roles) and Celery async analysis workers",
               "Built a React 18 + TypeScript + Zustand SPA with a streaming conversational RAG chat (SSE) and one-click PDF audit report export",
               "Implemented an SMI checklist engine with 75+ KPI indicators, weighted conformity scoring and multi-format ingestion (PDF/OCR, DOCX, XLSX)",
-              "Shipped a bilingual (FR/EN) product backed by 108 unit tests, fully containerized with Docker (PostgreSQL, Redis, MinIO)"
+              "Delivered a bilingual (FR/EN) platform backed by 108 unit tests, fully containerized with Docker (PostgreSQL, Redis, MinIO)"
             ]
           },
           talan: {
-            title: "Engineering Intern - Mobile & Backend Development",
+            title: "Software Engineering Intern",
             company: "Talan Tunisia",
             description: "ProjectFlow - Cross-platform project management platform with AI integration",
             achievements: [
@@ -108,28 +110,18 @@ const resources = {
               "Implemented secure authentication and role-based access control system"
             ]
           },
-          vatech2022: {
-            title: "Industrial Trainee",
-            company: "Vatech WABAG",
-            description: "Introduction to business processes and team collaboration",
-            achievements: [
-              "Learned company management and organizational processes",
-              "Developed teamwork and internal communication skills",
-              "Discovered IT project lifecycle in enterprise environment",
-              "Participated in cross-functional team meetings and planning sessions"
-            ]
-          },
           esprit: {
             title: "Computer Engineering — Mobile Information Systems (SIM)",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "5-year National Engineering Degree, graduated 2026, highest distinction — trained in mobile information systems, then moved into applied AI with the end-of-studies project (PFE) at Talan Tunisia: the SMI Virtual Auditor, an AI-powered ISO compliance auditor",
+            description: "5-year National Engineering Degree (Master's level), graduated September 2026 — trained in mobile information systems, then moved into applied AI with the end-of-studies project (PFE) at Talan Tunisia: the SMI Virtual Auditor, rated 'Excellent' by the jury (18.25/20 at the defense)",
             achievements: [
               "Completed the full 5-year engineering cycle in the Mobile Information Systems (SIM) track — software engineering and cross-platform mobile development",
-              "Delivered the end-of-studies project (PFE) at Talan Tunisia — an AI-powered ISO compliance auditor (RAG + LLM)",
+              "End-of-studies project (PFE) at Talan Tunisia, an AI ISO-compliance auditor (RAG + LLM), rated 'Excellent' by the jury (18.25/20 at the defense)",
+              "PFE report: 20/20 for writing quality and a 2% plagiarism score (ESPRIT's maximum is 15%)",
               "Completed a prior engineering internship at Talan building the ProjectFlow platform",
               "Advanced coursework in software architecture, distributed systems, AI/ML and DevOps",
               "Active participation in hackathons and programming competitions",
-              "Strong foundation in algorithms, data structures and production-grade engineering"
+              "Strong foundation in algorithms, data structures and software engineering"
             ]
           },
           bac: {
@@ -230,7 +222,7 @@ const resources = {
           // Bootcamp Projects (Talan)
           sentinelai: {
             title: "SentinelAI — Geopolitical Market Intelligence Platform",
-            description: "Production-grade multi-agent AI system analyzing geopolitical & macroeconomic risks for Gold, Oil, S&P 500, BTC and ETH using a 7-agent LangGraph pipeline — full analysis in under 30 seconds",
+            description: "Winning project of Talan's three-day pre-hire bootcamp (team of 5–6): a multi-agent AI system analyzing geopolitical & macroeconomic risks for Gold, Oil, S&P 500, BTC and ETH using a 7-agent LangGraph pipeline — full analysis in under 30 seconds",
             features: [
               "7-agent LangGraph pipeline: routing → geo intel → sentiment → per-asset analysis → quant/risk → critic → synthesis",
               "Rate-limit handling on Groq — 429 back-off that honors Retry-After",
@@ -444,7 +436,7 @@ const resources = {
             title: "AWS Academy Graduate - Cloud Foundations",
             issuer: "AWS Academy",
             date: "2025",
-            description: "Comprehensive AWS Cloud Foundations training program demonstrating cloud computing proficiency",
+            description: "AWS Academy course-completion badge (Credly) covering core AWS services, cloud architecture and security basics",
             skills: ["AWS Core Services", "Cloud Architecture", "Security Best Practices", "EC2, S3, RDS, VPC"]
           },
           hashgraph: {
@@ -475,7 +467,7 @@ const resources = {
       contact: {
         title: "Get In Touch",
         subtitle: "Let's work together",
-        mobility: "EU citizen · open to relocation",
+        mobility: "French citizen (EU) · no work permit needed in the EU/EEA & Switzerland · open to relocation",
         description: "I'm always interested in new opportunities and exciting projects. Whether you want to discuss a potential collaboration or just say hello, feel free to reach out!",
         form: {
           name: "Your Name",
@@ -499,7 +491,7 @@ const resources = {
         loading: "Loading...",
         loadingPortfolio: "Loading Portfolio...",
         name: "Elyes Darouich",
-        title: "Software Engineer",
+        title: "AI Engineer",
         footer: "Crafted with ❤️ and React",
         error: "Something went wrong",
         retry: "Retry",
@@ -526,9 +518,9 @@ const resources = {
       hero: {
         greeting: "Salut, je suis",
         name: "Elyes Darouich",
-        title: "Ingénieur IA & Full-Stack",
-        subtitle: "Systèmes agentiques, pipelines RAG & IA de production — sur toute la stack",
-        description: "Ingénieur diplômé d'ESPRIT (2026), avec un projet de fin d'études IA réalisé chez Talan. Je construis des systèmes IA de production — orchestration multi-agents, pipelines RAG / LLM avec garde-fous, et cryptographie appliquée — sur un socle full-stack et mobile solide (React, FastAPI, Flutter).",
+        title: "Ingénieur IA",
+        subtitle: "Agents, RAG & systèmes LLM — sur toute la stack",
+        description: "Ingénieur diplômé d'ESPRIT (2026, niveau Master) et citoyen français (UE). Mon projet de fin d'études chez Talan, un auditeur de conformité ISO aux verdicts sourcés clause par clause, a été noté « Excellent » par le jury (18,25/20 en soutenance). Je construis des systèmes IA vérifiables : orchestration multi-agents, pipelines RAG / LLM avec garde-fous et évaluation mesurée, sur un socle full-stack et mobile solide (React, FastAPI, Flutter).",
         cta: "Me Contacter",
         downloadCV: "Télécharger CV",
         stats: {
@@ -541,13 +533,14 @@ const resources = {
       // About Section
       about: {
         title: "À Propos",
-        subtitle: "Bâtir une IA qui passe en production.",
-        intro: "Ingénieur IA & full-stack, diplômé d'ESPRIT en 2026 après mon projet de fin d'études chez Talan. Je me spécialise dans l'IA de production — systèmes agentiques multi-agents, pipelines RAG/LLM et cryptographie appliquée — sur un solide socle frontend, mobile et backend.",
+        subtitle: "Bâtir une IA vérifiable.",
+        intro: "Ingénieur IA avec un socle full-stack, diplômé d'ESPRIT en 2026 (Diplôme National d'Ingénieur, niveau Master) après mon projet de fin d'études chez Talan, noté « Excellent » par le jury. Je me spécialise dans l'IA agentique (systèmes multi-agents, pipelines RAG/LLM avec garde-fous, évaluation) et la cryptographie appliquée, sur un solide socle frontend, mobile et backend.",
         location: "Bizerte, Tunisie",
-        age: "24 ans",
+        citizenship: "Française (UE)",
+        workRights: "UE/EEE et Suisse, sans permis de travail",
         email: "elyes.darouich1@gmail.com", 
         phone: "+216 94 906 400",
-        description: "Ingénieur IA avec un solide socle full-stack. Je conçois et livre des systèmes IA de production — orchestration multi-agents (LangGraph, MCP, Claude Agent SDK), pipelines RAG et LLM avec garde-fous, et cryptographie appliquée — appuyés sur une ingénierie frontend, mobile et backend solide (React, Flutter, FastAPI). De plus en plus orienté IA agentique, tout en gardant de solides bases en UI.",
+        description: "Ingénieur IA avec un solide socle full-stack. Je conçois et construis des systèmes IA vérifiables — orchestration multi-agents (LangGraph, MCP, Claude Agent SDK), pipelines RAG et LLM avec garde-fous et preuves citées, évaluation mesurée et cryptographie appliquée — appuyés sur une ingénierie frontend, mobile et backend solide (React, Flutter, FastAPI). De plus en plus orienté IA agentique, tout en gardant de solides bases en UI.",
         languages: {
           title: "Langues",
           arabic: "Arabe - Langue maternelle",
@@ -575,21 +568,22 @@ const resources = {
         },
         content: {
           talanPfe: {
-            title: "Stagiaire Ingénieur PFE — IA & Full-Stack",
+            title: "Ingénieur IA en projet de fin d'études (PFE)",
             company: "Talan Tunisie",
             description: "SMI Virtual Auditor — Plateforme d'audit de conformité ISO 9001 / 14001 / 27001 alimentée par l'IA, basée sur un pipeline RAG",
             achievements: [
+              "Noté « Excellent » par le jury (18,25/20 en soutenance) ; conservé par Talan comme démonstrateur interne",
               "Développé une plateforme d'audit de conformité par IA produisant des verdicts clause par clause (CONFORME / PARTIEL / NON-CONFORME) pour ISO 9001, 14001, 27001 et le référentiel Forfait Talan",
               "Conçu un pipeline RAG (Retrieval-Augmented Generation) à 3 passes (Llama 3.3 70B via Groq / GitHub Models / NVIDIA NIM) avec embeddings bge-m3 locaux sur Ollama + base vectorielle ChromaDB",
               "Implémenté 7 couches de garde-fous (groundedness, fidélité, contradiction, plafonnement de confiance) pour supprimer les hallucinations du LLM sur les preuves d'audit",
               "Architecturé un backend FastAPI en Clean Architecture avec authentification JWT RS256, contrôle d'accès par rôles (4 rôles) et workers Celery asynchrones",
               "Développé une SPA React 18 + TypeScript + Zustand avec chat RAG conversationnel en streaming (SSE) et export de rapport d'audit PDF en un clic",
               "Construit un moteur de checklist SMI avec 75+ indicateurs KPI, scoring de conformité pondéré et ingestion multi-formats (PDF/OCR, DOCX, XLSX)",
-              "Livré un produit bilingue (FR/EN) couvert par 108 tests unitaires, entièrement conteneurisé avec Docker (PostgreSQL, Redis, MinIO)"
+              "Livré une plateforme bilingue (FR/EN) couverte par 108 tests unitaires, entièrement conteneurisé avec Docker (PostgreSQL, Redis, MinIO)"
             ]
           },
           talan: {
-            title: "Stagiaire Ingénieur - Développement Mobile & Backend",
+            title: "Stagiaire Ingénieur Logiciel",
             company: "Talan Tunisie",
             description: "ProjectFlow - Plateforme de gestion de projets multiplateforme avec intégration IA",
             achievements: [
@@ -615,28 +609,18 @@ const resources = {
               "Implémenté système d'authentification sécurisé et contrôle d'accès basé sur les rôles"
             ]
           },
-          vatech2022: {
-            title: "Stagiaire Ouvrier",
-            company: "Vatech WABAG",
-            description: "Initiation aux processus d'entreprise et collaboration en équipe",
-            achievements: [
-              "Appris les processus de gestion et d'organisation de l'entreprise",
-              "Développé compétences de travail en équipe et communication interne",
-              "Découvert cycle de vie des projets IT en environnement d'entreprise",
-              "Participé aux réunions d'équipes transversales et sessions de planification"
-            ]
-          },
           esprit: {
             title: "Génie Informatique — Systèmes d'Information Mobiles (SIM)",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "Diplôme National d'Ingénieur (5 ans), obtenu en 2026 avec la plus haute mention — formé aux systèmes d'information mobiles, puis orienté vers l'IA appliquée avec le projet de fin d'études (PFE) chez Talan Tunisie : le SMI Virtual Auditor, un auditeur de conformité ISO alimenté par l'IA",
+            description: "Diplôme National d'Ingénieur (5 ans, niveau Master), obtenu en septembre 2026 — formé aux systèmes d'information mobiles, puis orienté vers l'IA appliquée avec le projet de fin d'études (PFE) chez Talan Tunisie : le SMI Virtual Auditor, noté « Excellent » par le jury (18,25/20 en soutenance)",
             achievements: [
               "Accompli le cycle d'ingénieur complet de 5 ans dans l'option Systèmes d'Information Mobiles (SIM) — génie logiciel et développement mobile multiplateforme",
-              "Réalisé le projet de fin d'études (PFE) chez Talan Tunisie — un auditeur de conformité ISO alimenté par l'IA (RAG + LLM)",
+              "Projet de fin d'études (PFE) chez Talan Tunisie, un auditeur de conformité ISO par IA (RAG + LLM), noté « Excellent » par le jury (18,25/20 en soutenance)",
+              "Rapport de PFE : 20/20 pour la qualité rédactionnelle et 2 % de plagiat (maximum ESPRIT : 15 %)",
               "Accompli un précédent stage d'ingénieur chez Talan sur la plateforme ProjectFlow",
               "Cours avancés en architecture logicielle, systèmes distribués, IA/ML et DevOps",
               "Participation active aux hackathons et compétitions de programmation",
-              "Base solide en algorithmes, structures de données et ingénierie de production"
+              "Base solide en algorithmes, structures de données et génie logiciel"
             ]
           },
           bac: {
@@ -735,7 +719,7 @@ const resources = {
           // Projets Bootcamp (Talan)
           sentinelai: {
             title: "SentinelAI — Plateforme Intelligence de Marché Géopolitique",
-            description: "Système IA multi-agents de production analysant les risques géopolitiques et macroéconomiques pour l'Or, le Pétrole, S&P 500, BTC et ETH via un pipeline LangGraph à 7 agents — analyse complète en moins de 30 secondes",
+            description: "Projet lauréat du bootcamp de pré-embauche Talan (trois jours, équipe de 5 à 6) : un système IA multi-agents analysant les risques géopolitiques et macroéconomiques pour l'Or, le Pétrole, S&P 500, BTC et ETH via un pipeline LangGraph à 7 agents — analyse complète en moins de 30 secondes",
             features: [
               "Pipeline LangGraph à 7 agents : routage → intelligence géo → sentiment → analyse par actif → quantitatif/risque → critique → synthèse",
               "Gestion des limites de débit sur Groq — temporisation sur HTTP 429 respectant l'en-tête Retry-After",
@@ -949,7 +933,7 @@ const resources = {
             title: "AWS Academy Graduate - Cloud Foundations",
             issuer: "AWS Academy",
             date: "2025",
-            description: "Programme de formation complet AWS Cloud Foundations démontrant la compétence en cloud computing",
+            description: "Badge de fin de cours AWS Academy (Credly) couvrant les services AWS de base, l'architecture cloud et les bases de la sécurité",
             skills: ["Services AWS de base", "Architecture Cloud", "Meilleures pratiques de sécurité", "EC2, S3, RDS, VPC"]
           },
           hashgraph: {
@@ -980,7 +964,7 @@ const resources = {
       contact: {
         title: "Entrer en Contact",
         subtitle: "Travaillons ensemble",
-        mobility: "Citoyen de l'UE · ouvert à la mobilité",
+        mobility: "Citoyen français (UE) · sans permis de travail dans l'UE/EEE et en Suisse · ouvert à la mobilité",
         description: "Je suis toujours intéressé par de nouvelles opportunités et projets passionnants. Que vous souhaitiez discuter d'une collaboration potentielle ou simplement dire bonjour, n'hésitez pas à me contacter !",
         form: {
           name: "Votre Nom",
@@ -1004,7 +988,7 @@ const resources = {
         loading: "Chargement...",
         loadingPortfolio: "Chargement Portfolio...",
         name: "Elyes Darouich",
-        title: "Ingénieur Logiciel",
+        title: "Ingénieur IA",
         footer: "Conçu avec ❤️ et React",
         error: "Une erreur s'est produite",
         retry: "Réessayer",

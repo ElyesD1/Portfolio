@@ -28,8 +28,8 @@ const Hero = () => {
 
   const findings = [
     { k: 'YEARS @ ESPRIT', v: '05' },
-    { k: 'PROJECTS SHIPPED', v: '14' },
-    { k: 'INTERNSHIPS', v: '04' },
+    { k: 'PROJECTS BUILT', v: '15' },
+    { k: 'INTERNSHIPS', v: '03' },
   ]
 
   return (
@@ -60,7 +60,7 @@ const Hero = () => {
           <motion.div className="hero-register" {...fade(0.05)}>
             <span className="kicker">PORTFOLIO&nbsp;SPECIMEN</span>
             <span className="hero-register-rule" />
-            <span className="kicker">REF.&nbsp;ED—2026 · TUNIS, TN</span>
+            <span className="kicker">REF.&nbsp;ED—2026 · BIZERTE, TN</span>
           </motion.div>
 
           {/* Masthead */}
