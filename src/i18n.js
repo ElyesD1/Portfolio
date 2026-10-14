@@ -35,7 +35,7 @@ const resources = {
       about: {
         title: "About Me",
         subtitle: "Building AI you can check.",
-        intro: "AI engineer with a full-stack core, graduated from ESPRIT in 2026 (National Engineering Degree, Master's level) after my end-of-studies project at Talan, rated 'Excellent' by the jury. I specialize in agentic AI (multi-agent systems, RAG/LLM pipelines with guardrails, evaluation) and applied cryptography, on a strong frontend, mobile and backend foundation.",
+        intro: "AI engineer with a full-stack core, graduated from ESPRIT in 2026 (National Engineering Degree, Master's level) after my end-of-studies project at Talan. I specialize in agentic AI (multi-agent systems, RAG/LLM pipelines with guardrails, evaluation) and applied cryptography, on a strong frontend, mobile and backend foundation.",
         location: "Bizerte, Tunisia",
         citizenship: "French (EU)",
         workRights: "EU/EEA & Switzerland, no permit needed",
@@ -73,7 +73,7 @@ const resources = {
             company: "Talan Tunisia",
             description: "SMI Virtual Auditor — AI-powered ISO 9001 / 14001 / 27001 compliance audit platform built on a RAG pipeline",
             achievements: [
-              "Rated 'Excellent' by the jury (18.25/20 at the defense); kept by Talan as an internal demonstrator",
+              "Kept by Talan as an internal demonstrator after the defense",
               "Built an AI compliance-audit platform delivering clause-by-clause verdicts (COMPLIANT / PARTIAL / NON-COMPLIANT) for ISO 9001, 14001, 27001 and the Talan Forfait standard",
               "Engineered a 3-pass Retrieval-Augmented Generation pipeline (Llama 3.3 70B via Groq / GitHub Models / NVIDIA NIM) with local bge-m3 embeddings on Ollama + ChromaDB vector store",
               "Designed 7-layer guard rails (groundedness, fidelity, contradiction, confidence capping) to suppress LLM hallucinations on audit evidence",
@@ -113,7 +113,7 @@ const resources = {
           esprit: {
             title: "Computer Engineering — Mobile Information Systems (SIM)",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "5-year National Engineering Degree (Master's level), graduated September 2026 — trained in mobile information systems, then moved into applied AI with the end-of-studies project (PFE) at Talan Tunisia: the SMI Virtual Auditor, rated 'Excellent' by the jury (18.25/20 at the defense)",
+            description: "5-year National Engineering Degree (Master's level), graduated September 2026 — trained in mobile information systems, then moved into applied AI with the end-of-studies project (PFE) at Talan Tunisia: the SMI Virtual Auditor",
             achievements: [
               "Completed the full 5-year engineering cycle in the Mobile Information Systems (SIM) track — software engineering and cross-platform mobile development",
               "End-of-studies project (PFE) at Talan Tunisia, an AI ISO-compliance auditor (RAG + LLM), rated 'Excellent' by the jury (18.25/20 at the defense)",
@@ -150,12 +150,13 @@ const resources = {
           internship: "Internship Projects", 
           internshipDesc: "Professional projects completed during internships",
           bootcamp: "Bootcamp Projects",
-          bootcamp_detail: "Talan bootcamp, team project (winner)",
+          bootcamp_detail: "Talan pre-hire bootcamp, winning team project",
           personal: "Personal Projects",
           personalDesc: "Side projects and personal initiatives"
         },
         labels: {
-          features: "Key Features"
+          features: "Key Features",
+          team: "Team project (ESPRIT)"
         },
         demos: {
           title: "Mobile Demos",
@@ -221,7 +222,7 @@ const resources = {
           // Bootcamp Projects (Talan)
           sentinelai: {
             title: "SentinelAI — Geopolitical Market Intelligence Platform",
-            description: "Winning project of Talan's three-day pre-hire bootcamp (team of 5–6): a multi-agent AI system analyzing geopolitical & macroeconomic risks for Gold, Oil, S&P 500, BTC and ETH using a 7-agent LangGraph pipeline — full analysis in under 30 seconds",
+            description: "Winning project of a Talan three-day pre-hire bootcamp session (team of 5–6): a multi-agent AI system analyzing geopolitical & macroeconomic risks for Gold, Oil, S&P 500, BTC and ETH using a 7-agent LangGraph pipeline — full analysis in under 30 seconds",
             features: [
               "7-agent LangGraph pipeline: routing → geo intel → sentiment → per-asset analysis → quant/risk → critic → synthesis",
               "Rate-limit handling on Groq — 429 back-off that honors Retry-After",
@@ -235,7 +236,7 @@ const resources = {
           },
           scribeai: {
             title: "ScribeAI — Meeting Intelligence Platform",
-            description: "Real-time speech-to-text and AI analysis platform that turns meetings into structured documentation with speaker diarization, 9-step AI pipeline, and auto-generated architecture diagrams",
+            description: "Winning project of a second Talan pre-hire bootcamp session: a real-time speech-to-text and AI analysis platform that turns meetings into structured documentation with speaker diarization, 9-step AI pipeline, and auto-generated architecture diagrams",
             features: [
               "Real-time transcription with ElevenLabs Scribe v2 and speaker diarization (EN, FR, AR, Tunisian dialect)",
               "Multi-language support including Arabic code-switching and RTL PDF rendering",
@@ -533,7 +534,7 @@ const resources = {
       about: {
         title: "À Propos",
         subtitle: "Bâtir une IA vérifiable.",
-        intro: "Ingénieur IA avec un socle full-stack, diplômé d'ESPRIT en 2026 (Diplôme National d'Ingénieur, niveau Master) après mon projet de fin d'études chez Talan, noté « Excellent » par le jury. Je me spécialise dans l'IA agentique (systèmes multi-agents, pipelines RAG/LLM avec garde-fous, évaluation) et la cryptographie appliquée, sur un solide socle frontend, mobile et backend.",
+        intro: "Ingénieur IA avec un socle full-stack, diplômé d'ESPRIT en 2026 (Diplôme National d'Ingénieur, niveau Master) après mon projet de fin d'études chez Talan. Je me spécialise dans l'IA agentique (systèmes multi-agents, pipelines RAG/LLM avec garde-fous, évaluation) et la cryptographie appliquée, sur un solide socle frontend, mobile et backend.",
         location: "Bizerte, Tunisie",
         citizenship: "Française (UE)",
         workRights: "UE/EEE et Suisse, sans permis de travail",
@@ -571,7 +572,7 @@ const resources = {
             company: "Talan Tunisie",
             description: "SMI Virtual Auditor — Plateforme d'audit de conformité ISO 9001 / 14001 / 27001 alimentée par l'IA, basée sur un pipeline RAG",
             achievements: [
-              "Noté « Excellent » par le jury (18,25/20 en soutenance) ; conservé par Talan comme démonstrateur interne",
+              "Conservé par Talan comme démonstrateur interne après la soutenance",
               "Développé une plateforme d'audit de conformité par IA produisant des verdicts clause par clause (CONFORME / PARTIEL / NON-CONFORME) pour ISO 9001, 14001, 27001 et le référentiel Forfait Talan",
               "Conçu un pipeline RAG (Retrieval-Augmented Generation) à 3 passes (Llama 3.3 70B via Groq / GitHub Models / NVIDIA NIM) avec embeddings bge-m3 locaux sur Ollama + base vectorielle ChromaDB",
               "Implémenté 7 couches de garde-fous (groundedness, fidélité, contradiction, plafonnement de confiance) pour supprimer les hallucinations du LLM sur les preuves d'audit",
@@ -611,7 +612,7 @@ const resources = {
           esprit: {
             title: "Génie Informatique — Systèmes d'Information Mobiles (SIM)",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "Diplôme National d'Ingénieur (5 ans, niveau Master), obtenu en septembre 2026 — formé aux systèmes d'information mobiles, puis orienté vers l'IA appliquée avec le projet de fin d'études (PFE) chez Talan Tunisie : le SMI Virtual Auditor, noté « Excellent » par le jury (18,25/20 en soutenance)",
+            description: "Diplôme National d'Ingénieur (5 ans, niveau Master), obtenu en septembre 2026 — formé aux systèmes d'information mobiles, puis orienté vers l'IA appliquée avec le projet de fin d'études (PFE) chez Talan Tunisie : le SMI Virtual Auditor",
             achievements: [
               "Accompli le cycle d'ingénieur complet de 5 ans dans l'option Systèmes d'Information Mobiles (SIM) — génie logiciel et développement mobile multiplateforme",
               "Projet de fin d'études (PFE) chez Talan Tunisie, un auditeur de conformité ISO par IA (RAG + LLM), noté « Excellent » par le jury (18,25/20 en soutenance)",
@@ -646,12 +647,13 @@ const resources = {
           internship: "Projets de Stage",
           internshipDesc: "Projets professionnels réalisés durant les stages",
           bootcamp: "Projets Bootcamp",
-          bootcamp_detail: "Bootcamp Talan, projet d'équipe (lauréat)",
+          bootcamp_detail: "Bootcamp de pré-embauche Talan, projet d'équipe lauréat",
           personal: "Projets Personnels",
           personalDesc: "Projets personnels et initiatives privées"
         },
         labels: {
-          features: "Fonctionnalités Clés"
+          features: "Fonctionnalités Clés",
+          team: "Projet d'équipe (ESPRIT)"
         },
         demos: {
           title: "Démonstrations Mobile",
@@ -717,7 +719,7 @@ const resources = {
           // Projets Bootcamp (Talan)
           sentinelai: {
             title: "SentinelAI — Plateforme Intelligence de Marché Géopolitique",
-            description: "Projet lauréat du bootcamp de pré-embauche Talan (trois jours, équipe de 5 à 6) : un système IA multi-agents analysant les risques géopolitiques et macroéconomiques pour l'Or, le Pétrole, S&P 500, BTC et ETH via un pipeline LangGraph à 7 agents — analyse complète en moins de 30 secondes",
+            description: "Projet lauréat d'une session du bootcamp de pré-embauche Talan (trois jours, équipe de 5 à 6) : un système IA multi-agents analysant les risques géopolitiques et macroéconomiques pour l'Or, le Pétrole, S&P 500, BTC et ETH via un pipeline LangGraph à 7 agents — analyse complète en moins de 30 secondes",
             features: [
               "Pipeline LangGraph à 7 agents : routage → intelligence géo → sentiment → analyse par actif → quantitatif/risque → critique → synthèse",
               "Gestion des limites de débit sur Groq — temporisation sur HTTP 429 respectant l'en-tête Retry-After",
@@ -731,7 +733,7 @@ const resources = {
           },
           scribeai: {
             title: "ScribeAI — Plateforme Intelligence de Réunions",
-            description: "Plateforme de transcription vocale temps réel et d'analyse IA transformant les réunions en documentation structurée avec diarisation des locuteurs, pipeline IA en 9 étapes et diagrammes d'architecture auto-générés",
+            description: "Projet lauréat d'une seconde session du bootcamp de pré-embauche Talan : une plateforme de transcription vocale temps réel et d'analyse IA transformant les réunions en documentation structurée avec diarisation des locuteurs, pipeline IA en 9 étapes et diagrammes d'architecture auto-générés",
             features: [
               "Transcription temps réel avec ElevenLabs Scribe v2 et diarisation des locuteurs (EN, FR, AR, dialecte tunisien)",
               "Support multilingue incluant alternance codique arabe et rendu PDF RTL",

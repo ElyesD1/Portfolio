@@ -64,7 +64,6 @@
   color: var(--ink-3);
 }
 
-.cert-verified { font-size: 0.55rem; }
 
 .cert-head {
   display: flex;

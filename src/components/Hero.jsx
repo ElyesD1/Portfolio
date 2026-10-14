@@ -139,13 +139,6 @@ const Hero = () => {
                 </div>
               ))}
 
-              <div className="hero-find-row hero-find-conf-row">
-                <span className="hero-find-k">CONFIDENCE</span>
-                <span className="hero-find-conf">
-                  <span className="hero-conf-bar"><span className="hero-conf-fill" /></span>
-                  98%
-                </span>
-              </div>
 
               {/* Certified label footer — barcode */}
               <div className="hero-find-foot">

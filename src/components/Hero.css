@@ -258,35 +258,6 @@
   color: var(--lime);
 }
 
-.hero-find-conf-row { border-bottom: none; }
-
-.hero-find-conf {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-3);
-  font-family: var(--font-mono);
-  font-size: var(--t-micro);
-  color: var(--ink-2);
-  letter-spacing: 0.06em;
-}
-.hero-conf-bar {
-  width: 88px;
-  height: 3px;
-  background: var(--rule-2);
-  display: block;
-  overflow: hidden;
-}
-.hero-conf-fill {
-  display: block;
-  height: 100%;
-  width: 98%;
-  background: var(--lime);
-  box-shadow: 0 0 8px rgba(197, 247, 79, 0.5);
-  transform-origin: left;
-  animation: conf-grow 1.4s 0.9s both var(--ease-out);
-}
-@keyframes conf-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-
 /* Certified label footer — barcode */
 .hero-find-foot {
   display: flex;

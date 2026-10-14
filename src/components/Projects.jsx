@@ -100,7 +100,7 @@ const ALL_PROJECTS = [
     type: 'personal',
     year: '2024',
     tech: ['SwiftUI', 'MapKit', 'Riot API'],
-    github: 'https://github.com/ElyesD1',
+    github: null,
     video: 'https://www.youtube.com/embed/JUjH3DlewF4',
     videoType: 'youtube',
   },
@@ -119,7 +119,8 @@ const ALL_PROJECTS = [
     type: 'academic',
     year: '2024',
     tech: ['Flutter', 'NestJS', 'Gemini AI'],
-    github: 'https://github.com/Tayaa01/Nomadly',
+    github: null,
+    team: true,
     video: null,
   },
   {
@@ -137,7 +138,8 @@ const ALL_PROJECTS = [
     type: 'academic',
     year: '2023',
     tech: ['Symfony', 'JavaFX', 'MySQL'],
-    github: 'https://github.com/rouazayani211/Pi_Symfony',
+    github: null,
+    team: true,
     video: null,
   },
   {
@@ -232,7 +234,7 @@ const ExhibitDetail = ({ project }) => {
         <div className="exh-detail-info">
           <div className="exh-detail-titleblock">
             {/* 'detail' context: uses e.g. categories.bootcamp_detail when defined, else the filter label */}
-            <span className="exh-detail-class">{t(`projects.categories.${project.type}`, { context: 'detail' })}</span>
+            <span className="exh-detail-class">{t(`projects.categories.${project.type}`, { context: 'detail' })}{project.team && ` · ${t('projects.labels.team')}`}</span>
             <h3 className="exh-detail-title">{t(`projects.content.${project.key}.title`)}</h3>
           </div>
 
@@ -407,11 +409,12 @@ const Projects = () => {
             </div>
 
             {/* Build-time prerender only: the interactive dossier mounts one
-                case file at a time, so the full archive is emitted here for
-                crawlers and AI scrapers. Never rendered in the browser. */}
+                case file at a time, so the rest of the archive is emitted here
+                for crawlers and AI scrapers (the open case file is already
+                above, so it is skipped). Never rendered in the browser. */}
             {typeof window === 'undefined' && (
               <div className="exh-ssr-archive">
-                {ALL_PROJECTS.map((p) => (
+                {ALL_PROJECTS.filter((p) => p.key !== selected?.key).map((p) => (
                   <ExhibitDetail key={p.key} project={p} />
                 ))}
               </div>

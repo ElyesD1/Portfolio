@@ -103,7 +103,6 @@ const Contact = () => {
                   <div className="contact-signoff-meta">
                     <span>REF · ED—2026 · BIZERTE, TN</span>
                     <span>STATUS · OPEN TO OPPORTUNITIES</span>
-                    <span>VERIFIED · 2026</span>
                   </div>
                 </div>
               </div>

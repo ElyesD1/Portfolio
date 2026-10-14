@@ -7,15 +7,16 @@ import nvidiaCert from '../assets/My Learning _ NVIDIA.pdf'
 import './Certificates.css'
 
 const CERTS = [
-  { key: 'aws', ref: 'CRED·01', accent: '#FF9900', label: 'Cloud', view: awsCert },
-  { key: 'hashgraph', ref: 'CRED·02', accent: '#7FE9D0', label: 'Blockchain', view: hashgraphCert },
-  { key: 'generativeai', ref: 'CRED·03', accent: '#C5F74F', label: 'AI / ML', view: nvidiaCert },
+  { key: 'aws', ref: 'CRED·01', accent: '#FF9900', label: 'Cloud', view: awsCert, linkLabel: 'VIEW BADGE' },
+  { key: 'hashgraph', ref: 'CRED·02', accent: '#7FE9D0', label: 'Blockchain', view: hashgraphCert, linkLabel: 'VIEW CERTIFICATE' },
+  { key: 'generativeai', ref: 'CRED·03', accent: '#C5F74F', label: 'AI / ML', view: nvidiaCert, linkLabel: 'VIEW CERTIFICATE' },
   {
     key: 'predictivemaintenance',
     ref: 'CRED·04',
     accent: '#76B900',
     label: 'AI / ML',
     view: 'https://learn.nvidia.com/certificates?id=DfIs6wnhTa204pXqdLB7hw',
+    linkLabel: 'VERIFY ON NVIDIA',
   },
 ]
 
@@ -42,7 +43,7 @@ const Certificates = () => {
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6 }}
           >
-            <span className="kicker">VERIFIED CREDENTIALS</span>
+            <span className="kicker">CREDENTIALS ON FILE</span>
             <h2 className="certs-title">{t('certificates.title')}</h2>
           </motion.header>
 
@@ -61,7 +62,6 @@ const Certificates = () => {
                 >
                   <div className="cert-top">
                     <span className="cert-ref">{cert.ref}</span>
-                    <span className="verdict verdict-pass cert-verified">VERIFIED</span>
                   </div>
 
                   <div className="cert-head">
@@ -81,7 +81,7 @@ const Certificates = () => {
                   <div className="cert-footer">
                     <span className="cert-date">ISSUED · {data.date}</span>
                     <a href={cert.view} target="_blank" rel="noreferrer" className="cert-link">
-                      VIEW <ArrowUpRight size={12} />
+                      {cert.linkLabel} <ArrowUpRight size={12} />
                     </a>
                   </div>
                 </motion.article>

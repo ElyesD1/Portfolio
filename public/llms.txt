@@ -55,15 +55,15 @@ Verified measurements:
 
 ## Other projects
 
-- **SentinelAI**: multi-agent platform, winning project of Talan's three-day pre-hire bootcamp;
+- **SentinelAI**: multi-agent platform, winning project of a Talan three-day pre-hire bootcamp session;
   scoring geopolitical & market risk for Gold, Oil, S&P 500, BTC, ETH — 7-agent LangGraph
   pipeline with Monte Carlo + GARCH risk modeling, Qdrant semantic news search over
   GDELT/FRED, sub-30 s end-to-end, with rate-limit handling (429 back-off honoring
-  Retry-After) on Groq. Talan bootcamp, team project (winner).
+  Retry-After) on Groq.
 - **ScribeAI**: meeting intelligence — real-time diarized transcription (EN/FR/AR/Tunisian,
   ElevenLabs Scribe API), 9-step AI analysis pipeline on a local LLM (Ollama), RAG over
-  ChromaDB, auto-generated Mermaid architecture diagrams. Talan bootcamp, team project
-  (winner).
+  ChromaDB, auto-generated Mermaid architecture diagrams. Winning project of a second
+  Talan pre-hire bootcamp session (team project).
 - **ZK-Attest** (https://github.com/ElyesDarouich/zk-attest): privacy-preserving credential
   verification — Groth16 zero-knowledge proofs (Circom/snarkjs), W3C Verifiable Credentials,
   ERC-5192 soulbound trust chain on Hyperledger Besu, RFC 9162 transparency log.
@@ -74,7 +74,7 @@ Verified measurements:
   rendering multi-agent orchestration as a living pixel-art office — a main agent plus six
   specialised Claude Agent SDK agents.
 - Earlier: desktop apps for Vatech WABAG built outside the internship (Electron), SquadLink,
-  Dialex (iOS), Nomadly (Flutter),
+  Dialex (iOS), Nomadly (Flutter, ESPRIT team project),
   Riftpedia (SwiftUI).
 
 ## Certifications (verifiable)
