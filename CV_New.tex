@@ -99,7 +99,7 @@
 % ---------------- EXPERIENCE ----------------
 \section{Experience}
 
-\entry{End-of-Studies AI Engineer (PFE) --- Talan Tunisia}{Feb 2026 -- Jun 2026}{}{Tunis, Tunisia}
+\entry{End-of-Studies AI Engineer --- Talan Tunisia}{Feb 2026 -- Jun 2026}{Final-year engineering thesis project, defended before a jury}{Tunis, Tunisia}
 \begin{bullets}
   \item Architected ``SMI Virtual Auditor,'' an AI ISO-compliance auditor giving cited, clause-by-clause verdicts (ISO 9001/14001/27001 and Talan's internal Forfait standard: 110 clauses) via 3-pass RAG on Llama 3.3 70B (Groq, GitHub Models, NVIDIA NIM).
   \item Engineered a 7-layer guardrail system (groundedness, fidelity, contradiction, confidence capping) that suppresses hallucinations, grounding verdicts via local bge-m3 embeddings on Ollama + ChromaDB.
@@ -119,7 +119,7 @@
 % ---------------- PROJECTS ----------------
 \section{Projects}
 
-\project{EDITH --- Local-First Personal AI Companion (macOS)}{Python, Swift, Ollama, MLX, LoRA, SQLite}{Fully local, persistent AI companion: an always-on daemon wakes a 9B model only when it is needed (cold start 20.7 s, warm 0.36--0.77 s to first token, under 1 GB idle). 1,596-test suite; base-model swaps gated on measured probes (10/10 instruction following, 14/14 held-out honesty); LoRA on Apple MLX (0.06\% of parameters trainable, held-out validation loss 3.89 to 2.73).}
+\project{EDITH --- Local-First Personal AI Assistant (macOS)}{Python, Swift, Ollama, MLX, LoRA, SQLite}{Fully local, persistent AI assistant: an always-on daemon wakes a 9B model only when it is needed (cold start 20.7 s, warm 0.36--0.77 s to first token, under 1 GB idle). 1,596-test suite; base-model swaps gated on measured probes (10/10 instruction following, 14/14 held-out honesty); LoRA on Apple MLX (0.06\% of parameters trainable, held-out validation loss 3.89 to 2.73).}
 
 \project{Agentic Misalignment Replication --- AI Safety Research}{Python, Ollama, pre-registered evaluation}{Independent replication of Anthropic's agentic-misalignment methodology on EDITH's 9B model, persona as the only variable: 24 runs, pre-registered scoring, every scorer flag checked against the full transcript. Reports zero harmful attempts as uninterpretable, not safe; proposes in-task comprehension as a validity gate; documents a retracted interim finding. Write-up: \href{https://claude.ai/artifact/7TTKjre9CBnbJv1ziY4zhn}{claude.ai/artifact/7TTKjre9CBnbJv1ziY4zhn}}
 

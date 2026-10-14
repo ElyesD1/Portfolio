@@ -13,7 +13,8 @@
 
 ## Experience
 
-- **End-of-Studies AI Engineer (PFE) — Talan Tunisia, Feb–Jun 2026.** Architected the
+- **End-of-Studies AI Engineer — Talan Tunisia, Feb–Jun 2026** (the engineering degree's
+  final-year thesis project, defended before a jury). Architected the
   SMI Virtual Auditor, an AI ISO-compliance platform producing clause-by-clause verdicts
   (COMPLIANT / PARTIAL / NON-COMPLIANT) with cited evidence across ISO 9001/14001/27001
   and Talan's internal Forfait standard (110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B; 7-layer anti-hallucination
@@ -27,9 +28,9 @@
 - **Flutter Developer Intern — Vatech WABAG, 2023.** Employee leave-management app with
   secure auth, RBAC and Firebase push notifications.
 
-## Flagship project: EDITH — local-first personal AI companion (macOS)
+## Flagship project: EDITH — local-first personal AI assistant (macOS)
 
-A 100% local, persistent AI companion — not a chatbot. An always-alive Python daemon holds
+A 100% local, persistent AI assistant — not a chatbot. An always-alive Python daemon holds
 state, memory and an event-priority ladder; the 9B-parameter model (Ollama) loads only when
 cognition is required. Hybrid Swift/SwiftUI + Python architecture over a Unix socket.
 Verified measurements:

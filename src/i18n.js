@@ -69,7 +69,7 @@ const resources = {
         },
         content: {
           talanPfe: {
-            title: "End-of-Studies AI Engineer (PFE)",
+            title: "End-of-Studies AI Engineer (final-year engineering thesis project)",
             company: "Talan Tunisia",
             description: "SMI Virtual Auditor — AI-powered ISO 9001 / 14001 / 27001 compliance audit platform built on a RAG pipeline",
             achievements: [
@@ -113,11 +113,11 @@ const resources = {
           esprit: {
             title: "Computer Engineering — Mobile Information Systems (SIM)",
             company: "ESPRIT (École Supérieure Privée d'Ingénierie et de Technologies)",
-            description: "5-year National Engineering Degree (Master's level), graduated September 2026 — trained in mobile information systems, then moved into applied AI with the end-of-studies project (PFE) at Talan Tunisia: the SMI Virtual Auditor",
+            description: "5-year National Engineering Degree (Master's level), graduated September 2026 — trained in mobile information systems, then moved into applied AI with the end-of-studies project at Talan Tunisia: the SMI Virtual Auditor",
             achievements: [
               "Completed the full 5-year engineering cycle in the Mobile Information Systems (SIM) track — software engineering and cross-platform mobile development",
-              "End-of-studies project (PFE) at Talan Tunisia, an AI ISO-compliance auditor (RAG + LLM), rated 'Excellent' by the jury (18.25/20 at the defense)",
-              "PFE report: 20/20 for writing quality and a 2% plagiarism score (ESPRIT's maximum is 15%)",
+              "End-of-studies project at Talan Tunisia, an AI ISO-compliance auditor (RAG + LLM), rated 'Excellent' by the jury (18.25/20 at the defense)",
+              "Thesis report: 20/20 for writing quality and a 2% plagiarism score (ESPRIT's maximum is 15%)",
               "Completed a prior engineering internship at Talan building the ProjectFlow platform",
               "Advanced coursework in software architecture, distributed systems, AI/ML and DevOps",
               "Active participation in hackathons",
@@ -165,8 +165,8 @@ const resources = {
         content: {
           // Flagship personal project
           edith: {
-            title: "EDITH — Local-First Personal AI Companion (macOS)",
-            description: "A 100% local, persistent AI companion — not a chatbot. An always-alive Python daemon holds state, memory and an event-priority ladder, and wakes the 9B-parameter brain (Ollama) only when cognition is required. Hybrid Swift + Python architecture, a full evaluation culture (1,596 tests, probe-gated model swaps), and an independent replication of Anthropic's agentic-misalignment methodology.",
+            title: "EDITH — Local-First Personal AI Assistant (macOS)",
+            description: "A 100% local, persistent AI assistant — not a chatbot. An always-alive Python daemon holds state, memory and an event-priority ladder, and wakes the 9B-parameter brain (Ollama) only when cognition is required. Hybrid Swift + Python architecture, a full evaluation culture (1,596 tests, probe-gated model swaps), and an independent replication of Anthropic's agentic-misalignment methodology.",
             features: [
               "Event-driven cognition on an 18 GB laptop: the ~5.7 GB model loads on demand — cold start 20.7 s to first token, 0.36–0.77 s warm, idle footprint under 1 GB; a lifecycle redesign measured swap falling from 17.8 GB to 7.3 GB",
               "1,596-test suite (~10 s) backed by runtime liveness ledgers: a registry witness instrument found 22 of 155 registry rows the suite never actually reached — ten of which passed the naive static check",
@@ -181,7 +181,7 @@ const resources = {
           // Internship Projects
           smiauditor: {
             title: "SMI Virtual Auditor — AI ISO Compliance Auditor",
-            description: "End-of-studies (PFE) project at Talan Tunisia — an AI-powered platform that audits ISO 9001 / 14001 / 27001 and Forfait management systems, producing clause-by-clause compliance verdicts with cited evidence through a RAG pipeline on Llama 3.3 70B",
+            description: "End-of-studies project at Talan Tunisia — an AI-powered platform that audits ISO 9001 / 14001 / 27001 and Forfait management systems, producing clause-by-clause compliance verdicts with cited evidence through a RAG pipeline on Llama 3.3 70B",
             features: [
               "3-pass Retrieval-Augmented Generation pipeline producing COMPLIANT / PARTIAL / NON-COMPLIANT verdicts with cited evidence, confidence scores and recommendations",
               "Llama 3.3 70B Instruct via OpenAI-compatible providers (Groq / GitHub Models / NVIDIA NIM) with provider failover and rate-limit handling; local bge-m3 embeddings on Ollama + ChromaDB",
@@ -662,8 +662,8 @@ const resources = {
         content: {
           // Projet personnel phare
           edith: {
-            title: "EDITH — Compagnon IA Personnel 100% Local (macOS)",
-            description: "Un compagnon IA persistant et 100% local — pas un chatbot. Un daemon Python toujours actif maintient l'état, la mémoire et une échelle de priorité d'événements, et ne réveille le modèle 9B (Ollama) que lorsque la cognition est requise. Architecture hybride Swift + Python, une vraie culture d'évaluation (1 596 tests, changements de modèle validés par sondes), et une réplication indépendante de la méthodologie d'Anthropic sur le désalignement agentique.",
+            title: "EDITH — Assistant IA Personnel 100% Local (macOS)",
+            description: "Un assistant IA persistant et 100% local — pas un chatbot. Un daemon Python toujours actif maintient l'état, la mémoire et une échelle de priorité d'événements, et ne réveille le modèle 9B (Ollama) que lorsque la cognition est requise. Architecture hybride Swift + Python, une vraie culture d'évaluation (1 596 tests, changements de modèle validés par sondes), et une réplication indépendante de la méthodologie d'Anthropic sur le désalignement agentique.",
             features: [
               "Cognition événementielle sur un laptop 18 Go : le modèle (~5,7 Go) se charge à la demande — démarrage à froid 20,7 s au premier token, 0,36–0,77 s à chaud, empreinte au repos sous 1 Go ; une refonte du cycle de vie a fait chuter le swap mesuré de 17,8 Go à 7,3 Go",
               "Suite de 1 596 tests (~10 s) adossée à des registres de vivacité à l'exécution : un instrument témoin a trouvé 22 lignes de registre sur 155 jamais réellement atteintes par la suite — dont dix passaient la vérification statique naïve",
