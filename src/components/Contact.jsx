@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Github, Linkedin, Facebook, Instagram, ArrowUpRight } from 'lucide-react'
+import { Github, Linkedin, Facebook, ArrowUpRight } from 'lucide-react'
 import './Contact.css'
 
 const SOCIALS = [
   { icon: <Github size={15} />, label: 'GitHub', href: 'https://github.com/ElyesD1' },
   { icon: <Linkedin size={15} />, label: 'LinkedIn', href: 'https://linkedin.com/in/elyes-darouich' },
   { icon: <Facebook size={15} />, label: 'Facebook', href: 'https://www.facebook.com/elyes.darouich.7/' },
-  { icon: <Instagram size={15} />, label: 'Instagram', href: 'https://www.instagram.com/elyes_darouich/' },
 ]
 
 const CORRESPONDENCE = [

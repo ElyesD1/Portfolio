@@ -16,7 +16,7 @@
 - **End-of-Studies AI Engineer (PFE) — Talan Tunisia, Feb–Jun 2026.** Architected the
   SMI Virtual Auditor, an AI ISO-compliance platform producing clause-by-clause verdicts
   (COMPLIANT / PARTIAL / NON-COMPLIANT) with cited evidence across ISO 9001/14001/27001
-  (110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B; 7-layer anti-hallucination
+  and Talan's internal Forfait standard (110 clauses) via a 3-pass RAG pipeline on Llama 3.3 70B; 7-layer anti-hallucination
   guardrails; clean-architecture FastAPI backend (JWT RS256, RBAC, Celery, PostgreSQL,
   Redis, MinIO, Docker, 108 tests) and a React 18 + TypeScript SPA with streaming RAG chat.
   Retained by Talan as an internal demonstrator; rated "Excellent" by the jury (18.25/20 at
@@ -73,7 +73,8 @@ Verified measurements:
 - **Agentic Valley** (https://github.com/ElyesDarouich/Agentic-Valley): VSCode extension
   rendering multi-agent orchestration as a living pixel-art office — a main agent plus six
   specialised Claude Agent SDK agents.
-- Earlier: WABAG desktop apps (Electron), SquadLink, Dialex (iOS), Nomadly (Flutter),
+- Earlier: desktop apps for Vatech WABAG built outside the internship (Electron), SquadLink,
+  Dialex (iOS), Nomadly (Flutter),
   Riftpedia (SwiftUI).
 
 ## Certifications (verifiable)

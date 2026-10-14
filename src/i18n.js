@@ -120,18 +120,17 @@ const resources = {
               "PFE report: 20/20 for writing quality and a 2% plagiarism score (ESPRIT's maximum is 15%)",
               "Completed a prior engineering internship at Talan building the ProjectFlow platform",
               "Advanced coursework in software architecture, distributed systems, AI/ML and DevOps",
-              "Active participation in hackathons and programming competitions",
+              "Active participation in hackathons",
               "Strong foundation in algorithms, data structures and software engineering"
             ]
           },
           bac: {
             title: "Baccalauréat in Computer Science",
-            company: "Lycée Jeune Fille",
+            company: "Lycée Habib Thameur (Lycée des Jeunes Filles), Bizerte",
             description: "High school diploma with specialization in Computer Science",
             achievements: [
               "Graduated with specialization in Computer Science and Mathematics",
               "Strong foundation in programming fundamentals and logical thinking",
-              "Participated in national mathematics and computer science competitions",
               "Developed early passion for software development and problem solving"
             ]
           }
@@ -619,18 +618,17 @@ const resources = {
               "Rapport de PFE : 20/20 pour la qualité rédactionnelle et 2 % de plagiat (maximum ESPRIT : 15 %)",
               "Accompli un précédent stage d'ingénieur chez Talan sur la plateforme ProjectFlow",
               "Cours avancés en architecture logicielle, systèmes distribués, IA/ML et DevOps",
-              "Participation active aux hackathons et compétitions de programmation",
+              "Participation active aux hackathons",
               "Base solide en algorithmes, structures de données et génie logiciel"
             ]
           },
           bac: {
             title: "Baccalauréat en Informatique",
-            company: "Lycée Jeune Fille",
+            company: "Lycée Habib Thameur (Lycée des Jeunes Filles), Bizerte",
             description: "Diplôme d'études secondaires avec spécialisation en Informatique",
             achievements: [
               "Diplômé avec spécialisation en Informatique et Mathématiques",
               "Base solide en fondamentaux de programmation et pensée logique",
-              "Participé aux compétitions nationales de mathématiques et informatique",
               "Développé passion précoce pour développement logiciel et résolution de problèmes"
             ]
           }
